@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://e17b7r5m2lsj" path="res://map/spawner.tscn" id="2_kj0ke"]
 
 [node name="Mine" type="Node2D" unique_id=862780132]
-position = Vector2(0, 8)
 
 [node name="Stones" type="Node2D" parent="." unique_id=2031564209]
 
