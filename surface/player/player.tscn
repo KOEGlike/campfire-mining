@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cnth4b1iqpx1"]
+
+[ext_resource type="Texture2D" uid="uid://dlvtjvm1hincc" path="res://icon.svg" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://birblxg3mgtjw" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="PackedScene" uid="uid://cv64aiks2pdga" path="res://utility/wobble.tscn" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://k5q5f7c0vqcq" path="res://player/camera_2d.gd" id="3_yw30f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
+radius = 48.0
+height = 128.48
+
+[node name="Player" type="CharacterBody2D" unique_id=874400125]
+script = ExtResource("1_rkbax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=408051550]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_rkbax")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=907329932]
+position = Vector2(-1.3113022e-06, -8)
+scale = Vector2(0.75, 1)
+texture = ExtResource("1_oul6g")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=573020501]
+script = ExtResource("3_yw30f")
+
+[node name="Wobble" parent="Camera2D" unique_id=1601786016 node_paths=PackedStringArray("node") instance=ExtResource("3_g1dw6")]
+node = NodePath("..")
+wobble_time = 7
