@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dsuek3rt1ourq"]
+[gd_scene format=3 uid="uid://b2ymn3we10fvf"]
 
-[ext_resource type="Texture2D" uid="uid://dlvtjvm1hincc" path="res://icon.svg" id="1_g6vov"]
+[ext_resource type="Texture2D" uid="uid://dlvtjvm1hincc" path="res://icon.svg" id="1_tmtth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5ddw"]
 size = Vector2(200, 200)
 
-[node name="Stone" type="StaticBody2D" unique_id=476103673]
+[node name="StoneGrass" type="StaticBody2D" unique_id=476103673]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641905734]
 shape = SubResource("RectangleShape2D_n5ddw")
@@ -13,4 +13,4 @@ shape = SubResource("RectangleShape2D_n5ddw")
 [node name="Icon" type="Sprite2D" parent="." unique_id=1034833419]
 position = Vector2(-1.513958e-05, 2.8014183e-06)
 scale = Vector2(1.5625, 1.5625001)
-texture = ExtResource("1_g6vov")
+texture = ExtResource("1_tmtth")

@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dlvtjvm1hincc" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://birblxg3mgtjw" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="PackedScene" uid="uid://cv64aiks2pdga" path="res://utility/wobble.tscn" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://k5q5f7c0vqcq" path="res://player/camera_2d.gd" id="3_yw30f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
 radius = 48.0
@@ -20,3 +22,8 @@ scale = Vector2(0.75, 1)
 texture = ExtResource("1_oul6g")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=573020501]
+script = ExtResource("3_yw30f")
+
+[node name="Wobble" parent="Camera2D" unique_id=1601786016 node_paths=PackedStringArray("node") instance=ExtResource("3_g1dw6")]
+node = NodePath("..")
+wobble_time = 7
