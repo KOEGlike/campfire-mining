@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b3k2ji7wtoadc"]
+
+[ext_resource type="Script" uid="uid://dlx04m6asxuou" path="res://map/tree.gd" id="1_g2vli"]
+[ext_resource type="Texture2D" uid="uid://bn7813vfrd4dy" path="res://map/tree.png" id="1_xyaq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaq1"]
+size = Vector2(16, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2vli"]
+size = Vector2(128, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3puuq"]
+size = Vector2(60, 100)
+
+[node name="Tree" type="StaticBody2D" unique_id=1835523215]
+script = ExtResource("1_g2vli")
+
+[node name="Tree" type="Sprite2D" parent="." unique_id=1265533692]
+scale = Vector2(4, 4)
+texture = ExtResource("1_xyaq1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1357108100]
+position = Vector2(72, -22)
+shape = SubResource("RectangleShape2D_xyaq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524856722]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_g2vli")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2119576535]
+position = Vector2(-2, 66)
+shape = SubResource("RectangleShape2D_3puuq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=894596082]
+position = Vector2(24, 20)
+polygon = PackedVector2Array(4, 96, 8, 96, 8, 100, 28, 100, 28, 104, 40, 104, 40, 108, -88, 108, -88, 104, -76, 104, -76, 100, -56, 100, -56, 96)

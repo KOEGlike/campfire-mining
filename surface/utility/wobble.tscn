@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cv64aiks2pdga"]
+
+[ext_resource type="Script" uid="uid://dh758nm07wapm" path="res://utility/wobble.gd" id="1_c0bx7"]
+
+[node name="Wobble" type="Node" unique_id=1601786016]
+script = ExtResource("1_c0bx7")
