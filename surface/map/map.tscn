@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://c7aqkrb5ccev1" path="res://map/grassy.tscn" id="1_a0dt8"]
 [ext_resource type="PackedScene" uid="uid://btpplk1rdmh75" path="res://map/mine.tscn" id="3_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://cnth4b1iqpx1" path="res://player/player.tscn" id="3_lgq1i"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dmswn0f3ji8cr" path="res://map/the_hole.tscn" id="4_lgq1i"]
+=======
+[ext_resource type="PackedScene" uid="uid://c32xpu8o3k00p" path="res://map/lavamap.tscn" id="4_lgq1i"]
+>>>>>>> Stashed changes
 
 [node name="Map" type="Node2D" unique_id=685014105]
 
@@ -13,7 +17,14 @@ position = Vector2(671, -63)
 [node name="Grassy" parent="." unique_id=1120019614 instance=ExtResource("1_a0dt8")]
 
 [node name="Mine" parent="." unique_id=862780132 instance=ExtResource("3_4hjbm")]
+<<<<<<< Updated upstream
 position = Vector2(1326, -286)
 
 [node name="TheHole" parent="." unique_id=1199586846 instance=ExtResource("4_lgq1i")]
 position = Vector2(-204, 408)
+=======
+position = Vector2(-17, 608)
+
+[node name="Lava" parent="." unique_id=1021381230 instance=ExtResource("4_lgq1i")]
+position = Vector2(1221, 1137)
+>>>>>>> Stashed changes
