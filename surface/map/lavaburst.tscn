@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvhdpk7ntmxo2"]
+
+[ext_resource type="Texture2D" path="res://map/lavaburst.png" id="1_8wg2k"]
+[ext_resource type="Script" path="res://map/lavaburst.gd" id="1_tdoqb"]
+
+[node name="Lavaburst" type="Area2D" unique_id=2007224858]
+position = Vector2(20, -60)
+script = ExtResource("1_tdoqb")
+
+[node name="Lavaburst" type="Sprite2D" parent="." unique_id=1548337860]
+position = Vector2(8, -100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_8wg2k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1969050344]
+position = Vector2(-54.65525, -49.09419)
+polygon = PackedVector2Array(26.65525, -2.9058113, 26.65525, -10.905811, 30.65525, -10.905811, 30.65525, -18.905811, 34.65525, -18.905811, 34.65525, -26.905811, 62.65525, -26.905811, 62.65525, -22.905811, 70.65525, -22.905811, 70.65525, -18.905811, 74.65525, -18.905811, 74.65525, -14.905811, 78.65525, -14.905811, 78.65525, 1.0941887, 74.65525, 1.0941887, 74.65525, 13.094189, 70.65525, 13.094189, 70.65525, 17.094189, 66.65525, 17.094189, 66.65525, 49.09419, 46.65525, 49.09419, 46.65525, 17.094189, 42.65525, 17.094189, 42.65525, 13.094189, 30.65525, 13.094189, 30.65525, 9.094189, 26.65525, 9.094189, 26.65525, -2.9058113)

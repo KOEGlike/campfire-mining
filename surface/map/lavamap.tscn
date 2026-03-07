@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bogq1dipfgodf"]
+
+[ext_resource type="PackedScene" path="res://map/lavaburst.tscn" id="1_fy3fb"]
+
+[node name="Lava" type="Node2D" unique_id=1021381230]
+
+[node name="Lavaburst" parent="." unique_id=2007224858 instance=ExtResource("1_fy3fb")]
