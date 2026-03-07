@@ -7,9 +7,10 @@
 [node name="Map" type="Node2D" unique_id=685014105]
 
 [node name="Player" parent="." unique_id=874400125 instance=ExtResource("3_lgq1i")]
-position = Vector2(671, -63)
+position = Vector2(715, 1040)
 
 [node name="Grassy" parent="." unique_id=1120019614 instance=ExtResource("1_a0dt8")]
+position = Vector2(7, -52)
 
 [node name="Mine" parent="." unique_id=862780132 instance=ExtResource("3_4hjbm")]
-position = Vector2(1326, -286)
+position = Vector2(-17, 608)

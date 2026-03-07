@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://e17b7r5m2lsj"]
+
+[ext_resource type="Script" uid="uid://dpv0euxjxl0vy" path="res://map/minecartspawner.gd" id="1_26l6b"]
+
+[node name="Spawner" type="Node2D" unique_id=1811073533]
+script = ExtResource("1_26l6b")
+frequency = 7.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1032746999]
+wait_time = 7.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
