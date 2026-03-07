@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsuek3rt1ourq"]
 
 [ext_resource type="Texture2D" uid="uid://nw2t3bsy6nq2" path="res://map/stoneblock.png" id="1_g6vov"]
-[ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="1_vkwi7"]
+[ext_resource type="Script" uid="uid://ckfod3td1lhmb" path="res://map/stone.gd" id="1_vkwi7"]
 [ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="2_xedn5"]
 [ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="3_2pjpm"]
 

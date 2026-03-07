@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2ymn3we10fvf"]
 
-[ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="1_liruk"]
+[ext_resource type="Script" uid="uid://bdls7xxj1ftia" path="res://map/stone_grass.gd" id="1_qeddt"]
 [ext_resource type="Texture2D" uid="uid://dnck3bitqn415" path="res://map/dirtXstoneblock.png" id="1_tmtth"]
 [ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="3_qeddt"]
 [ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="4_qeddt"]
@@ -13,7 +13,7 @@ _data = [Vector2(0, 0.9912103), 0.0, 0.0, 0, 0, Vector2(0.20502092, 0.9648411), 
 point_count = 3
 
 [node name="StoneGrass" type="StaticBody2D" unique_id=156727115]
-script = ExtResource("1_liruk")
+script = ExtResource("1_qeddt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641905734]
 shape = SubResource("RectangleShape2D_n5ddw")

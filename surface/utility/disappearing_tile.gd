@@ -2,7 +2,8 @@ class_name DisappearingTile
 
 extends Node
 
-@export var disappear_on_earthquake: bool
+@export var starter_signal:Signal
+
 @export var icon: Sprite2D
 @export var collision_shape_2d: CollisionShape2D
 @export var cpu_particles_2d: CPUParticles2D
@@ -20,8 +21,6 @@ func _ready() -> void:
 	wobble_node.node = node
 	wobble_node.wobble = wobble
 	wobble_node.wobble_time = wobble_time
-	if disappear_on_earthquake:
-		Manager.start_earthquake.connect(disappear)
 	
 
 func disappear():
