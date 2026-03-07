@@ -1,6 +1,8 @@
+class_name Minecart
+
 extends CharacterBody2D
 
-const SPEED = 200.0
+const SPEED = 400.0
 const BOUNCE_SPEED = -150.0
 const PLAYER_KNOCKBACK = Vector2(-400, -200)
 
@@ -20,7 +22,6 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("lol", body.name)
 	if body is Player:
 		var player:Player=body
 		if goleft:
