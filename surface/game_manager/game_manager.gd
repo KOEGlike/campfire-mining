@@ -10,3 +10,4 @@ signal surface_ground_fall
 func _ready():
 	await get_tree().create_timer(0).timeout
 	start_earthquake.emit()
+	surface_tree_fall.emit()
