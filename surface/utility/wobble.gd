@@ -24,6 +24,7 @@ func start():
 	await get_tree().create_timer(wobble_time).timeout
 	wobbling=false
 	finished.emit()
+	node.position=Vector2.ZERO
 
 func _process(delta: float) -> void:
 	if wobbling:

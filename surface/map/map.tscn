@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7aqkrb5ccev1" path="res://map/grassy.tscn" id="1_a0dt8"]
 [ext_resource type="PackedScene" uid="uid://btpplk1rdmh75" path="res://map/mine.tscn" id="3_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://cnth4b1iqpx1" path="res://player/player.tscn" id="3_lgq1i"]
+[ext_resource type="PackedScene" uid="uid://dmswn0f3ji8cr" path="res://map/the_hole.tscn" id="4_lgq1i"]
 
 [node name="Map" type="Node2D" unique_id=685014105]
 
@@ -13,3 +14,6 @@ position = Vector2(671, -63)
 
 [node name="Mine" parent="." unique_id=862780132 instance=ExtResource("3_4hjbm")]
 position = Vector2(1326, -286)
+
+[node name="TheHole" parent="." unique_id=1199586846 instance=ExtResource("4_lgq1i")]
+position = Vector2(-204, 408)
