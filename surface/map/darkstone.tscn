@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwlmqeguk3bqa"]
 
 [ext_resource type="Texture2D" uid="uid://nw2t3bsy6nq2" path="res://map/stoneblock.png" id="1_2pts5"]
-[ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="1_q07cg"]
+[ext_resource type="Script" uid="uid://cm4iabnclvt28" path="res://map/dark_stone.gd" id="1_q07cg"]
 [ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="2_net4w"]
 [ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="3_q07cg"]
 
@@ -12,7 +12,7 @@ size = Vector2(200, 200)
 _data = [Vector2(0, 0.9912103), 0.0, 0.0, 0, 0, Vector2(0.20502092, 0.9648411), 1.1609374, 1.1609374, 0, 0, Vector2(1, 0.20013523), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[node name="Stone" type="StaticBody2D" unique_id=476103673]
+[node name="DarkStone" type="StaticBody2D" unique_id=476103673]
 script = ExtResource("1_q07cg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641905734]
