@@ -1,88 +1,14 @@
 [gd_scene format=3 uid="uid://d0hhrrabbq7ho"]
 
-[ext_resource type="PackedScene" uid="uid://chob6tjdxqsx5" path="res://map/grassy_field.tscn" id="1_4hjbm"]
-[ext_resource type="PackedScene" uid="uid://b3k2ji7wtoadc" path="res://map/tree.tscn" id="1_hgrid"]
-[ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="1_lgq1i"]
+[ext_resource type="PackedScene" uid="uid://c7aqkrb5ccev1" path="res://map/grassy.tscn" id="1_a0dt8"]
+[ext_resource type="PackedScene" uid="uid://btpplk1rdmh75" path="res://map/mine.tscn" id="3_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://cnth4b1iqpx1" path="res://player/player.tscn" id="3_lgq1i"]
-[ext_resource type="PackedScene" uid="uid://b2ymn3we10fvf" path="res://map/stone_grass.tscn" id="5_kffv2"]
 
 [node name="Map" type="Node2D" unique_id=685014105]
 
-[node name="Tree" parent="." unique_id=1835523215 instance=ExtResource("1_hgrid")]
-position = Vector2(304, -203.99994)
-scale = Vector2(1.898857, 1.898857)
-
-[node name="Tree2" parent="." unique_id=402648185 instance=ExtResource("1_hgrid")]
-position = Vector2(1168, -204)
-scale = Vector2(1.898857, 1.898857)
+[node name="Grassy" parent="." unique_id=1120019614 instance=ExtResource("1_a0dt8")]
 
 [node name="Player" parent="." unique_id=874400125 instance=ExtResource("3_lgq1i")]
 position = Vector2(496, -84)
 
-[node name="GrassyField" parent="." unique_id=69348105 instance=ExtResource("1_4hjbm")]
-position = Vector2(104, 84)
-
-[node name="GrassyField2" parent="." unique_id=549240301 instance=ExtResource("1_4hjbm")]
-position = Vector2(304, 84)
-
-[node name="GrassyField3" parent="." unique_id=1367095103 instance=ExtResource("1_4hjbm")]
-position = Vector2(504, 84)
-
-[node name="GrassyField4" parent="." unique_id=1049825783 instance=ExtResource("1_4hjbm")]
-position = Vector2(704, 84)
-disappear = true
-
-[node name="GrassyField5" parent="." unique_id=111508835 instance=ExtResource("1_4hjbm")]
-position = Vector2(904, 84)
-disappear = true
-
-[node name="GrassyField6" parent="." unique_id=170973972 instance=ExtResource("1_4hjbm")]
-position = Vector2(1104, 84)
-
-[node name="GrassyField7" parent="." unique_id=1619458385 instance=ExtResource("1_4hjbm")]
-position = Vector2(1304, 84)
-
-[node name="GrassyField8" parent="." unique_id=266137535 instance=ExtResource("1_4hjbm")]
-position = Vector2(1504, 84)
-
-[node name="GrassyField9" parent="." unique_id=1912326306 instance=ExtResource("1_4hjbm")]
-position = Vector2(1704, 84)
-
-[node name="StoneGrass" parent="." unique_id=637773479 instance=ExtResource("5_kffv2")]
-position = Vector2(100, 284)
-
-[node name="StoneGrass2" parent="." unique_id=228881758 instance=ExtResource("5_kffv2")]
-position = Vector2(300, 284)
-
-[node name="StoneGrass3" parent="." unique_id=313641781 instance=ExtResource("5_kffv2")]
-position = Vector2(500, 284)
-
-[node name="StoneGrass4" parent="." unique_id=352235056 instance=ExtResource("5_kffv2")]
-position = Vector2(700, 284)
-
-[node name="StoneGrass5" parent="." unique_id=311447139 instance=ExtResource("5_kffv2")]
-position = Vector2(900, 284)
-
-[node name="StoneGrass6" parent="." unique_id=452981006 instance=ExtResource("5_kffv2")]
-position = Vector2(1100, 284)
-
-[node name="StoneGrass7" parent="." unique_id=1054213375 instance=ExtResource("5_kffv2")]
-position = Vector2(1300, 284)
-
-[node name="StoneGrass8" parent="." unique_id=952489573 instance=ExtResource("5_kffv2")]
-position = Vector2(1500, 284)
-
-[node name="StoneGrass9" parent="." unique_id=1316523448 instance=ExtResource("5_kffv2")]
-position = Vector2(1700, 284)
-
-[node name="Stone" parent="." unique_id=476103673 instance=ExtResource("1_lgq1i")]
-position = Vector2(100, 484)
-
-[node name="Stone2" parent="." unique_id=356439301 instance=ExtResource("1_lgq1i")]
-position = Vector2(300, 484)
-
-[node name="Stone3" parent="." unique_id=10367959 instance=ExtResource("1_lgq1i")]
-position = Vector2(500, 484)
-
-[node name="Stone4" parent="." unique_id=295853083 instance=ExtResource("1_lgq1i")]
-position = Vector2(700, 484)
+[node name="Mine" parent="." unique_id=862780132 instance=ExtResource("3_4hjbm")]
