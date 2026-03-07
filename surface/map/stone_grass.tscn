@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2ymn3we10fvf"]
 
-[ext_resource type="Texture2D" uid="uid://dlvtjvm1hincc" path="res://icon.svg" id="1_tmtth"]
+[ext_resource type="Texture2D" uid="uid://dnck3bitqn415" path="res://map/dirtXstoneblock.png" id="1_tmtth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5ddw"]
 size = Vector2(200, 200)
@@ -10,7 +10,7 @@ size = Vector2(200, 200)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641905734]
 shape = SubResource("RectangleShape2D_n5ddw")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1034833419]
-position = Vector2(-1.513958e-05, 2.8014183e-06)
-scale = Vector2(1.5625, 1.5625001)
+[node name="DirtXstoneblock" type="Sprite2D" parent="." unique_id=1137970762]
+position = Vector2(7.6293945e-06, 0)
+scale = Vector2(4, 4)
 texture = ExtResource("1_tmtth")
