@@ -152,11 +152,11 @@ position = Vector2(1288, 236)
 position = Vector2(1484, 236)
 
 [node name="Spawner" parent="." unique_id=1811073533 instance=ExtResource("2_kj0ke")]
-position = Vector2(96, 592)
+position = Vector2(80, 576)
 frequency = 8.0
 
 [node name="Spawner2" parent="." unique_id=1598350960 instance=ExtResource("2_kj0ke")]
-position = Vector2(1528, 608)
+position = Vector2(1552, 584)
 goleft = true
 startdelay = 4.0
 frequency = 8.0

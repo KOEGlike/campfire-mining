@@ -27,6 +27,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if goleft:
 			player.apply_knockback(Vector2(-1300, 70))
 		else:
-			player.apply_knockback(Vector2(1300, -70))
+			player.apply_knockback(Vector2(1300, 70))
 	
 			
