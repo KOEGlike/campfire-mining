@@ -1,24 +1,6 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene format=3 uid="uid://bogq1dipfgodf"]
-
-[ext_resource type="PackedScene" path="res://map/lavaburst.tscn" id="1_fy3fb"]
-=======
 [gd_scene format=3 uid="uid://c32xpu8o3k00p"]
 
 [ext_resource type="PackedScene" uid="uid://jyehpbffyswk" path="res://map/lavaburst.tscn" id="1_fy3fb"]
->>>>>>> Stashed changes
-=======
-[gd_scene format=3 uid="uid://c32xpu8o3k00p"]
-
-[ext_resource type="PackedScene" uid="uid://jyehpbffyswk" path="res://map/lavaburst.tscn" id="1_fy3fb"]
->>>>>>> Stashed changes
-=======
-[gd_scene format=3 uid="uid://c32xpu8o3k00p"]
-
-[ext_resource type="PackedScene" uid="uid://jyehpbffyswk" path="res://map/lavaburst.tscn" id="1_fy3fb"]
->>>>>>> Stashed changes
 
 [node name="Lava" type="Node2D" unique_id=1021381230]
 
