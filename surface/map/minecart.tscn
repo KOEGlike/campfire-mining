@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxl1eu2y35w1e"]
+
+[ext_resource type="Script" uid="uid://canl2mhct26l7" path="res://map/minecart.gd" id="1_3ehmg"]
+[ext_resource type="Texture2D" uid="uid://ds1kmdhgpyv42" path="res://map/minecart.png" id="2_h8m8s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj0ke"]
+size = Vector2(20, 197)
+
+[node name="MineCart" type="CharacterBody2D" unique_id=558021619]
+script = ExtResource("1_3ehmg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1581880671]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1710475070]
+position = Vector2(184.00002, 24.000004)
+rotation = 0.37551197
+shape = SubResource("RectangleShape2D_kj0ke")
+
+[node name="Minecart" type="Sprite2D" parent="." unique_id=2087125464]
+position = Vector2(109.000015, -91)
+scale = Vector2(8.203995, 8.203995)
+texture = ExtResource("2_h8m8s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=88046924]
+position = Vector2(0, 8)
+polygon = PackedVector2Array(-152, -104, 200, -104, 200, -56, 136, 104, -96, 104, -152, -56)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
