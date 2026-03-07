@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://btpplk1rdmh75"]
 
+[ext_resource type="PackedScene" uid="uid://cxl1eu2y35w1e" path="res://map/minecart.tscn" id="1_rufq2"]
+
 [node name="Mine" type="Node2D" unique_id=862780132]
+
+[node name="MineCart" parent="." unique_id=558021619 instance=ExtResource("1_rufq2")]
+position = Vector2(1096, 264)
+
+[node name="MineCart2" parent="." unique_id=2074118695 instance=ExtResource("1_rufq2")]
+position = Vector2(360, 160)
+scale = Vector2(-1, 1)
+goleft = true
