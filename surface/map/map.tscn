@@ -6,7 +6,11 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dmswn0f3ji8cr" path="res://map/the_hole.tscn" id="4_lgq1i"]
+=======
+[ext_resource type="PackedScene" uid="uid://c32xpu8o3k00p" path="res://map/lavamap.tscn" id="4_lgq1i"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="PackedScene" uid="uid://c32xpu8o3k00p" path="res://map/lavamap.tscn" id="4_lgq1i"]
 >>>>>>> Stashed changes
@@ -37,6 +41,9 @@ position = Vector2(-17, 608)
 position = Vector2(1221, 1137)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
