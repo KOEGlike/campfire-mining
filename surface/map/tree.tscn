@@ -25,15 +25,31 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2),
-"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0, 0.69809955, -0.25, 0, 0.25, 0, 1.3962634, -0.09983334, -0.23271057, 0, 0),
-"times": PackedFloat32Array(0.0009999999, 0.30065542, 0.6)
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0, 1.3962634, -0.09983334, -0.23271057, 0, 0),
+"times": PackedFloat32Array(0.0009999999, 0.6)
+}
+
+[sub_resource type="Animation" id="Animation_3jcs6"]
+resource_name = "tree fall left"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0, -1.396, -0.09983334, -0.23271057, 0, 0),
+"times": PackedFloat32Array(0.0009999999, 0.6)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jcs6"]
 _data = {
 &"RESET": SubResource("Animation_g2vli"),
-&"tree fall": SubResource("Animation_3puuq")
+&"tree fall": SubResource("Animation_3puuq"),
+&"tree fall left": SubResource("Animation_3jcs6")
 }
 
 [node name="Tree" type="StaticBody2D" unique_id=1835523215]
@@ -45,20 +61,16 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_xyaq1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1357108100]
-position = Vector2(72, -150)
+position = Vector2(74, -138)
 shape = SubResource("RectangleShape2D_xyaq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524856722]
-position = Vector2(0, -154)
+position = Vector2(2, -142)
 shape = SubResource("RectangleShape2D_g2vli")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2119576535]
-position = Vector2(-2, -62)
+position = Vector2(0, -50)
 shape = SubResource("RectangleShape2D_3puuq")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=894596082]
-position = Vector2(24, -108)
-polygon = PackedVector2Array(4, 96, 8, 96, 8, 100, 28, 100, 28, 104, 40, 104, 40, 108, -88, 108, -88, 104, -76, 104, -76, 100, -56, 100, -56, 96)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=417996757]
 libraries/ = SubResource("AnimationLibrary_3jcs6")

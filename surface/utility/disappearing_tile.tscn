@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://pi3y7jt45657"]
+
+[ext_resource type="Script" uid="uid://dixgwqnedgl4h" path="res://utility/disappearing_tile.gd" id="1_16xwh"]
+[ext_resource type="PackedScene" uid="uid://cv64aiks2pdga" path="res://utility/wobble.tscn" id="2_16xwh"]
+
+[node name="DisappearingTile" type="Node" unique_id=622804500]
+script = ExtResource("1_16xwh")
+
+[node name="Wobble" parent="." unique_id=1601786016 instance=ExtResource("2_16xwh")]

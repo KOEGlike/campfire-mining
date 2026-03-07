@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://b2ymn3we10fvf"]
 
+[ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="1_liruk"]
 [ext_resource type="Texture2D" uid="uid://dnck3bitqn415" path="res://map/dirtXstoneblock.png" id="1_tmtth"]
+[ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="3_qeddt"]
+[ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="4_qeddt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5ddw"]
 size = Vector2(200, 200)
 
-[node name="StoneGrass" type="StaticBody2D" unique_id=476103673]
+[sub_resource type="Curve" id="Curve_1l71i"]
+_data = [Vector2(0, 0.9912103), 0.0, 0.0, 0, 0, Vector2(0.20502092, 0.9648411), 1.1609374, 1.1609374, 0, 0, Vector2(1, 0.20013523), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="StoneGrass" type="StaticBody2D" unique_id=156727115]
+script = ExtResource("1_liruk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1641905734]
 shape = SubResource("RectangleShape2D_n5ddw")
@@ -14,3 +22,28 @@ shape = SubResource("RectangleShape2D_n5ddw")
 position = Vector2(7.6293945e-06, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("1_tmtth")
+
+[node name="DisappearingTile" parent="." unique_id=622804500 node_paths=PackedStringArray("icon", "collision_shape_2d", "cpu_particles_2d", "node") instance=ExtResource("3_qeddt")]
+icon = NodePath("../DirtXstoneblock")
+collision_shape_2d = NodePath("../CollisionShape2D")
+cpu_particles_2d = NodePath("../CPUParticles2D")
+node = NodePath("..")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=900095638]
+emitting = false
+amount = 6
+texture = ExtResource("4_qeddt")
+lifetime = 0.5
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 3000)
+initial_velocity_min = 456.68
+initial_velocity_max = 456.68
+damping_min = 6.507
+damping_max = 6.507
+angle_min = -101.3
+angle_max = 106.9
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_1l71i")

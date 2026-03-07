@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bar1l5t3bow17"
-path="res://.godot/imported/carttest.webp-97b1f7959e3a2edeba4aced642bcd0ae.ctex"
+uid="uid://c8o8bxtefoir6"
+path="res://.godot/imported/lavaburst.png-c1642ffbfcbe0dfeab696d82b18863d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/carttest.webp"
-dest_files=["res://.godot/imported/carttest.webp-97b1f7959e3a2edeba4aced642bcd0ae.ctex"]
+source_file="res://map/lavaburst.png"
+dest_files=["res://.godot/imported/lavaburst.png-c1642ffbfcbe0dfeab696d82b18863d0.ctex"]
 
 [params]
 
