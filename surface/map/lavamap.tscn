@@ -1,7 +1,11 @@
-[gd_scene format=3 uid="uid://c32xpu8o3k00p"]
+[gd_scene format=3 uid="uid://b7qg714v7shoj"]
 
 [ext_resource type="PackedScene" uid="uid://jyehpbffyswk" path="res://map/lavaburst.tscn" id="1_fy3fb"]
+[ext_resource type="PackedScene" uid="uid://dknjy644nbgvc" path="res://map/lavaburstlong.tscn" id="2_1a4h0"]
 
 [node name="Lava" type="Node2D" unique_id=1021381230]
 
 [node name="Lavaburst" parent="." unique_id=2007224858 instance=ExtResource("1_fy3fb")]
+
+[node name="Lavaburstlong" parent="." unique_id=2128216012 instance=ExtResource("2_1a4h0")]
+position = Vector2(-72, -136)
