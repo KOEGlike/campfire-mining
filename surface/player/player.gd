@@ -9,6 +9,9 @@ var knockback = Vector2.ZERO
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func _process(delta: float) -> void:
+	if _is_crushed():
+		get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
 	# Gravitáció
@@ -21,8 +24,8 @@ func _physics_process(delta: float) -> void:
 
 	# Knockback
 	if knockback.length() > 10.0:
-		velocity.x = knockback.x        # ← X: balra/jobbra lökés
-		velocity.y += knockback.y * delta * 10  # �� Y: felfelé lökés, gravitációval együtt
+		velocity.x = knockback.x # ← X: balra/jobbra lökés
+		velocity.y += knockback.y * delta * 10 # �� Y: felfelé lökés, gravitációval együtt
 		knockback = knockback.move_toward(Vector2.ZERO, 1200 * delta)
 	else:
 		knockback = Vector2.ZERO
@@ -45,7 +48,19 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func _is_crushed() -> bool:
+	if get_slide_collision_count() < 2:
+		return false
+	
+	for i in get_slide_collision_count():
+		for j in range(i + 1, get_slide_collision_count()):
+			var col_a = get_slide_collision(i)
+			var col_b = get_slide_collision(j)
+				# If two collision normals point in roughly opposite directions, player is crushed
+			if col_a.get_normal().dot(col_b.get_normal()) < -0.5:
+				return true
+	return false
 
 func apply_knockback(force: Vector2) -> void:
 	knockback = force
-	velocity= force  # ← AZONNAL felfelé löki, nem várja a következő frame-et!
+	velocity = force # ← AZONNAL felfelé löki, nem várja a következő frame-et!
