@@ -3,7 +3,7 @@ class_name Player
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -550.0
 
 var knockback = Vector2.ZERO
 
@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 	# Knockback
 	if knockback.length() > 10.0:
 		velocity.x = knockback.x # ← X: balra/jobbra lökés
-		velocity.y += knockback.y * delta * 10 # �� Y: felfelé lökés, gravitációval együtt
 		knockback = knockback.move_toward(Vector2.ZERO, 1200 * delta)
 	else:
 		knockback = Vector2.ZERO
