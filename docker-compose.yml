@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./FullServer
+    container_name: campfire-backend
+    ports:
+      - "3412:5000"
+    env_file:
+      - ./FullServer/.env
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
