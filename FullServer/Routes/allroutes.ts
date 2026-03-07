@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { CreateUser, GetRegister } from "../Controllers/Register";
-import { CreateFullScore, GetFullScore } from "../Controllers/scoreboard";
+import { CreateFullScore, GetFullScore } from "../Controllers/Scoreboard";
 
 const router = Router();
 
