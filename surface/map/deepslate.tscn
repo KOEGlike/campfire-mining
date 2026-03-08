@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bhwemhucswoxv"]
+
+[ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="1_wxym3"]
+[ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="2_ki3dt"]
+[ext_resource type="Texture2D" uid="uid://b8dkqcg8r0wol" path="res://map/deepslateblock.png" id="3_doub5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj225"]
+size = Vector2(200, 200)
+
+[sub_resource type="Curve" id="Curve_hmyxm"]
+_data = [Vector2(0, 0.9912103), 0.0, 0.0, 0, 0, Vector2(0.20502092, 0.9648411), 1.1609374, 1.1609374, 0, 0, Vector2(1, 0.20013523), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Deepslate" type="StaticBody2D" unique_id=361091547]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82510106]
+shape = SubResource("RectangleShape2D_qj225")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=726904857]
+emitting = false
+amount = 6
+texture = ExtResource("1_wxym3")
+lifetime = 0.5
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 3000)
+initial_velocity_min = 456.68
+initial_velocity_max = 456.68
+damping_min = 6.507
+damping_max = 6.507
+angle_min = -101.3
+angle_max = 106.9
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_hmyxm")
+
+[node name="DisappearingTile" parent="." unique_id=622804500 node_paths=PackedStringArray("icon", "collision_shape_2d", "cpu_particles_2d", "node") instance=ExtResource("2_ki3dt")]
+icon = NodePath("")
+collision_shape_2d = NodePath("")
+cpu_particles_2d = NodePath("")
+node = NodePath("")
+
+[node name="Deepslateblock" type="Sprite2D" parent="." unique_id=1766548930]
+position = Vector2(-0.24999905, -0.2499938)
+scale = Vector2(4.01, 4.01)
+texture = ExtResource("3_doub5")
