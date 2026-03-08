@@ -8,10 +8,9 @@ script = ExtResource("1_gv6bu")
 
 [node name="Star" type="Sprite2D" parent="." unique_id=575958883]
 position = Vector2(12.400002, -4.8999996)
-scale = Vector2(2, 1.75)
 texture = ExtResource("1_22467")
 
 [node name="Polygon2D" type="CollisionPolygon2D" parent="." unique_id=986776481]
-position = Vector2(0.4000001, -1.8999996)
-scale = Vector2(2, 1.75)
-polygon = PackedVector2Array(9, -3, 9, -1, 10, 0, 15, 0, 15, -1, 16, -5, 15, -5, 13, -5, 11, -5, 12, -7, 14, -3, 13, -2, 10, -2, 11, -5, 8, -5)
+position = Vector2(-1680.0001, 424.00003)
+scale = Vector2(143.70624, 128.51219)
+polygon = PackedVector2Array(11.71835, -0.9648893, 13.945115, 0.15562701, 13.6111, -2.178782, 14.863655, -3.984058, 14.974994, -4.855571, 12.664725, -4.762194, 11.746184, -6.90985, 10.688472, -4.8244452, 8.628714, -4.6999435, 8.54521, -3.984058, 9.909103, -2.5834126, 9.51942, -2.3841858e-07)

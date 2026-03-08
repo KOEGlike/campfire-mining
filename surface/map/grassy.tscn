@@ -213,7 +213,6 @@ position = Vector2(1500, 284)
 position = Vector2(1700, 284)
 
 [node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
-visible = false
 z_index = -2
 z_as_relative = false
 position = Vector2(648, -232)

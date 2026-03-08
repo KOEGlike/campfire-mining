@@ -12,13 +12,13 @@
 position = Vector2(272, 1900)
 
 [node name="Lava" parent="." unique_id=1021381230 instance=ExtResource("4_lgq1i")]
-position = Vector2(276, 4140)
+position = Vector2(948, 4160)
 
 [node name="TheHole" parent="." unique_id=1199586846 instance=ExtResource("5_kffv2")]
 position = Vector2(196, 392)
 
 [node name="Player" parent="." unique_id=874400125 instance=ExtResource("3_lgq1i")]
-position = Vector2(1094, -202)
+position = Vector2(1036, -251)
 
 [node name="Grassy" parent="." unique_id=1120019614 instance=ExtResource("1_a0dt8")]
 position = Vector2(400, -15)
