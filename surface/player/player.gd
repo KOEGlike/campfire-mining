@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -650.0
 
 var knockback = Vector2.ZERO
 var can_move := false
+var _death_handled := false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -14,9 +15,25 @@ func _ready() -> void:
 	add_to_group("player")
 	Manager.registered.connect(func(): can_move = true)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	if _death_handled:
+		return
 	if _is_crushed():
-		Manager.restart()
+		die()
+
+func die() -> void:
+	if _death_handled:
+		return
+	print("[Player] die() triggered")
+	_death_handled = true
+	_handle_death()
+
+func _handle_death() -> void:
+	can_move = false
+	set_physics_process(false)
+	velocity = Vector2.ZERO
+	print("[Player] requesting restart with score submit")
+	Manager.restart(true)
 
 func _physics_process(delta: float) -> void:
 	if not can_move:

@@ -12,6 +12,7 @@ signal the_hole_open()
 signal mine_end()
 signal registered()
 signal score_submitted(response: Dictionary)
+signal full_score_finished(response_code: int, response: Dictionary)
 
 const USER_ID_FILE = "user://user.id"
 
@@ -50,6 +51,7 @@ func _process(delta: float) -> void:
 
 var _time_accumulator: float = 0.0
 var _timeline_run_id: int = 0
+var _restart_in_progress: bool = false
 
 func start_game_timer() -> void:
 	game_time = 0
@@ -129,15 +131,15 @@ func send_name(player_name: String) -> void:
 #  GAME OVER - /CreateFullScore
 # ============================================================
 
-func send_full_score() -> void:
+func send_full_score() -> bool:
 	if user_id == -1:
 		print("[GameManager] No user registered, cannot send score.")
-		return
+		return false
 	if user_alive <= 0:
 		print("[GameManager] No more lives!")
-		return
+		return false
 
-	var url = "https://squid-app-azgji.ondigitalocean.app/CreateFullScore"
+	var url = "https://squid-app-azgji.ondigitalocean.app/createscore"
 	var headers = ["Content-Type: application/json"]
 	var body = JSON.stringify({
 		"userId": user_id,
@@ -148,6 +150,7 @@ func send_full_score() -> void:
 	current_request = RequestType.FULL_SCORE
 	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
 	print("[GameManager] Sending score -> time=", game_time, "s stars=", star_count, " completed=", is_completed)
+	return true
 
 # ============================================================
 #  HTTP RESPONSE KEZELÉS
@@ -161,9 +164,16 @@ func _on_request_completed(_result: int, response_code: int, _headers: PackedStr
 		RequestType.REGISTER:
 			_handle_register_response(response_code, body_text)
 		RequestType.FULL_SCORE:
-			_handle_full_score_response(response_code, body_text)
+			var response_data := _handle_full_score_response(response_code, body_text)
+			full_score_finished.emit(response_code, response_data)
 
 	current_request = RequestType.NONE
+
+func _extract_response_payload(root: Dictionary) -> Dictionary:
+	var payload = root.get("Data", root.get("data", root))
+	if payload is Dictionary:
+		return payload
+	return root
 
 func _handle_register_response(response_code: int, body_text: String) -> void:
 	if response_code != 200:
@@ -176,31 +186,37 @@ func _handle_register_response(response_code: int, body_text: String) -> void:
 		print("[GameManager] Failed to parse register response.")
 		return
 
-	var data = json.data
+	var root: Dictionary = json.data
+	var data := _extract_response_payload(root)
 	user_id = int(data.get("id", -1))
-	user_name = data.get("name", "")
+	user_name = str(data.get("name", ""))
 	user_alive = int(data.get("allive", data.get("alive", -1)))
+
+	if user_id == -1:
+		print("[GameManager] Register response missing valid user id.")
+		return
 
 	save_user_data()
 	print("[GameManager] Registered! id=", user_id, " name=", user_name, " alive=", user_alive)
 	registered.emit()
 
-func _handle_full_score_response(response_code: int, body_text: String) -> void:
+func _handle_full_score_response(response_code: int, body_text: String) -> Dictionary:
 	var json = JSON.new()
 	var error = json.parse(body_text)
 	if error != OK:
 		print("[GameManager] Failed to parse score response.")
-		return
+		return {}
 
-	var data: Dictionary = json.data
+	var root: Dictionary = json.data
+	var data := _extract_response_payload(root)
 
 	if response_code == 403:
 		user_alive = 0
 		save_user_data()
-		return
+		return data
 
 	if response_code != 200:
-		return
+		return data
 
 	if data.has("remainingLives"):
 		user_alive = int(data["remainingLives"])
@@ -208,8 +224,9 @@ func _handle_full_score_response(response_code: int, body_text: String) -> void:
 		user_alive -= 1
 	save_user_data()
 
-	score_submitted.emit(data)
-	print("[GameManager] Server: ", data.get("message", ""))
+	score_submitted.emit(root)
+	print("[GameManager] Server: ", root.get("message", data.get("message", "")))
+	return data
 
 # ============================================================
 #  TIMELINE
@@ -259,6 +276,22 @@ func _reset_runtime_state() -> void:
 		http_request.cancel_request()
 	current_request = RequestType.NONE
 
-func restart() -> void:
+func restart(submit_score: bool = true) -> void:
+	if _restart_in_progress:
+		return
+	_restart_in_progress = true
+	print("[GameManager] restart() called submit_score=", submit_score, " game_running=", game_running, " is_completed=", is_completed, " user_id=", user_id, " alive=", user_alive)
+
+	if submit_score and not is_completed:
+		if game_running:
+			stop_game_timer(false)
+		print("[GameManager] restart() death flow: trying score submit before reload")
+		var request_started := send_full_score()
+		if request_started:
+			await full_score_finished
+		else:
+			print("[GameManager] restart() score submit skipped (missing user or no lives)")
+
 	_reset_runtime_state()
+	_restart_in_progress = false
 	get_tree().call_deferred("reload_current_scene")
