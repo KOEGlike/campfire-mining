@@ -10,8 +10,8 @@ export const CreateUser = async (
   try {
     const { name } = req.body;
     if (name) {
-      await serverdb.insert(User).values({ name });
-      res.status(200).json({ message: "success", success: true, name: name });
+      const newUser = await serverdb.insert(User).values({ name }).returning();
+      res.status(200).json({ message: "success", success: true, Data: newUser[0] });
     }
   } catch (error) {
     next(error);
