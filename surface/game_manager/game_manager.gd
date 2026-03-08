@@ -23,13 +23,13 @@ var user_alive: int = -1
 # ============================================================
 #  JÁTÉK VÁLTOZÓK
 # ============================================================
-var game_time: int = 0          # másodpercekben (1mp-ként nő 1-gyel)
-var star_count: int = 0         # összegyűjtött csillagok
-var is_completed: bool = false  # végigcsinálta-e a pályát
-var game_running: bool = false  # fut-e a timer
+var game_time: int = 0 # másodpercekben (1mp-ként nő 1-gyel)
+var star_count: int = 0 # összegyűjtött csillagok
+var is_completed: bool = false # végigcsinálta-e a pályát
+var game_running: bool = false # fut-e a timer
 
 # Melyik request van folyamatban
-enum RequestType { NONE, REGISTER, FULL_SCORE }
+enum RequestType {NONE, REGISTER, FULL_SCORE}
 var current_request: RequestType = RequestType.NONE
 
 func _ready() -> void:
@@ -108,6 +108,8 @@ func load_user_data() -> void:
 			print("[GameManager] Failed to parse user data.")
 
 func has_saved_user() -> bool:
+	if user_id == -1 and FileAccess.file_exists(USER_ID_FILE):
+		load_user_data()
 	return user_id != -1
 
 # ============================================================

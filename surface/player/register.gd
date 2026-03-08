@@ -6,13 +6,16 @@ extends Control
 func _ready() -> void:
 	button.pressed.connect(_on_submit)
 	Manager.registered.connect(_on_registered)
+	Manager.load_user_data()
 
 	# Ha már van mentett user, skip registration
-	if Manager.has_saved_user():
+	if Manager.user_id != -1:
 		print("[Register] Already registered as: ", Manager.user_name)
 		visible = false
-		Manager.registered.emit()
-		Manager.timeline()
+		call_deferred("_resume_with_saved_user")
+
+func _resume_with_saved_user() -> void:
+	Manager.registered.emit()
 
 func _on_submit() -> void:
 	var player_name = line_edit.text.strip_edges()
