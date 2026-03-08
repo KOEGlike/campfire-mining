@@ -10,9 +10,10 @@ signal the_hole_start()
 signal the_hole_open()
 
 
-
-
-func _ready():
+func _ready() -> void:
+	timeline()
+	
+func timeline():
 	await get_tree().create_timer(2).timeout
 	start_earthquake.emit()
 	await get_tree().create_timer(1).timeout
@@ -24,3 +25,6 @@ func _ready():
 	await get_tree().create_timer(3).timeout
 	the_hole_open.emit()
 	
+func restart():
+	get_tree().reload_current_scene()
+	timeline()

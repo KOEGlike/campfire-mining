@@ -11,7 +11,7 @@ var knockback = Vector2.ZERO
 
 func _process(delta: float) -> void:
 	if _is_crushed():
-		get_tree().reload_current_scene()
+		Manager.restart()
 
 func _physics_process(delta: float) -> void:
 	# Gravitáció
