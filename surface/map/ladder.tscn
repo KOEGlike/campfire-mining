@@ -15,3 +15,138 @@ texture = ExtResource("1_fvgfa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=484808380]
 position = Vector2(122, 44)
 shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder2" type="Sprite2D" parent="." unique_id=363719706]
+position = Vector2(122, -19)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=928711515]
+position = Vector2(122, -20)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder3" type="Sprite2D" parent="." unique_id=147765096]
+position = Vector2(122, -83)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=509004389]
+position = Vector2(122, -84)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder4" type="Sprite2D" parent="." unique_id=1662678307]
+position = Vector2(122, -147)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=873982311]
+position = Vector2(122, -148)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder5" type="Sprite2D" parent="." unique_id=1840192871]
+position = Vector2(122, -211)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1343841550]
+position = Vector2(122, -212)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder6" type="Sprite2D" parent="." unique_id=725158097]
+position = Vector2(122, -275)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=947664437]
+position = Vector2(122, -276)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder7" type="Sprite2D" parent="." unique_id=977611608]
+position = Vector2(122, -339)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=635670970]
+position = Vector2(122, -340)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder8" type="Sprite2D" parent="." unique_id=1766394479]
+position = Vector2(122, -403)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="." unique_id=1783373988]
+position = Vector2(122, -404)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder9" type="Sprite2D" parent="." unique_id=1241791607]
+position = Vector2(122, -467)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="." unique_id=1201582867]
+position = Vector2(122, -468)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder10" type="Sprite2D" parent="." unique_id=393396462]
+position = Vector2(122, -531)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="." unique_id=304181326]
+position = Vector2(122, -532)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder11" type="Sprite2D" parent="." unique_id=1228208254]
+position = Vector2(122, -595)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="." unique_id=818718551]
+position = Vector2(122, -596)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder12" type="Sprite2D" parent="." unique_id=998204115]
+position = Vector2(122, -659)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="." unique_id=726314505]
+position = Vector2(122, -660)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder13" type="Sprite2D" parent="." unique_id=423951390]
+position = Vector2(122, -723)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="." unique_id=1233451439]
+position = Vector2(122, -724)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder14" type="Sprite2D" parent="." unique_id=1484930395]
+position = Vector2(122, -787)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="." unique_id=100496665]
+position = Vector2(122, -788)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder15" type="Sprite2D" parent="." unique_id=1144761675]
+position = Vector2(122, -851)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="." unique_id=1717715053]
+position = Vector2(122, -852)
+shape = SubResource("RectangleShape2D_fvgfa")
+
+[node name="Ladder16" type="Sprite2D" parent="." unique_id=1478581738]
+position = Vector2(122, -915)
+scale = Vector2(4, 4)
+texture = ExtResource("1_fvgfa")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="." unique_id=739691895]
+position = Vector2(122, -916)
+shape = SubResource("RectangleShape2D_fvgfa")

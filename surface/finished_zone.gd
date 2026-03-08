@@ -11,8 +11,8 @@ func _on_body_entered(body: Node2D) -> void:
 		print("PLAYER DETECTED!")
 		
 		var ladder = ladder_scene.instantiate()
-		ladder.global_position = body.global_position - Vector2(0, 30)
 		get_parent().add_child(ladder)
+		ladder.global_position = body.global_position - Vector2(0, 30)
 		print("LADDER SPAWNED at: ", ladder.global_position)
 		
 		body.set_physics_process(false)
