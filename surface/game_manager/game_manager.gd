@@ -33,6 +33,9 @@ var game_running: bool = false # fut-e a timer
 # Melyik request van folyamatban
 enum RequestType {NONE, REGISTER, FULL_SCORE}
 var current_request: RequestType = RequestType.NONE
+var _register_name_pending: String = ""
+var _register_url_candidates: Array[String] = []
+var _register_url_index: int = 0
 
 func _ready() -> void:
 	http_request.request_completed.connect(_on_request_completed)
@@ -120,13 +123,34 @@ func has_saved_user() -> bool:
 # ============================================================
 
 func send_name(player_name: String) -> void:
-	var url = "https://squid-app-azgji.ondigitalocean.app/CreateUser"
+	_register_name_pending = player_name
+	_register_url_candidates = [
+		"https://squid-app-azgji.ondigitalocean.app/CreateUser",
+		"https://squid-app-azgji.ondigitalocean.app/createuser"
+	]
+	_register_url_index = 0
+	_send_register_request()
+
+func _send_register_request() -> void:
+	if _register_url_index >= _register_url_candidates.size():
+		print("[GameManager] Register failed: no endpoints left to try.")
+		return
+
+	var url = _register_url_candidates[_register_url_index]
 	var headers = ["Content-Type: application/json"]
 	var body = JSON.stringify({
-		"name": player_name
+		"name": _register_name_pending
 	})
+
 	current_request = RequestType.REGISTER
-	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
+	var request_error := http_request.request(url, headers, HTTPClient.METHOD_POST, body)
+	if request_error != OK:
+		print("[GameManager] Register request start failed (", request_error, "): ", error_string(request_error), " endpoint=", url)
+		_register_url_index += 1
+		_send_register_request()
+		return
+
+	print("[GameManager] Register request sent -> ", url)
 
 # ============================================================
 #  GAME OVER - /CreateFullScore
@@ -163,15 +187,15 @@ func show_end_screen(completed: bool, score_was_submitted: bool) -> void:
 #  HTTP RESPONSE KEZELÉS
 # ============================================================
 
-func _on_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+func _on_request_completed(result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var body_text = body.get_string_from_utf8()
-	print("[GameManager] Response (", response_code, "): ", body_text)
+	print("[GameManager] Response (result=", result, " code=", response_code, "): ", body_text)
 
 	match current_request:
 		RequestType.REGISTER:
-			_handle_register_response(response_code, body_text)
+			_handle_register_response(result, response_code, body_text)
 		RequestType.FULL_SCORE:
-			var response_data := _handle_full_score_response(response_code, body_text)
+			var response_data := _handle_full_score_response(result, response_code, body_text)
 			full_score_finished.emit(response_code, response_data)
 
 	current_request = RequestType.NONE
@@ -182,9 +206,23 @@ func _extract_response_payload(root: Dictionary) -> Dictionary:
 		return payload
 	return root
 
-func _handle_register_response(response_code: int, body_text: String) -> void:
+func _handle_register_response(result: int, response_code: int, body_text: String) -> void:
+	if result != HTTPRequest.RESULT_SUCCESS:
+		print("[GameManager] Register transport error: ", _http_result_to_text(result), " (", result, ")")
+		_register_url_index += 1
+		if _register_url_index < _register_url_candidates.size():
+			print("[GameManager] Retrying register with fallback endpoint...")
+			_send_register_request()
+			return
+		print("[GameManager] Register failed after all endpoints. Last result=", result)
+		return
+
 	if response_code != 200:
 		print("[GameManager] Register failed: ", response_code)
+		_register_url_index += 1
+		if _register_url_index < _register_url_candidates.size():
+			print("[GameManager] Retrying register with fallback endpoint...")
+			_send_register_request()
 		return
 
 	var json = JSON.new()
@@ -206,8 +244,15 @@ func _handle_register_response(response_code: int, body_text: String) -> void:
 	save_user_data()
 	print("[GameManager] Registered! id=", user_id, " name=", user_name, " alive=", user_alive)
 	registered.emit()
+	_register_name_pending = ""
+	_register_url_candidates.clear()
+	_register_url_index = 0
 
-func _handle_full_score_response(response_code: int, body_text: String) -> Dictionary:
+func _handle_full_score_response(result: int, response_code: int, body_text: String) -> Dictionary:
+	if result != HTTPRequest.RESULT_SUCCESS:
+		print("[GameManager] Score submit transport error: ", _http_result_to_text(result), " (", result, ")")
+		return {}
+
 	var json = JSON.new()
 	var error = json.parse(body_text)
 	if error != OK:
@@ -234,6 +279,39 @@ func _handle_full_score_response(response_code: int, body_text: String) -> Dicti
 	score_submitted.emit(root)
 	print("[GameManager] Server: ", root.get("message", data.get("message", "")))
 	return data
+
+func _http_result_to_text(result: int) -> String:
+	match result:
+		HTTPRequest.RESULT_SUCCESS:
+			return "RESULT_SUCCESS"
+		HTTPRequest.RESULT_CHUNKED_BODY_SIZE_MISMATCH:
+			return "RESULT_CHUNKED_BODY_SIZE_MISMATCH"
+		HTTPRequest.RESULT_CANT_CONNECT:
+			return "RESULT_CANT_CONNECT"
+		HTTPRequest.RESULT_CANT_RESOLVE:
+			return "RESULT_CANT_RESOLVE"
+		HTTPRequest.RESULT_CONNECTION_ERROR:
+			return "RESULT_CONNECTION_ERROR"
+		HTTPRequest.RESULT_TLS_HANDSHAKE_ERROR:
+			return "RESULT_TLS_HANDSHAKE_ERROR"
+		HTTPRequest.RESULT_NO_RESPONSE:
+			return "RESULT_NO_RESPONSE"
+		HTTPRequest.RESULT_BODY_SIZE_LIMIT_EXCEEDED:
+			return "RESULT_BODY_SIZE_LIMIT_EXCEEDED"
+		HTTPRequest.RESULT_BODY_DECOMPRESS_FAILED:
+			return "RESULT_BODY_DECOMPRESS_FAILED"
+		HTTPRequest.RESULT_REQUEST_FAILED:
+			return "RESULT_REQUEST_FAILED"
+		HTTPRequest.RESULT_DOWNLOAD_FILE_CANT_OPEN:
+			return "RESULT_DOWNLOAD_FILE_CANT_OPEN"
+		HTTPRequest.RESULT_DOWNLOAD_FILE_WRITE_ERROR:
+			return "RESULT_DOWNLOAD_FILE_WRITE_ERROR"
+		HTTPRequest.RESULT_REDIRECT_LIMIT_REACHED:
+			return "RESULT_REDIRECT_LIMIT_REACHED"
+		HTTPRequest.RESULT_TIMEOUT:
+			return "RESULT_TIMEOUT"
+		_:
+			return "RESULT_UNKNOWN"
 
 # ============================================================
 #  TIMELINE
