@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://c7mv5or3y1hkt" path="res://map/surfacestones.gd" id="2_fv5y6"]
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="2_r5i85"]
 [ext_resource type="PackedScene" uid="uid://b2ymn3we10fvf" path="res://map/stone_grass.tscn" id="3_fv5y6"]
+[ext_resource type="Texture2D" uid="uid://1xek2wgf6e" path="res://map/sunnybackg.png" id="6_fv5y6"]
 
 [node name="Grassy" type="Node2D" unique_id=1120019614]
 
@@ -76,6 +77,24 @@ position = Vector2(-96, 84)
 [node name="StoneGrass10" parent="Blocks" unique_id=156727115 instance=ExtResource("3_fv5y6")]
 position = Vector2(-300, 284)
 
+[node name="GrassyField14" parent="Blocks" unique_id=275543771 instance=ExtResource("2_30474")]
+position = Vector2(-496, 84)
+
+[node name="StoneGrass14" parent="Blocks" unique_id=32107745 instance=ExtResource("3_fv5y6")]
+position = Vector2(-500, 284)
+
+[node name="GrassyField15" parent="Blocks" unique_id=448195982 instance=ExtResource("2_30474")]
+position = Vector2(-696, 84)
+
+[node name="StoneGrass15" parent="Blocks" unique_id=56258021 instance=ExtResource("3_fv5y6")]
+position = Vector2(-700, 284)
+
+[node name="GrassyField16" parent="Blocks" unique_id=1680109942 instance=ExtResource("2_30474")]
+position = Vector2(2304, 84)
+
+[node name="StoneGrass16" parent="Blocks" unique_id=464477417 instance=ExtResource("3_fv5y6")]
+position = Vector2(2300, 284)
+
 [node name="StoneGrass11" parent="Blocks" unique_id=44163865 instance=ExtResource("3_fv5y6")]
 position = Vector2(-100, 284)
 
@@ -114,3 +133,9 @@ position = Vector2(1500, 284)
 
 [node name="StoneGrass9" parent="Blocks" unique_id=1196158713 instance=ExtResource("3_fv5y6")]
 position = Vector2(1700, 284)
+
+[node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
+z_index = -1
+position = Vector2(904.00006, -524)
+scale = Vector2(5, 5)
+texture = ExtResource("6_fv5y6")
