@@ -6,7 +6,11 @@ import { router as allRoutes } from "./Routes/allroutes";
 const app = express();
 
 app.use(cors({
-  origin: "https://phgjaqmakdewq.ok.kimi.link",
+  origin: ["https://phgjaqmakdewq.ok.kimi.link" , "http://localhost:3000",
+    "http://localhost:5173",
+    "http://localhost:8060",
+    "https://koeglike.itch.io",
+    "http://127.0.0.1:5173",],
   credentials: true
 }));
 
