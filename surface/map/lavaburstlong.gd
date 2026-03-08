@@ -19,4 +19,5 @@ func _on_animation_finished(_anim_name: StringName) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Manager.restart()
+		var player: Player = body
+		player.die()
