@@ -24,6 +24,8 @@ func _on_body_entered(body: Node2D) -> void:
 		var request_started := Manager.send_full_score()
 		if request_started:
 			await Manager.full_score_finished
+
+		await Manager.show_end_screen(true, request_started)
 		
 		await get_tree().create_timer(1.0).timeout
 		get_tree().paused = true
