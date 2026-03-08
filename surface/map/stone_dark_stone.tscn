@@ -41,7 +41,7 @@ scale_amount_min = 0.0
 scale_amount_curve = SubResource("Curve_s5t46")
 
 [node name="DisappearingTile" parent="." unique_id=622804500 node_paths=PackedStringArray("icon", "collision_shape_2d", "cpu_particles_2d", "node") instance=ExtResource("3_e2c1r")]
-icon = NodePath("")
-collision_shape_2d = NodePath("")
-cpu_particles_2d = NodePath("")
-node = NodePath("")
+icon = NodePath("../Stoneblock")
+collision_shape_2d = NodePath("../CollisionShape2D")
+cpu_particles_2d = NodePath("../CPUParticles2D")
+node = NodePath("..")

@@ -36,10 +36,10 @@ scale_amount_min = 0.0
 scale_amount_curve = SubResource("Curve_hmyxm")
 
 [node name="DisappearingTile" parent="." unique_id=622804500 node_paths=PackedStringArray("icon", "collision_shape_2d", "cpu_particles_2d", "node") instance=ExtResource("2_ki3dt")]
-icon = NodePath("")
-collision_shape_2d = NodePath("")
-cpu_particles_2d = NodePath("")
-node = NodePath("")
+icon = NodePath("../Deepslateblock")
+collision_shape_2d = NodePath("../CollisionShape2D")
+cpu_particles_2d = NodePath("../CPUParticles2D")
+node = NodePath("..")
 
 [node name="Deepslateblock" type="Sprite2D" parent="." unique_id=1766548930]
 position = Vector2(-0.24999905, -0.2499938)
