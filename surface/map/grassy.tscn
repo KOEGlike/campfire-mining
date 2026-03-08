@@ -139,3 +139,15 @@ z_index = -1
 position = Vector2(904.00006, -524)
 scale = Vector2(5, 5)
 texture = ExtResource("6_fv5y6")
+
+[node name="Sunnybackg2" type="Sprite2D" parent="." unique_id=696622639]
+z_index = -1
+position = Vector2(-1580, -500)
+scale = Vector2(5, 5)
+texture = ExtResource("6_fv5y6")
+
+[node name="Sunnybackg3" type="Sprite2D" parent="." unique_id=1624523866]
+z_index = -1
+position = Vector2(3367.9995, -548)
+scale = Vector2(5, 5)
+texture = ExtResource("6_fv5y6")
