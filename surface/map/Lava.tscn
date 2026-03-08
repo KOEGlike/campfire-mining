@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://oaymtvs1qidb"]
+
+[ext_resource type="Texture2D" uid="uid://by80t1kbpofau" path="res://map/lava.png" id="1_t7giu"]
+
+[node name="Lava" type="Node2D" unique_id=1371657347]
+
+[node name="Lava" type="Sprite2D" parent="." unique_id=958691096]
+scale = Vector2(4, 4)
+texture = ExtResource("1_t7giu")

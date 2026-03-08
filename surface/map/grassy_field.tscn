@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://ci4ltd2r4rb70" path="res://map/dirtblock.png" id="1_3osnp"]
 [ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="1_cdeqg"]
 [ext_resource type="PackedScene" uid="uid://pi3y7jt45657" path="res://utility/disappearing_tile.tscn" id="3_gsijt"]
-[ext_resource type="PackedScene" uid="uid://chswk4gj0x6hv" path="res://utility/slicer.tscn" id="4_yma70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qokvk"]
 size = Vector2(200, 168)
@@ -14,7 +13,6 @@ point_count = 3
 
 [node name="GrassyField" type="StaticBody2D" unique_id=69348105]
 script = ExtResource("1_cdeqg")
-disappear = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=353336609]
 position = Vector2(-4, 15.999996)
@@ -50,5 +48,3 @@ icon = NodePath("../Icon")
 collision_shape_2d = NodePath("../CollisionShape2D")
 cpu_particles_2d = NodePath("../CPUParticles2D")
 node = NodePath("..")
-
-[node name="Slicer" parent="." unique_id=1479954601 instance=ExtResource("4_yma70")]

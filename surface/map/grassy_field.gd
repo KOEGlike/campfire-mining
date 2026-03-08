@@ -4,10 +4,7 @@ extends StaticBody2D
 @export var slice: bool
 
 @onready var disappearing_tile: DisappearingTile = $DisappearingTile
-@onready var ground_slicer: GroundSlicer = $Slicer
 
 func _ready() -> void:
 	if disappear:
 		Manager.surface_ground_fall.connect(disappearing_tile.disappear)
-	if slice:
-		Manager.surface_ground_fall.connect(ground_slicer.start_slice)
