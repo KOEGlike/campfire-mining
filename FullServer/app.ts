@@ -1,8 +1,14 @@
 import express from "express";
+import cors from "cors";
 import { errorHandler } from "./Middlewares/ErrorHandler";
 import { router as allRoutes } from "./Routes/allroutes";
 
 const app = express();
+
+app.use(cors({
+  origin: "https://phgjaqmakdewq.ok.kimi.link",
+  credentials: true
+}));
 
 app.use(express.json());
 
