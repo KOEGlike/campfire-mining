@@ -5,4 +5,4 @@
 [node name="Root" type="Node2D" unique_id=1342942024]
 
 [node name="Map" parent="." unique_id=1692179795 instance=ExtResource("2_0xm2m")]
-position = Vector2(-88, -220)
+position = Vector2(-10, -484)
