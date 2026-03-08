@@ -15,6 +15,7 @@ signal score_submitted(response: Dictionary)
 signal full_score_finished(response_code: int, response: Dictionary)
 
 const USER_ID_FILE = "user://user.id"
+const END_SCREEN_SCENE: PackedScene = preload("res://ui/EndScreen.tscn")
 
 # Memóriában tárolt user adatok
 var user_id: int = -1
@@ -152,6 +153,12 @@ func send_full_score() -> bool:
 	print("[GameManager] Sending score -> time=", game_time, "s stars=", star_count, " completed=", is_completed)
 	return true
 
+func show_end_screen(completed: bool, score_was_submitted: bool) -> void:
+	var end_screen := END_SCREEN_SCENE.instantiate() as EndScreen
+	get_tree().root.add_child(end_screen)
+	end_screen.setup(completed, star_count, user_alive, score_was_submitted)
+	await end_screen.closed
+
 # ============================================================
 #  HTTP RESPONSE KEZELÉS
 # ============================================================
@@ -282,15 +289,19 @@ func restart(submit_score: bool = true) -> void:
 	_restart_in_progress = true
 	print("[GameManager] restart() called submit_score=", submit_score, " game_running=", game_running, " is_completed=", is_completed, " user_id=", user_id, " alive=", user_alive)
 
+	var score_was_submitted := false
 	if submit_score and not is_completed:
 		if game_running:
 			stop_game_timer(false)
 		print("[GameManager] restart() death flow: trying score submit before reload")
 		var request_started := send_full_score()
+		score_was_submitted = request_started
 		if request_started:
 			await full_score_finished
 		else:
 			print("[GameManager] restart() score submit skipped (missing user or no lives)")
+
+	await show_end_screen(false, score_was_submitted)
 
 	_reset_runtime_state()
 	_restart_in_progress = false
