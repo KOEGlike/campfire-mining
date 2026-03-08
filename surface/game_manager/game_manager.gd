@@ -49,6 +49,7 @@ func _process(delta: float) -> void:
 		game_time += 1
 
 var _time_accumulator: float = 0.0
+var _timeline_run_id: int = 0
 
 func start_game_timer() -> void:
 	game_time = 0
@@ -213,22 +214,49 @@ func _handle_full_score_response(response_code: int, body_text: String) -> void:
 # ============================================================
 
 func timeline() -> void:
+	_timeline_run_id += 1
+	var run_id := _timeline_run_id
+
 	await get_tree().create_timer(2).timeout
+	if run_id != _timeline_run_id:
+		return
 	start_earthquake.emit()
 	await get_tree().create_timer(1).timeout
+	if run_id != _timeline_run_id:
+		return
 	surface_ground_fall.emit()
 	await get_tree().create_timer(2).timeout
+	if run_id != _timeline_run_id:
+		return
 	surface_tree_fall.emit()
 	await get_tree().create_timer(1).timeout
+	if run_id != _timeline_run_id:
+		return
 	the_hole_start.emit()
 	await get_tree().create_timer(12).timeout
+	if run_id != _timeline_run_id:
+		return
 	the_hole_open.emit()
 
 	# >>> ITT INDUL A JÁTÉK TIMER <<<
 	start_game_timer()
 
 	await get_tree().create_timer(15).timeout
+	if run_id != _timeline_run_id:
+		return
 	mine_end.emit()
 
+func _reset_runtime_state() -> void:
+	_timeline_run_id += 1
+	game_running = false
+	game_time = 0
+	star_count = 0
+	is_completed = false
+	_time_accumulator = 0.0
+	if current_request != RequestType.NONE:
+		http_request.cancel_request()
+	current_request = RequestType.NONE
+
 func restart() -> void:
-	get_tree().reload_current_scene()
+	_reset_runtime_state()
+	get_tree().call_deferred("reload_current_scene")

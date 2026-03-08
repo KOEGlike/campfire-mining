@@ -11,6 +11,7 @@ func _ready() -> void:
 	if Manager.has_saved_user():
 		print("[Register] Already registered as: ", Manager.user_name)
 		visible = false
+		Manager.registered.emit()
 		Manager.timeline()
 
 func _on_submit() -> void:
