@@ -1,53 +1,23 @@
 extends Area2D
 
-@export var jump_height: float = 30.0
-@export var jump_speed: float = 5.0
-@export var pause_time: float = 1.0
-@export var fall_speed: float = 200.0
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var _start_y: float
-var _current_y: float
-var _time: float = 0.0
-var _paused: bool = true
-var _pause_timer: float = 0.0
-var _falling: bool = false
+@export var min_wait: float = 1.0
+@export var max_wait: float = 5.0
 
 func _ready() -> void:
-	_start_y = global_position.y
-	body_entered.connect(_on_body_entered)
-	_pause_timer = pause_time
+	animation_player.animation_finished.connect(_on_animation_finished)
+	_start_random_wait()
 
-func _process(delta: float) -> void:
-	if _paused:
-		scale.y = 1.0
-		global_position.y = _start_y
-		_pause_timer -= delta
-		if _pause_timer <= 0.0:
-			_paused = false
-			_falling = false
-			_time = 0.0
-		return
+func _start_random_wait() -> void:
+	var wait_time := randf_range(min_wait, max_wait)
+	await get_tree().create_timer(wait_time).timeout
+	if is_inside_tree():
+		animation_player.play("Popup")
 
-	if _falling:
-		scale.y = -1.0
-		_current_y += fall_speed * delta
-		global_position.y = _current_y
-		if global_position.y >= _start_y:
-			global_position.y = _start_y
-			scale.y = 1.0
-			_paused = true
-			_pause_timer = pause_time
-		return
-
-	scale.y = 1.0
-	_time += delta * jump_speed
-
-	if _time >= PI / 2.0:
-		_falling = true
-		_current_y = global_position.y
-	else:
-		global_position.y = _start_y - sin(_time) * jump_height
+func _on_animation_finished(_anim_name: StringName) -> void:
+	_start_random_wait()
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		get_tree().reload_current_scene()
+	if body is Player:
+		Manager.restart()

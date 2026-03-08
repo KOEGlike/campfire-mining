@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://chswk4gj0x6hv"]
-
-[ext_resource type="Script" uid="uid://disft04s5hq77" path="res://utility/slicer.gd" id="1_ahnkg"]
-
-[node name="Slicer" type="Node" unique_id=1479954601]
-script = ExtResource("1_ahnkg")
