@@ -136,3 +136,6 @@ sprite_frames = SubResource("SpriteFrames_ebec5")
 animation = &"jump_walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1372765547]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=916505555]
+current = true

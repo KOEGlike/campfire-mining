@@ -1,8 +1,21 @@
 [gd_scene format=3 uid="uid://bt80hs87sfnqv"]
 
 [ext_resource type="PackedScene" uid="uid://d0hhrrabbq7ho" path="res://map/map.tscn" id="2_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://bj2gx8drurbb5" path="res://toby fox - UNDERTALE Soundtrack - 65 CORE.mp3" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://ct0iij7v878pb" path="res://toby_fox_undertale_soundtrack_65_core.gd" id="3_1bvp3"]
 
 [node name="Root" type="Node2D" unique_id=1342942024]
 
 [node name="Map" parent="." unique_id=1692179795 instance=ExtResource("2_0xm2m")]
 position = Vector2(399, -527)
+
+[node name="TobyFoxUndertaleSoundtrack65Core" type="AudioStreamPlayer2D" parent="." unique_id=2031776442]
+position = Vector2(4884, 948)
+stream = ExtResource("2_h2yge")
+volume_db = 7.605
+autoplay = true
+max_distance = 6145.0
+attenuation = 1.4738987e-05
+script = ExtResource("3_1bvp3")
+
+[connection signal="finished" from="TobyFoxUndertaleSoundtrack65Core" to="TobyFoxUndertaleSoundtrack65Core" method="_on_finished"]
