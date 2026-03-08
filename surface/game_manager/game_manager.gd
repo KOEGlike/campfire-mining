@@ -27,7 +27,7 @@ func timeline():
 	surface_tree_fall.emit()
 	await get_tree().create_timer(1).timeout
 	the_hole_start.emit()
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(12).timeout
 	the_hole_open.emit()
 	
 func restart():
