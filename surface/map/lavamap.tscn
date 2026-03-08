@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cab3wgsj28lsq" path="res://map/lava2.png" id="6_jcp0r"]
 [ext_resource type="PackedScene" uid="uid://bhwemhucswoxv" path="res://map/deepslate.tscn" id="7_ai5kx"]
 [ext_resource type="PackedScene" uid="uid://oaymtvs1qidb" path="res://map/Lava.tscn" id="8_e3w84"]
+[ext_resource type="PackedScene" uid="uid://d3or311exks87" path="res://FinishedZone.tscn" id="9_jcp0r"]
+[ext_resource type="PackedScene" uid="uid://byob4262rtf86" path="res://map/ladder.tscn" id="10_h3q3e"]
+[ext_resource type="PackedScene" uid="uid://mnsu6bljrs0e" path="res://Star.tscn" id="11_l1l63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3q3e"]
 size = Vector2(74, 26)
@@ -594,3 +597,11 @@ position = Vector2(2884, 272)
 
 [node name="Lava28" parent="blocks" unique_id=422499905 instance=ExtResource("8_e3w84")]
 position = Vector2(3084, 272)
+
+[node name="FinishedZone" parent="." unique_id=1008965861 instance=ExtResource("9_jcp0r")]
+position = Vector2(2752, -740)
+ladder_scene = ExtResource("10_h3q3e")
+
+[node name="Star" parent="." unique_id=966012803 instance=ExtResource("11_l1l63")]
+position = Vector2(2088, -808)
+scale = Vector2(0.1, 0.1)

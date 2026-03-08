@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://mnsu6bljrs0e"]
 
+[ext_resource type="Texture2D" uid="uid://c3h1i6xrd6bke" path="res://map/star.png" id="1_22467"]
+[ext_resource type="Script" uid="uid://boepn8vdd28ix" path="res://star.gd" id="1_gv6bu"]
+
 [node name="Star" type="Area2D" unique_id=966012803]
+script = ExtResource("1_gv6bu")
+
+[node name="Star" type="Sprite2D" parent="." unique_id=575958883]
+position = Vector2(12.400002, -4.8999996)
+scale = Vector2(2, 1.75)
+texture = ExtResource("1_22467")
 
 [node name="Polygon2D" type="CollisionPolygon2D" parent="." unique_id=986776481]
-polygon = PackedVector2Array(0, 1, 17, -15, 21, 3)
+position = Vector2(0.4000001, -1.8999996)
+scale = Vector2(2, 1.75)
+polygon = PackedVector2Array(9, -3, 9, -1, 10, 0, 15, 0, 15, -1, 16, -5, 15, -5, 13, -5, 11, -5, 12, -7, 14, -3, 13, -2, 10, -2, 11, -5, 8, -5)

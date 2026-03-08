@@ -1,0 +1,27 @@
+extends Area2D
+
+var ladder_scene: PackedScene = preload("res://map/ladder.tscn")
+var ladder_spawned: bool = false
+
+func _on_body_entered(body: Node2D) -> void:
+	print("VALAMI BELÉPETT: ", body.name, " | típus: ", body.get_class())
+	
+	if body is Player and not ladder_spawned:
+		ladder_spawned = true
+		print("PLAYER DETECTED!")
+		
+		var ladder = ladder_scene.instantiate()
+		ladder.global_position = body.global_position - Vector2(0, 30)
+		get_parent().add_child(ladder)
+		print("LADDER SPAWNED at: ", ladder.global_position)
+		
+		body.set_physics_process(false)
+		body.velocity = Vector2.ZERO
+		
+		await get_tree().create_timer(2.0).timeout
+		
+		Manager.stop_game_timer(true)
+		Manager.send_full_score()
+		
+		await get_tree().create_timer(1.0).timeout
+		get_tree().paused = true

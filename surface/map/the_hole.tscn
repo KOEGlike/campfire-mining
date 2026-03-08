@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="1_gicmp"]
 [ext_resource type="Script" uid="uid://r5cpdeutnnir" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
 [ext_resource type="PackedScene" uid="uid://bp1qx486xgkdh" path="res://map/hole_spawner.tscn" id="3_1v8wy"]
+[ext_resource type="PackedScene" uid="uid://mnsu6bljrs0e" path="res://Star.tscn" id="4_ge7my"]
 [ext_resource type="PackedScene" uid="uid://bvjfrqsdcdrhk" path="res://map/dropping_stone.tscn" id="4_gicmp"]
 [ext_resource type="PackedScene" uid="uid://c53h5ywx6cjkg" path="res://map/leaf.tscn" id="5_gxrax"]
 [ext_resource type="PackedScene" uid="uid://dgq5sp6bykdxy" path="res://map/branch.tscn" id="6_n8ndk"]
@@ -446,8 +447,12 @@ position = Vector2(-1800, 900)
 [node name="Stone100" parent="Stones" unique_id=681892575 instance=ExtResource("1_2ode6")]
 position = Vector2(-1800, 1100)
 
+[node name="Star" parent="Stones" unique_id=966012803 instance=ExtResource("4_ge7my")]
+position = Vector2(299.99997, 414)
+scale = Vector2(0.1, 0.1)
+
 [node name="spawner" parent="." unique_id=234430051 instance=ExtResource("3_1v8wy")]
-position = Vector2(711, 51)
+position = Vector2(773, -35)
 item = ExtResource("4_gicmp")
 wait_time = 1.0
 
@@ -457,7 +462,7 @@ item = ExtResource("5_gxrax")
 wait_time = 10.0
 
 [node name="spawner3" parent="." unique_id=527477 instance=ExtResource("3_1v8wy")]
-position = Vector2(818, 60)
+position = Vector2(898, -52)
 item = ExtResource("6_n8ndk")
 wait_time = 10.0
 
@@ -467,7 +472,7 @@ item = ExtResource("4_gicmp")
 wait_time = 3.5
 
 [node name="spawner5" parent="." unique_id=639035697 instance=ExtResource("3_1v8wy")]
-position = Vector2(1023, 50)
+position = Vector2(993, -30)
 item = ExtResource("4_gicmp")
 wait_time = 9.0
 
@@ -797,7 +802,7 @@ position = Vector2(-1800, 900)
 position = Vector2(-1800, 1100)
 
 [node name="spawner9" parent="." unique_id=835644820 instance=ExtResource("3_1v8wy")]
-position = Vector2(711, 51)
+position = Vector2(989, 7)
 item = ExtResource("4_gicmp")
 wait_time = 1.0
 
@@ -807,11 +812,11 @@ item = ExtResource("5_gxrax")
 wait_time = 10.0
 
 [node name="spawner11" parent="." unique_id=1562556716 instance=ExtResource("3_1v8wy")]
-position = Vector2(918, 54)
+position = Vector2(923, -47)
 item = ExtResource("6_n8ndk")
 
 [node name="spawner12" parent="." unique_id=1445003170 instance=ExtResource("3_1v8wy")]
-position = Vector2(947, 38)
+position = Vector2(958, -26)
 item = ExtResource("4_gicmp")
 wait_time = 9.0
 
@@ -1146,7 +1151,7 @@ position = Vector2(-1800, 900)
 position = Vector2(-1800, 1100)
 
 [node name="spawner17" parent="." unique_id=1591709229 instance=ExtResource("3_1v8wy")]
-position = Vector2(711, 51)
+position = Vector2(831, -1)
 item = ExtResource("4_gicmp")
 wait_time = 1.0
 
@@ -1156,7 +1161,7 @@ item = ExtResource("5_gxrax")
 wait_time = 12.0
 
 [node name="spawner19" parent="." unique_id=1952344805 instance=ExtResource("3_1v8wy")]
-position = Vector2(852, 27)
+position = Vector2(871, -32)
 item = ExtResource("6_n8ndk")
 wait_time = 10.0
 
@@ -1181,6 +1186,6 @@ item = ExtResource("4_gicmp")
 wait_time = 9.0
 
 [node name="spawner24" parent="." unique_id=1014719274 instance=ExtResource("3_1v8wy")]
-position = Vector2(775, 16)
+position = Vector2(772, -18)
 item = ExtResource("4_gicmp")
 wait_time = 4.9
