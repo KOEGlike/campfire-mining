@@ -92,6 +92,10 @@ script = ExtResource("2_keolf")
 position = Vector2(-1080, 280)
 script = ExtResource("2_keolf")
 
+[node name="Stone73" parent="Stones" unique_id=1769380170 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1192, 256)
+script = ExtResource("2_keolf")
+
 [node name="Stone64" parent="Stones" unique_id=597973053 instance=ExtResource("2_0v2pn")]
 position = Vector2(-880, 280)
 script = ExtResource("2_keolf")
@@ -108,12 +112,52 @@ script = ExtResource("2_keolf")
 position = Vector2(-1080, 472)
 script = ExtResource("2_keolf")
 
+[node name="Stone72" parent="Stones" unique_id=144603989 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1192, 456)
+script = ExtResource("2_keolf")
+
+[node name="Stone77" parent="Stones" unique_id=933073368 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1200, 536)
+script = ExtResource("2_keolf")
+
+[node name="Stone78" parent="Stones" unique_id=527260265 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1000, 544)
+script = ExtResource("2_keolf")
+
+[node name="Stone79" parent="Stones" unique_id=930807332 instance=ExtResource("2_0v2pn")]
+position = Vector2(-800, 544)
+script = ExtResource("2_keolf")
+
+[node name="Stone80" parent="Stones" unique_id=1721206477 instance=ExtResource("2_0v2pn")]
+position = Vector2(-608, 544)
+script = ExtResource("2_keolf")
+
+[node name="Stone81" parent="Stones" unique_id=1999306484 instance=ExtResource("2_0v2pn")]
+position = Vector2(-608, 544)
+script = ExtResource("2_keolf")
+
 [node name="Stone51" parent="Stones" unique_id=262306268 instance=ExtResource("2_0v2pn")]
 position = Vector2(-880, 476)
 script = ExtResource("2_keolf")
 
+[node name="Stone74" parent="Stones" unique_id=1892750652 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1192, -296)
+script = ExtResource("2_keolf")
+
+[node name="Stone75" parent="Stones" unique_id=893224727 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1192, -144)
+script = ExtResource("2_keolf")
+
+[node name="Stone76" parent="Stones" unique_id=25795399 instance=ExtResource("2_0v2pn")]
+position = Vector2(-1192, 56)
+script = ExtResource("2_keolf")
+
 [node name="Stone52" parent="Stones" unique_id=1500740122 instance=ExtResource("2_0v2pn")]
 position = Vector2(-680, 476)
+script = ExtResource("2_keolf")
+
+[node name="Stone67" parent="Stones" unique_id=25305107 instance=ExtResource("2_0v2pn")]
+position = Vector2(-464, 544)
 script = ExtResource("2_keolf")
 
 [node name="Stone53" parent="Stones" unique_id=1496104490 instance=ExtResource("2_0v2pn")]
@@ -196,7 +240,7 @@ position = Vector2(1704, 720)
 position = Vector2(1888, 728)
 
 [node name="StoneDarkStone12" parent="." unique_id=682654145 instance=ExtResource("5_rr464")]
-position = Vector2(2088, 728)
+position = Vector2(2112, 728)
 
 [node name="Deepslate" parent="." unique_id=361091547 instance=ExtResource("6_r4eby")]
 position = Vector2(-96, 920)
@@ -229,13 +273,25 @@ position = Vector2(1536, 920)
 position = Vector2(1704, 920)
 
 [node name="Deepslate11" parent="." unique_id=1669241642 instance=ExtResource("6_r4eby")]
-position = Vector2(-104, 1120)
+position = Vector2(-96, 1056)
 
 [node name="Deepslate12" parent="." unique_id=1857048110 instance=ExtResource("6_r4eby")]
-position = Vector2(96, 1120)
+position = Vector2(104, 1056)
 
 [node name="StoneDarkStone13" parent="." unique_id=210321486 instance=ExtResource("5_rr464")]
-position = Vector2(-488, 720)
+position = Vector2(-472, 736)
+
+[node name="StoneDarkStone19" parent="." unique_id=206384822 instance=ExtResource("5_rr464")]
+position = Vector2(-672, 736)
+
+[node name="StoneDarkStone20" parent="." unique_id=1878015854 instance=ExtResource("5_rr464")]
+position = Vector2(-872, 736)
+
+[node name="StoneDarkStone21" parent="." unique_id=1813921997 instance=ExtResource("5_rr464")]
+position = Vector2(-1056, 736)
+
+[node name="StoneDarkStone22" parent="." unique_id=1798822011 instance=ExtResource("5_rr464")]
+position = Vector2(-1200, 736)
 
 [node name="StoneDarkStone14" parent="." unique_id=654223503 instance=ExtResource("5_rr464")]
 position = Vector2(-288, 720)
@@ -247,43 +303,100 @@ position = Vector2(-488, 920)
 position = Vector2(-288, 920)
 
 [node name="Deepslate27" parent="." unique_id=1612677286 instance=ExtResource("6_r4eby")]
-position = Vector2(-496, 1120)
+position = Vector2(-488, 1056)
 
 [node name="Deepslate28" parent="." unique_id=1654071996 instance=ExtResource("6_r4eby")]
-position = Vector2(-296, 1120)
+position = Vector2(-288, 1056)
 
 [node name="Deepslate13" parent="." unique_id=302413348 instance=ExtResource("6_r4eby")]
-position = Vector2(304, 1120)
+position = Vector2(312, 1056)
 
 [node name="Deepslate14" parent="." unique_id=333963690 instance=ExtResource("6_r4eby")]
-position = Vector2(504, 1120)
+position = Vector2(512, 1056)
 
 [node name="Deepslate15" parent="." unique_id=138966380 instance=ExtResource("6_r4eby")]
-position = Vector2(704, 1120)
+position = Vector2(712, 1056)
 
 [node name="Deepslate16" parent="." unique_id=513488478 instance=ExtResource("6_r4eby")]
-position = Vector2(912, 1120)
+position = Vector2(920, 1056)
 
 [node name="Deepslate17" parent="." unique_id=1463772416 instance=ExtResource("6_r4eby")]
-position = Vector2(1120, 1120)
+position = Vector2(1128, 1056)
 
 [node name="Deepslate18" parent="." unique_id=2020834746 instance=ExtResource("6_r4eby")]
-position = Vector2(1320, 1120)
+position = Vector2(1328, 1056)
 
 [node name="Deepslate19" parent="." unique_id=506244068 instance=ExtResource("6_r4eby")]
-position = Vector2(1528, 1120)
+position = Vector2(1536, 1056)
 
 [node name="Deepslate20" parent="." unique_id=409850533 instance=ExtResource("6_r4eby")]
-position = Vector2(1696, 1120)
+position = Vector2(1704, 1056)
 
 [node name="Deepslate21" parent="." unique_id=1635533357 instance=ExtResource("6_r4eby")]
 position = Vector2(1904, 920)
 
-[node name="Deepslate22" parent="." unique_id=828322247 instance=ExtResource("6_r4eby")]
-position = Vector2(-1128, -360)
-
 [node name="Deepslate23" parent="." unique_id=612604844 instance=ExtResource("6_r4eby")]
-position = Vector2(1896, 1120)
+position = Vector2(1904, 1056)
+
+[node name="StoneDarkStone15" parent="." unique_id=1719209057 instance=ExtResource("5_rr464")]
+position = Vector2(2080, 728)
+
+[node name="StoneDarkStone16" parent="." unique_id=2042534153 instance=ExtResource("5_rr464")]
+position = Vector2(2280, 728)
+
+[node name="StoneDarkStone17" parent="." unique_id=887439934 instance=ExtResource("5_rr464")]
+position = Vector2(2480, 728)
+
+[node name="StoneDarkStone18" parent="." unique_id=539051603 instance=ExtResource("5_rr464")]
+position = Vector2(2680, 728)
+
+[node name="Deepslate29" parent="." unique_id=308993988 instance=ExtResource("6_r4eby")]
+position = Vector2(2104, 928)
+
+[node name="Deepslate30" parent="." unique_id=504137993 instance=ExtResource("6_r4eby")]
+position = Vector2(2312, 928)
+
+[node name="Deepslate31" parent="." unique_id=2103145387 instance=ExtResource("6_r4eby")]
+position = Vector2(2480, 928)
+
+[node name="Deepslate32" parent="." unique_id=803187998 instance=ExtResource("6_r4eby")]
+position = Vector2(2104, 1064)
+
+[node name="Deepslate33" parent="." unique_id=1847126973 instance=ExtResource("6_r4eby")]
+position = Vector2(2312, 1064)
+
+[node name="Deepslate34" parent="." unique_id=901097247 instance=ExtResource("6_r4eby")]
+position = Vector2(2480, 1064)
+
+[node name="Deepslate35" parent="." unique_id=634904095 instance=ExtResource("6_r4eby")]
+position = Vector2(2680, 928)
+
+[node name="Deepslate36" parent="." unique_id=999255368 instance=ExtResource("6_r4eby")]
+position = Vector2(2680, 1064)
+
+[node name="Deepslate37" parent="." unique_id=801221252 instance=ExtResource("6_r4eby")]
+position = Vector2(-1200, 856)
+
+[node name="Deepslate38" parent="." unique_id=935704192 instance=ExtResource("6_r4eby")]
+position = Vector2(-992, 856)
+
+[node name="Deepslate39" parent="." unique_id=1502106 instance=ExtResource("6_r4eby")]
+position = Vector2(-824, 856)
+
+[node name="Deepslate40" parent="." unique_id=861326312 instance=ExtResource("6_r4eby")]
+position = Vector2(-1200, 1056)
+
+[node name="Deepslate41" parent="." unique_id=1815284132 instance=ExtResource("6_r4eby")]
+position = Vector2(-1000, 1056)
+
+[node name="Deepslate42" parent="." unique_id=37806181 instance=ExtResource("6_r4eby")]
+position = Vector2(-832, 1056)
+
+[node name="Deepslate43" parent="." unique_id=697549694 instance=ExtResource("6_r4eby")]
+position = Vector2(-640, 864)
+
+[node name="Deepslate44" parent="." unique_id=273098621 instance=ExtResource("6_r4eby")]
+position = Vector2(-632, 1056)
 
 [node name="Deepslate24" parent="." unique_id=606803849 instance=ExtResource("6_r4eby")]
 position = Vector2(-1136, -160)
@@ -336,9 +449,6 @@ position = Vector2(2072, 160)
 [node name="Stone75" parent="." unique_id=603768435 instance=ExtResource("7_r4eby")]
 position = Vector2(2072, 360)
 
-[node name="Stone58" parent="." unique_id=723850125 instance=ExtResource("7_r4eby")]
-position = Vector2(2672, -240)
-
 [node name="Stone59" parent="." unique_id=1758623185 instance=ExtResource("7_r4eby")]
 position = Vector2(2672, -40)
 
@@ -349,7 +459,7 @@ position = Vector2(2672, 160)
 position = Vector2(2672, 360)
 
 [node name="Stone70" parent="." unique_id=1082336629 instance=ExtResource("7_r4eby")]
-position = Vector2(2472, -240)
+position = Vector2(2488, -288)
 
 [node name="Stone71" parent="." unique_id=714077304 instance=ExtResource("7_r4eby")]
 position = Vector2(2472, -40)
@@ -375,11 +485,8 @@ position = Vector2(2272, 360)
 [node name="Stone82" parent="." unique_id=1365237816 instance=ExtResource("7_r4eby")]
 position = Vector2(2072, -240)
 
-[node name="Stone118" parent="." unique_id=1660387682 instance=ExtResource("7_r4eby")]
-position = Vector2(2688, -288)
-
 [node name="Stone119" parent="." unique_id=134911184 instance=ExtResource("7_r4eby")]
-position = Vector2(2488, -288)
+position = Vector2(2680, -288)
 
 [node name="Stone120" parent="." unique_id=1543450687 instance=ExtResource("7_r4eby")]
 position = Vector2(2288, -288)
@@ -387,17 +494,11 @@ position = Vector2(2288, -288)
 [node name="Stone121" parent="." unique_id=1561261747 instance=ExtResource("7_r4eby")]
 position = Vector2(2088, -288)
 
-[node name="Stone122" parent="." unique_id=1395466792 instance=ExtResource("7_r4eby")]
-position = Vector2(2688, -288)
-
-[node name="Stone123" parent="." unique_id=949605979 instance=ExtResource("7_r4eby")]
-position = Vector2(2488, -288)
-
 [node name="Stone124" parent="." unique_id=281459290 instance=ExtResource("7_r4eby")]
 position = Vector2(2288, -288)
 
 [node name="Stone125" parent="." unique_id=418014057 instance=ExtResource("7_r4eby")]
-position = Vector2(2088, -288)
+position = Vector2(2064, -288)
 
 [node name="Stone83" parent="." unique_id=1713554277 instance=ExtResource("7_r4eby")]
 position = Vector2(2072, -40)
