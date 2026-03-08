@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b3k2ji7wtoadc" path="res://map/tree.tscn" id="1_r5i85"]
 [ext_resource type="PackedScene" uid="uid://chob6tjdxqsx5" path="res://map/grassy_field.tscn" id="2_30474"]
+[ext_resource type="Script" uid="uid://c7mv5or3y1hkt" path="res://map/surfacestones.gd" id="2_fv5y6"]
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="2_r5i85"]
 [ext_resource type="PackedScene" uid="uid://b2ymn3we10fvf" path="res://map/stone_grass.tscn" id="3_fv5y6"]
 
@@ -18,17 +19,17 @@ fall_left = true
 
 [node name="Blocks" type="Node2D" parent="." unique_id=33644267]
 
-[node name="Stone" parent="Blocks" unique_id=1975519484 instance=ExtResource("2_r5i85")]
+[node name="Stones" type="Node2D" parent="Blocks" unique_id=338701522]
+script = ExtResource("2_fv5y6")
+
+[node name="Stone" parent="Blocks/Stones" unique_id=1975519484 instance=ExtResource("2_r5i85")]
 position = Vector2(500, 484)
-disappear_on_earthquake = true
 
-[node name="Stone2" parent="Blocks" unique_id=1876367183 instance=ExtResource("2_r5i85")]
+[node name="Stone2" parent="Blocks/Stones" unique_id=1876367183 instance=ExtResource("2_r5i85")]
 position = Vector2(700, 484)
-disappear_on_earthquake = true
 
-[node name="Stone3" parent="Blocks" unique_id=1913221941 instance=ExtResource("2_r5i85")]
+[node name="Stone3" parent="Blocks/Stones" unique_id=1913221941 instance=ExtResource("2_r5i85")]
 position = Vector2(900, 484)
-disappear_on_earthquake = true
 
 [node name="GrassyField" parent="Blocks" unique_id=69348105 instance=ExtResource("2_30474")]
 position = Vector2(104, 84)
@@ -38,15 +39,15 @@ position = Vector2(304, 84)
 
 [node name="GrassyField3" parent="Blocks" unique_id=2082160361 instance=ExtResource("2_30474")]
 position = Vector2(504, 84)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="GrassyField4" parent="Blocks" unique_id=1858284238 instance=ExtResource("2_30474")]
 position = Vector2(704, 84)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="GrassyField5" parent="Blocks" unique_id=636510972 instance=ExtResource("2_30474")]
 position = Vector2(904, 84)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="GrassyField6" parent="Blocks" unique_id=913263200 instance=ExtResource("2_30474")]
 position = Vector2(1104, 84)
@@ -92,15 +93,15 @@ position = Vector2(2100, 284)
 
 [node name="StoneGrass3" parent="Blocks" unique_id=412041109 instance=ExtResource("3_fv5y6")]
 position = Vector2(500, 284)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="StoneGrass4" parent="Blocks" unique_id=777986132 instance=ExtResource("3_fv5y6")]
 position = Vector2(700, 284)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="StoneGrass5" parent="Blocks" unique_id=80356409 instance=ExtResource("3_fv5y6")]
 position = Vector2(900, 284)
-disappear_on_earthquake = true
+disappear = true
 
 [node name="StoneGrass6" parent="Blocks" unique_id=799252589 instance=ExtResource("3_fv5y6")]
 position = Vector2(1100, 284)

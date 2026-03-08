@@ -68,6 +68,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=874400125]
+collision_layer = 3
 script = ExtResource("1_rkbax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=408051550]

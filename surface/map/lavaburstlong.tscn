@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dknjy644nbgvc"]
+
+[ext_resource type="Script" uid="uid://br7cjvyeqfdme" path="res://map/lavaburstlong.gd" id="1_844bl"]
+[ext_resource type="Texture2D" uid="uid://dnlfohi1tvtev" path="res://map/lavaburslongt.png" id="2_7cra4"]
+
+[node name="Lavaburstlong" type="Area2D" unique_id=2128216012]
+script = ExtResource("1_844bl")
+
+[node name="Lavaburslongt" type="Sprite2D" parent="." unique_id=257096336]
+position = Vector2(-24, 24.800003)
+scale = Vector2(4, 4)
+texture = ExtResource("2_7cra4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=883740114]
+position = Vector2(-20, 24.800003)
+polygon = PackedVector2Array(12, 3.199997, 8, -32, 12, -32, 12, -36, 16, -36, 16, -48, 20, -48, 20, -64, 16, -64, 16, -68, 12, -68, 12, -72, 4, -72, 4, -76, -24, -76, -24, -68, -28, -68, -28, -60, -32, -60, -32, -40, -28, -40, -28, -36, -16, -36, -16, -32, -12, -32, -12, 100, 8, 100, 8, -4, 8, 96, 8, 100)

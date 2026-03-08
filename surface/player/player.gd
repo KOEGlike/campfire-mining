@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
+	
 func _is_crushed() -> bool:
 	if get_slide_collision_count() < 2:
 		return false
