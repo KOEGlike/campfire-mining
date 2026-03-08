@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 		var child = _children[_current_index]
 		if is_instance_valid(child):
 			if child.has_node("disappearing_tile"):
-				child.get_node("disappearing_tile").disappear()
+				child.disappearing_tile.disappear()
 			elif child.has_method("disappear"):
 				child.disappear()
 			# else: do nothing if neither
