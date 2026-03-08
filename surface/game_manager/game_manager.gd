@@ -57,18 +57,22 @@ var _time_accumulator: float = 0.0
 var _timeline_run_id: int = 0
 var _restart_in_progress: bool = false
 
+func _format_time_breakdown(total_seconds: int) -> String:
+	var minutes := total_seconds / 60
+	var seconds := total_seconds % 60
+	return "%02d:%02d (%dm %ds / %ds)" % [minutes, seconds, minutes, seconds, total_seconds]
+
 func start_game_timer() -> void:
 	game_time = 0
-	star_count = 0
 	is_completed = false
 	_time_accumulator = 0.0
 	game_running = true
-	print("[GameManager] Game timer started!")
+	print("[GameManager] Run started -> time=", _format_time_breakdown(game_time), " stars=", star_count)
 
 func stop_game_timer(completed: bool = false) -> void:
 	game_running = false
 	is_completed = completed
-	print("[GameManager] Game timer stopped! time=", game_time, "s stars=", star_count, " completed=", is_completed)
+	print("[GameManager] Run finished -> time=", _format_time_breakdown(game_time), " stars=", star_count, " completed=", is_completed)
 
 # ============================================================
 #  CSILLAG GYŰJTÉS - bárhonnan hívható
@@ -174,13 +178,13 @@ func send_full_score() -> bool:
 	})
 	current_request = RequestType.FULL_SCORE
 	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
-	print("[GameManager] Sending score -> time=", game_time, "s stars=", star_count, " completed=", is_completed)
+	print("[GameManager] Sending score -> time=", _format_time_breakdown(game_time), " stars=", star_count, " completed=", is_completed)
 	return true
 
 func show_end_screen(completed: bool, score_was_submitted: bool) -> void:
 	var end_screen := END_SCREEN_SCENE.instantiate() as EndScreen
 	get_tree().root.add_child(end_screen)
-	end_screen.setup(completed, star_count, user_alive, score_was_submitted)
+	end_screen.setup(completed, star_count, game_time, user_alive, score_was_submitted)
 	await end_screen.closed
 
 # ============================================================
@@ -320,6 +324,7 @@ func _http_result_to_text(result: int) -> String:
 func timeline() -> void:
 	_timeline_run_id += 1
 	var run_id := _timeline_run_id
+	start_game_timer()
 
 	await get_tree().create_timer(2).timeout
 	if run_id != _timeline_run_id:
@@ -341,9 +346,6 @@ func timeline() -> void:
 	if run_id != _timeline_run_id:
 		return
 	the_hole_open.emit()
-
-	# >>> ITT INDUL A JÁTÉK TIMER <<<
-	start_game_timer()
 
 	await get_tree().create_timer(15).timeout
 	if run_id != _timeline_run_id:
