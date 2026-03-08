@@ -6,7 +6,7 @@
 [sub_resource type="Animation" id="Animation_844bl"]
 resource_name = "Popup"
 length = 5.0
-loop_mode = 1
+loop_mode = 0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
