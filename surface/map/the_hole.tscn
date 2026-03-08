@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dmswn0f3ji8cr"]
 
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="1_2ode6"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="1_gicmp"]
+>>>>>>> 11d1058e68063484c9adb543740dc77e0c072f30
 [ext_resource type="Script" uid="uid://r5cpdeutnnir" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
 [ext_resource type="PackedScene" uid="uid://bp1qx486xgkdh" path="res://map/hole_spawner.tscn" id="3_1v8wy"]
 [ext_resource type="PackedScene" uid="uid://bvjfrqsdcdrhk" path="res://map/dropping_stone.tscn" id="4_gicmp"]
@@ -11,6 +15,132 @@
 
 [node name="Stones" type="Node2D" parent="." unique_id=461137145]
 position = Vector2(904, -24)
+
+[node name="Darkstoneblock" type="Sprite2D" parent="Stones" unique_id=495973153]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock2" type="Sprite2D" parent="Stones" unique_id=1918552346]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock3" type="Sprite2D" parent="Stones" unique_id=300950878]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock4" type="Sprite2D" parent="Stones" unique_id=189075648]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock5" type="Sprite2D" parent="Stones" unique_id=1794735334]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock6" type="Sprite2D" parent="Stones" unique_id=1055758821]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock7" type="Sprite2D" parent="Stones" unique_id=1969697892]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock8" type="Sprite2D" parent="Stones" unique_id=1446394773]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock9" type="Sprite2D" parent="Stones" unique_id=1761815549]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock10" type="Sprite2D" parent="Stones" unique_id=644858123]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock11" type="Sprite2D" parent="Stones" unique_id=1606908981]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock12" type="Sprite2D" parent="Stones" unique_id=1934004432]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock13" type="Sprite2D" parent="Stones" unique_id=779699905]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock14" type="Sprite2D" parent="Stones" unique_id=544662806]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock15" type="Sprite2D" parent="Stones" unique_id=291556640]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock16" type="Sprite2D" parent="Stones" unique_id=224401626]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock17" type="Sprite2D" parent="Stones" unique_id=903069043]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock18" type="Sprite2D" parent="Stones" unique_id=1796063979]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
 
 [node name="BottomStones" type="Node2D" parent="Stones" unique_id=112842386]
 position = Vector2(200, 1100)

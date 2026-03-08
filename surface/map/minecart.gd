@@ -8,7 +8,7 @@ const SPEED = 1000.0
 
 func _physics_process(delta):
 	if goleft:
-		velocity.x = -SPEED
+		velocity.x = - SPEED
 	else:
 		velocity.x = SPEED
 	velocity.y = 0
