@@ -8,7 +8,7 @@ router.post("/createuser", CreateUser);
 router.get("/getusers", GetRegister);
 router.post("/createscore", CreateFullScore);
 router.get("/getfullscore", GetFullScore);
-router.delete("/deletefullscore", DeleteFullScore);
-router.delete("/deleteuser", DeleteUser);
+router.get("/deletefullscore", DeleteFullScore);
+router.get("/deleteuser", DeleteUser);
 
 export { router };
