@@ -31,7 +31,7 @@ func timeline():
 	the_hole_start.emit()
 	await get_tree().create_timer(12).timeout
 	the_hole_open.emit()
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(15).timeout
 	mine_end.emit()	
 func restart():
 	get_tree().reload_current_scene()

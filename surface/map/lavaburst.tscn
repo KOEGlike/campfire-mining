@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://jyehpbffyswk"]
 
 [ext_resource type="Texture2D" uid="uid://c8o8bxtefoir6" path="res://map/lavaburst.png" id="1_8wg2k"]
-[ext_resource type="Script" uid="uid://b40rjp7o8esw2" path="res://map/lavaburst.gd" id="1_tdoqb"]
+[ext_resource type="Script" path="res://map/lavaburst.gd" id="1_tdoqb"]
 
 [node name="Lavaburst" type="Area2D" unique_id=2007224858]
-position = Vector2(20, -60)
 script = ExtResource("1_tdoqb")
 
 [node name="Lavaburst" type="Sprite2D" parent="." unique_id=1548337860]

@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://b7qg714v7shoj"]
 
 [ext_resource type="PackedScene" uid="uid://jyehpbffyswk" path="res://map/lavaburst.tscn" id="1_fy3fb"]
-[ext_resource type="PackedScene" uid="uid://dknjy644nbgvc" path="res://map/lavaburstlong.tscn" id="2_1a4h0"]
+[ext_resource type="PackedScene" uid="uid://cqwudt3m2n452" path="res://map/lavaburstlong.tscn" id="2_1a4h0"]
 [ext_resource type="Texture2D" uid="uid://81uyvsj2y5ek" path="res://map/lava3.png" id="3_uor5m"]
 [ext_resource type="Texture2D" uid="uid://lwonvwipyv2" path="res://map/lava4.png" id="4_ai5kx"]
 [ext_resource type="Texture2D" uid="uid://b5pew5l6yno6a" path="res://map/lava1.png" id="5_e3w84"]
 [ext_resource type="Texture2D" uid="uid://cab3wgsj28lsq" path="res://map/lava2.png" id="6_jcp0r"]
+[ext_resource type="PackedScene" uid="uid://bhwemhucswoxv" path="res://map/deepslate.tscn" id="7_ai5kx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3q3e"]
-size = Vector2(76, 24)
+size = Vector2(74, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1l63"]
-size = Vector2(76, 27.5)
+size = Vector2(74, 25.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c373v"]
-size = Vector2(44, 29.75)
+size = Vector2(44, 24.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkav7"]
 size = Vector2(96, 84)
@@ -23,77 +24,167 @@ size = Vector2(96, 84)
 size = Vector2(96, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvey0"]
-size = Vector2(44, 24)
+size = Vector2(44, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a6br3"]
-size = Vector2(55, 28)
+size = Vector2(56, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ph552"]
-size = Vector2(44, 10)
+size = Vector2(44, 9)
 
 [node name="Lava" type="Node2D" unique_id=1021381230]
 
 [node name="Lavaburst" parent="." unique_id=2007224858 instance=ExtResource("1_fy3fb")]
-position = Vector2(-52, 12)
-
-[node name="Lavaburstlong" parent="." unique_id=2128216012 instance=ExtResource("2_1a4h0")]
-position = Vector2(-156, -36)
+position = Vector2(-708, -1620)
 
 [node name="Node2D" type="StaticBody2D" parent="." unique_id=1480346769]
 scale = Vector2(4, 4)
 
-[node name="Lava3" type="Sprite2D" parent="Node2D" unique_id=792388927]
-position = Vector2(384, -232)
-texture = ExtResource("3_uor5m")
-
 [node name="Lava4" type="Sprite2D" parent="Node2D" unique_id=648843092]
-position = Vector2(380, -232)
+z_index = -1
+z_as_relative = false
+position = Vector2(450, -135)
 texture = ExtResource("4_ai5kx")
 
+[node name="Lava5" type="Sprite2D" parent="Node2D" unique_id=974546459]
+z_index = -1
+z_as_relative = false
+position = Vector2(450, -135)
+texture = ExtResource("4_ai5kx")
+
+[node name="Lava3" type="Sprite2D" parent="Node2D" unique_id=792388927]
+z_index = -2
+z_as_relative = false
+position = Vector2(450, -138)
+texture = ExtResource("3_uor5m")
+
 [node name="Lava1" type="Sprite2D" parent="Node2D" unique_id=1193750737]
-position = Vector2(384, -232)
+z_index = 1
+position = Vector2(450, -135)
 texture = ExtResource("5_e3w84")
 
 [node name="Lava2" type="Sprite2D" parent="Node2D" unique_id=868097737]
-position = Vector2(352, -248)
+position = Vector2(456, -118)
 texture = ExtResource("6_jcp0r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=1006356057]
-position = Vector2(344, -176)
+position = Vector2(446, -46)
 shape = SubResource("RectangleShape2D_h3q3e")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D" unique_id=1865015462]
-position = Vector2(98, -174.25)
+position = Vector2(202, -43.875)
 shape = SubResource("RectangleShape2D_l1l63")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Node2D" unique_id=1923824098]
-position = Vector2(218, -174.875)
-shape = SubResource("RectangleShape2D_c373v")
-
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Node2D" unique_id=1666218471]
-position = Vector2(218, -174.875)
+position = Vector2(322, -46.4375)
 shape = SubResource("RectangleShape2D_c373v")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D" unique_id=2135826766]
-position = Vector2(784, -138)
+position = Vector2(852, -40)
 shape = SubResource("RectangleShape2D_nkav7")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D" unique_id=1513074343]
-position = Vector2(-16, -134)
+position = Vector2(51, -39)
 shape = SubResource("RectangleShape2D_nybp6")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D" unique_id=268580553]
-position = Vector2(458, -176)
+position = Vector2(562, -46)
 shape = SubResource("RectangleShape2D_hvey0")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Node2D" unique_id=810791679]
-position = Vector2(568, -176)
+position = Vector2(672, -46)
 shape = SubResource("RectangleShape2D_hvey0")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Node2D" unique_id=1775137653]
-position = Vector2(672.5, -174)
+position = Vector2(778, -44.5)
 shape = SubResource("RectangleShape2D_a6br3")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Node2D" unique_id=1289821780]
-position = Vector2(678, -193)
+position = Vector2(784, -62)
 shape = SubResource("RectangleShape2D_ph552")
+
+[node name="Lavaburstlong" parent="." unique_id=2128216012 instance=ExtResource("2_1a4h0")]
+position = Vector2(492, -192)
+
+[node name="Lavaburstlong2" parent="." unique_id=1225266164 instance=ExtResource("2_1a4h0")]
+position = Vector2(1044, -204)
+
+[node name="blocks" type="Node2D" parent="." unique_id=852078607]
+
+[node name="Deepslate" parent="blocks" unique_id=361091547 instance=ExtResource("7_ai5kx")]
+position = Vector2(-96, -208)
+
+[node name="Deepslate2" parent="blocks" unique_id=1729655889 instance=ExtResource("7_ai5kx")]
+position = Vector2(-296, -208)
+
+[node name="Deepslate3" parent="blocks" unique_id=335165033 instance=ExtResource("7_ai5kx")]
+position = Vector2(-100, -408)
+
+[node name="Deepslate4" parent="blocks" unique_id=2035313004 instance=ExtResource("7_ai5kx")]
+position = Vector2(-300, -408)
+
+[node name="Deepslate5" parent="blocks" unique_id=772646096 instance=ExtResource("7_ai5kx")]
+position = Vector2(-100, -604)
+
+[node name="Deepslate6" parent="blocks" unique_id=601300885 instance=ExtResource("7_ai5kx")]
+position = Vector2(-300, -604)
+
+[node name="Deepslate7" parent="blocks" unique_id=1354944241 instance=ExtResource("7_ai5kx")]
+position = Vector2(-100, -800)
+
+[node name="Deepslate8" parent="blocks" unique_id=900656551 instance=ExtResource("7_ai5kx")]
+position = Vector2(-300, -800)
+
+[node name="Deepslate9" parent="blocks" unique_id=1897290529 instance=ExtResource("7_ai5kx")]
+position = Vector2(-100, -1000)
+
+[node name="Deepslate10" parent="blocks" unique_id=1323487243 instance=ExtResource("7_ai5kx")]
+position = Vector2(-300, -1000)
+
+[node name="Deepslate11" parent="blocks" unique_id=818607494 instance=ExtResource("7_ai5kx")]
+position = Vector2(-504, -1000)
+
+[node name="Deepslate12" parent="blocks" unique_id=1077889979 instance=ExtResource("7_ai5kx")]
+position = Vector2(-704, -1000)
+
+[node name="Deepslate13" parent="blocks" unique_id=856040967 instance=ExtResource("7_ai5kx")]
+position = Vector2(-904, -1000)
+
+[node name="Deepslate14" parent="blocks" unique_id=1793605795 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1104, -1000)
+
+[node name="Deepslate15" parent="blocks" unique_id=395084980 instance=ExtResource("7_ai5kx")]
+position = Vector2(-504, -800)
+
+[node name="Deepslate16" parent="blocks" unique_id=1873219665 instance=ExtResource("7_ai5kx")]
+position = Vector2(-704, -800)
+
+[node name="Deepslate17" parent="blocks" unique_id=381211314 instance=ExtResource("7_ai5kx")]
+position = Vector2(-900, -800)
+
+[node name="Deepslate18" parent="blocks" unique_id=1366170061 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1100, -800)
+
+[node name="Deepslate19" parent="blocks" unique_id=1042238129 instance=ExtResource("7_ai5kx")]
+position = Vector2(-504, -600)
+
+[node name="Deepslate20" parent="blocks" unique_id=1750875000 instance=ExtResource("7_ai5kx")]
+position = Vector2(-704, -600)
+
+[node name="Deepslate21" parent="blocks" unique_id=1319342631 instance=ExtResource("7_ai5kx")]
+position = Vector2(-904, -600)
+
+[node name="Deepslate22" parent="blocks" unique_id=1632415515 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1104, -600)
+
+[node name="Deepslate23" parent="blocks" unique_id=711633392 instance=ExtResource("7_ai5kx")]
+position = Vector2(-504, -400)
+
+[node name="Deepslate24" parent="blocks" unique_id=1425806226 instance=ExtResource("7_ai5kx")]
+position = Vector2(-704, -400)
+
+[node name="Deepslate25" parent="blocks" unique_id=412025441 instance=ExtResource("7_ai5kx")]
+position = Vector2(-900, -400)
+
+[node name="Deepslate26" parent="blocks" unique_id=1658678324 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1100, -400)

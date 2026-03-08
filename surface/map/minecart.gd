@@ -2,7 +2,7 @@ class_name Minecart
 
 extends CharacterBody2D
 
-const SPEED = 1000.0
+const SPEED = 800.0
 
 @export var goleft: bool
 
