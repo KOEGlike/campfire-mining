@@ -10,6 +10,8 @@ signal surface_ground_fall()
 
 signal the_hole_start()
 signal the_hole_open()
+signal mine_end()
+
 
 const USER_ID_FILE="user://user.id"
 
@@ -29,7 +31,8 @@ func timeline():
 	the_hole_start.emit()
 	await get_tree().create_timer(12).timeout
 	the_hole_open.emit()
-	
+	await get_tree().create_timer(2).timeout
+	mine_end.emit()	
 func restart():
 	get_tree().reload_current_scene()
 	timeline()
