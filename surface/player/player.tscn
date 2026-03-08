@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://birblxg3mgtjw" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://cv64aiks2pdga" path="res://utility/wobble.tscn" id="3_g1dw6"]
 [ext_resource type="Script" uid="uid://k5q5f7c0vqcq" path="res://player/camera_2d.gd" id="3_yw30f"]
+[ext_resource type="Script" uid="uid://bqxv3rlihw3w1" path="res://player/register.gd" id="4_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://ev2wcgl0vma4" path="res://player/player.png" id="4_yw30f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
@@ -81,6 +82,52 @@ script = ExtResource("3_yw30f")
 [node name="Wobble" parent="Camera2D" unique_id=1601786016 node_paths=PackedStringArray("node") instance=ExtResource("3_g1dw6")]
 node = NodePath("..")
 wobble_time = 7
+
+[node name="Control" type="Control" parent="Camera2D" unique_id=1407006105]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -456.0
+offset_top = -226.0
+offset_right = 524.0
+offset_bottom = 229.0
+script = ExtResource("4_qjkh3")
+
+[node name="LineEdit" type="LineEdit" parent="Camera2D/Control" unique_id=667400833]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -184.5
+offset_right = 188.0
+offset_bottom = -84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/caret_color = Color(0.2, 0.7, 0.3, 1)
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Enter your name..."
+alignment = 1
+
+[node name="Button" type="Button" parent="Camera2D/Control" unique_id=1742853530]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = 85.5
+offset_right = 116.0
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "ADD NAME"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=225672538]
 position = Vector2(0, -16)
