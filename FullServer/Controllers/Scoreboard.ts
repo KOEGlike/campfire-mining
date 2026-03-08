@@ -128,3 +128,21 @@ export const GetFullScore = async (
     next(error);
   }
 };
+
+export const DeleteFullScore = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const deletedScores = await serverdb.delete(ScoreTable).returning();
+    
+    res.status(200).json({ 
+      message: "All scores deleted successfully", 
+      success: true, 
+      deletedCount: deletedScores.length 
+    });
+  } catch (error) {
+    next(error);
+  }
+};
