@@ -5,6 +5,7 @@ signal closed
 
 @onready var title_label: Label = $Control/Panel/VBoxContainer/Title
 @onready var score_label: Label = $Control/Panel/VBoxContainer/Score
+@onready var time_label: Label = $Control/Panel/VBoxContainer/Time
 @onready var lives_label: Label = $Control/Panel/VBoxContainer/Lives
 @onready var warning_label: Label = $Control/Panel/VBoxContainer/Warning
 @onready var continue_button: Button = $Control/Panel/VBoxContainer/Continue
@@ -12,9 +13,12 @@ signal closed
 func _ready() -> void:
 	continue_button.pressed.connect(_on_continue_pressed)
 
-func setup(completed: bool, score: int, lives_left: int, score_will_submit: bool) -> void:
+func setup(completed: bool, score: int, time_seconds: int, lives_left: int, score_will_submit: bool) -> void:
+	var minutes := time_seconds / 60
+	var seconds := time_seconds % 60
 	title_label.text = "Level Finished" if completed else "You Died"
 	score_label.text = "Score: %d" % score
+	time_label.text = "Time: %02d:%02d" % [minutes, seconds]
 	lives_label.text = "Lives Left: %d" % max(lives_left, 0)
 
 	if score_will_submit:
