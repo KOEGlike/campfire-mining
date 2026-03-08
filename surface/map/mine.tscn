@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cq11d0tkkpg7v" path="res://map/stone_dark_stone.tscn" id="5_rr464"]
 [ext_resource type="PackedScene" uid="uid://bhwemhucswoxv" path="res://map/deepslate.tscn" id="6_r4eby"]
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="7_r4eby"]
+[ext_resource type="PackedScene" uid="uid://ds37h2vv48ucr" path="res://map/spike.tscn" id="8_t181l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t181l"]
+size = Vector2(1957, 32.5)
 
 [node name="Mine" type="Node2D" unique_id=862780132]
 
@@ -207,6 +211,7 @@ scale = Vector2(4, 4)
 texture = ExtResource("3_0v2pn")
 
 [node name="StoneDarkStone" parent="." unique_id=1820492696 instance=ExtResource("5_rr464")]
+z_index = 4
 position = Vector2(-96, 720)
 
 [node name="StoneDarkStone2" parent="." unique_id=1504043483 instance=ExtResource("5_rr464")]
@@ -234,6 +239,7 @@ position = Vector2(1304, 720)
 position = Vector2(1504, 720)
 
 [node name="StoneDarkStone10" parent="." unique_id=165882193 instance=ExtResource("5_rr464")]
+z_index = 2
 position = Vector2(1704, 720)
 
 [node name="StoneDarkStone11" parent="." unique_id=633816771 instance=ExtResource("5_rr464")]
@@ -274,6 +280,13 @@ position = Vector2(1704, 920)
 
 [node name="Deepslate11" parent="." unique_id=1669241642 instance=ExtResource("6_r4eby")]
 position = Vector2(-96, 1056)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=436555629]
+position = Vector2(104, 1056)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=842548073]
+position = Vector2(693.5, -463.75)
+shape = SubResource("RectangleShape2D_t181l")
 
 [node name="Deepslate12" parent="." unique_id=1857048110 instance=ExtResource("6_r4eby")]
 position = Vector2(104, 1056)
@@ -580,3 +593,33 @@ position = Vector2(-1088, -88)
 
 [node name="Stone117" parent="." unique_id=1813482459 instance=ExtResource("7_r4eby")]
 position = Vector2(-1088, 112)
+
+[node name="Spike" parent="." unique_id=1096369498 instance=ExtResource("8_t181l")]
+position = Vector2(1704, 0)
+rotation = -1.5707964
+
+[node name="Spike4" parent="." unique_id=1751724515 instance=ExtResource("8_t181l")]
+position = Vector2(1712, 296)
+rotation = -1.5707964
+
+[node name="Spike2" parent="." unique_id=737695106 instance=ExtResource("8_t181l")]
+position = Vector2(-128, 152)
+rotation = 1.5707964
+
+[node name="Spike7" parent="." unique_id=469350202 instance=ExtResource("8_t181l")]
+position = Vector2(-280, 576)
+
+[node name="Spike8" parent="." unique_id=631420100 instance=ExtResource("8_t181l")]
+position = Vector2(1744, 576)
+
+[node name="Spike3" parent="." unique_id=1347878789 instance=ExtResource("8_t181l")]
+position = Vector2(-128, -112)
+rotation = 1.5707964
+
+[node name="Spike5" parent="." unique_id=2013428552 instance=ExtResource("8_t181l")]
+position = Vector2(232, -232)
+rotation = 3.1415927
+
+[node name="Spike6" parent="." unique_id=517551627 instance=ExtResource("8_t181l")]
+position = Vector2(1496, -232)
+rotation = 3.1415927

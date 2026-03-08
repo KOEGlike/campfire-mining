@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ds37h2vv48ucr"]
+
+[ext_resource type="Texture2D" uid="uid://lgsjq5d2478b" path="res://map/spike.png" id="1_i54v4"]
+
+[node name="Spike" type="Area2D" unique_id=1751724515]
+scale = Vector2(2, 2)
+
+[node name="Spike" type="Sprite2D" parent="." unique_id=1994620049]
+position = Vector2(30, 2)
+scale = Vector2(4, 4)
+texture = ExtResource("1_i54v4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1226243550]
+polygon = PackedVector2Array(-12, 0, -12, -8, -8, -8, -8, -16, -4, -16, -4, -28, 0, -28, 0, -16, 4, -16, 4, -8, 8, -8, 8, -2, 8, 4, 12, 4, 12, 12, 16, 12, 16, 4, 20, 4, 20, -8, 24, -8, 24, -16, 28, -16, 28, -28, 32, -28, 32, -16, 36, -16, 36, -8, 40, -8, 40, 4, 44, 4, 44, 12, 48, 12, 48, 4, 52, 4, 52, -8, 56, -8, 56, -16, 60, -16, 60, -28, 64, -28, 64, -16, 68, -16, 68, -8, 72, -8, 72, 4, 76, 4, 76, 12, 80, 12, 80, 24, 84, 24, 84, 32, -24, 32, -24, 24, -20, 24, -20, 12, -16, 12, -16, 4, -12, 4, -12, 0)
