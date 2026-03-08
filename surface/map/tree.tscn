@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlx04m6asxuou" path="res://map/tree.gd" id="1_g2vli"]
 [ext_resource type="Texture2D" uid="uid://bn7813vfrd4dy" path="res://map/tree.png" id="1_xyaq1"]
+[ext_resource type="Texture2D" uid="uid://lihjcdh12415" path="res://map/leaf.png" id="2_3puuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaq1"]
 size = Vector2(16, 60)
@@ -55,6 +56,17 @@ _data = {
 [node name="Tree" type="StaticBody2D" unique_id=1835523215]
 script = ExtResource("1_g2vli")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1918834308]
+position = Vector2(22, -148)
+emitting = false
+amount = 80
+texture = ExtResource("2_3puuq")
+lifetime = 15.0
+one_shot = true
+direction = Vector2(0, -4)
+initial_velocity_min = 186.51
+initial_velocity_max = 186.51
+
 [node name="Tree" type="Sprite2D" parent="." unique_id=1265533692]
 position = Vector2(0, -128)
 scale = Vector2(4, 4)
@@ -74,3 +86,5 @@ shape = SubResource("RectangleShape2D_3puuq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=417996757]
 libraries/ = SubResource("AnimationLibrary_3jcs6")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
