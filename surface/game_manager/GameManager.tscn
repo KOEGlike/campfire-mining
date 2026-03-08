@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://r6lvo3c2lk72"]
+
+[ext_resource type="Script" uid="uid://df4dxsc6ne4ms" path="res://game_manager/game_manager.gd" id="1_keyya"]
+
+[node name="GameManager" type="Node" unique_id=1283989806]
+script = ExtResource("1_keyya")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=636935398]

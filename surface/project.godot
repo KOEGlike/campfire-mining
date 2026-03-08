@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Manager="*uid://df4dxsc6ne4ms"
+Manager="*uid://r6lvo3c2lk72"
 
 [display]
 
