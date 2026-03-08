@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dmswn0f3ji8cr"]
 
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="1_2ode6"]
-[ext_resource type="Script" uid="uid://r5cpdeutnnir" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
+[ext_resource type="Script" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
+[ext_resource type="PackedScene" uid="uid://bp1qx486xgkdh" path="res://map/hole_spawner.tscn" id="3_1v8wy"]
 
 [node name="TheHole" type="Node2D" unique_id=1199586846]
 
@@ -314,3 +315,21 @@ position = Vector2(-1800, 900)
 
 [node name="Stone100" parent="Stones" unique_id=681892575 instance=ExtResource("1_2ode6")]
 position = Vector2(-1800, 1100)
+
+[node name="spawner" parent="." unique_id=234430051 instance=ExtResource("3_1v8wy")]
+position = Vector2(736, -161)
+
+[node name="spawner2" parent="." unique_id=259659226 instance=ExtResource("3_1v8wy")]
+position = Vector2(1087, -206)
+
+[node name="spawner3" parent="." unique_id=527477 instance=ExtResource("3_1v8wy")]
+position = Vector2(904, -154)
+
+[node name="spawner4" parent="." unique_id=1248155741 instance=ExtResource("3_1v8wy")]
+position = Vector2(758, 27)
+
+[node name="spawner5" parent="." unique_id=639035697 instance=ExtResource("3_1v8wy")]
+position = Vector2(1104, 78)
+
+[node name="spawner6" parent="." unique_id=1966894907 instance=ExtResource("3_1v8wy")]
+position = Vector2(1071, -85)
