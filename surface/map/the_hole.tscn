@@ -1,11 +1,31 @@
 [gd_scene format=3 uid="uid://dmswn0f3ji8cr"]
 
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="1_2ode6"]
+[ext_resource type="Script" uid="uid://r5cpdeutnnir" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
 
 [node name="TheHole" type="Node2D" unique_id=1199586846]
 
 [node name="Stones" type="Node2D" parent="." unique_id=461137145]
 position = Vector2(904, -24)
+
+[node name="BottomStones" type="Node2D" parent="Stones" unique_id=112842386]
+position = Vector2(200, 1100)
+script = ExtResource("2_mbgs6")
+
+[node name="Side1" type="Node2D" parent="Stones/BottomStones" unique_id=631998953]
+
+[node name="Stone26" parent="Stones/BottomStones/Side1" unique_id=1042709349 instance=ExtResource("1_2ode6")]
+
+[node name="Stone27" parent="Stones/BottomStones/Side1" unique_id=1243897618 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
+
+[node name="Side2" type="Node2D" parent="Stones/BottomStones" unique_id=514043649]
+
+[node name="Stone28" parent="Stones/BottomStones/Side2" unique_id=1792590503 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 0)
+
+[node name="Stone29" parent="Stones/BottomStones/Side2" unique_id=681188780 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
 
 [node name="Stone" parent="Stones" unique_id=476103673 instance=ExtResource("1_2ode6")]
 position = Vector2(-400, 100)
@@ -294,12 +314,3 @@ position = Vector2(-1800, 900)
 
 [node name="Stone100" parent="Stones" unique_id=681892575 instance=ExtResource("1_2ode6")]
 position = Vector2(-1800, 1100)
-
-[node name="Stone26" parent="Stones" unique_id=1042709349 instance=ExtResource("1_2ode6")]
-position = Vector2(200, 1100)
-
-[node name="Stone27" parent="Stones" unique_id=1243897618 instance=ExtResource("1_2ode6")]
-position = Vector2(0, 1100)
-
-[node name="Stone28" parent="Stones" unique_id=1792590503 instance=ExtResource("1_2ode6")]
-position = Vector2(-200, 1100)
