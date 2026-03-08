@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dgq5sp6bykdxy"]
+
+[ext_resource type="Texture2D" uid="uid://cogb5icqxn1n" path="res://map/branch.png" id="1_0eom6"]
+
+[node name="Branch" type="Node2D" unique_id=320264269]
+
+[node name="Branch" type="Sprite2D" parent="." unique_id=628944055]
+position = Vector2(329, 205)
+scale = Vector2(2, 2)
+texture = ExtResource("1_0eom6")

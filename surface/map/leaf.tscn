@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c53h5ywx6cjkg"]
+
+[ext_resource type="Texture2D" uid="uid://lihjcdh12415" path="res://map/leaf.png" id="1_f0lvv"]
+
+[node name="Leaf" type="Area2D" unique_id=2070878970]
+
+[node name="ShapeCast2D" type="Polygon2D" parent="." unique_id=418177089]
+
+[node name="Leaf" type="Sprite2D" parent="." unique_id=1617414085]
+position = Vector2(237, 4)
+scale = Vector2(2, 2)
+texture = ExtResource("1_f0lvv")

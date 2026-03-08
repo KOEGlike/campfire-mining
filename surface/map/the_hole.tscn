@@ -1,12 +1,143 @@
 [gd_scene format=3 uid="uid://dmswn0f3ji8cr"]
 
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="1_2ode6"]
+[ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="1_gicmp"]
 [ext_resource type="Script" uid="uid://r5cpdeutnnir" path="res://map/bottom_stones_the_hole.gd" id="2_mbgs6"]
+[ext_resource type="PackedScene" uid="uid://bp1qx486xgkdh" path="res://map/hole_spawner.tscn" id="3_1v8wy"]
+[ext_resource type="PackedScene" uid="uid://bvjfrqsdcdrhk" path="res://map/dropping_stone.tscn" id="4_gicmp"]
+[ext_resource type="PackedScene" uid="uid://c53h5ywx6cjkg" path="res://map/leaf.tscn" id="5_gxrax"]
+[ext_resource type="PackedScene" uid="uid://dgq5sp6bykdxy" path="res://map/branch.tscn" id="6_n8ndk"]
 
 [node name="TheHole" type="Node2D" unique_id=1199586846]
 
 [node name="Stones" type="Node2D" parent="." unique_id=461137145]
 position = Vector2(904, -24)
+
+[node name="Darkstoneblock" type="Sprite2D" parent="Stones" unique_id=495973153]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock2" type="Sprite2D" parent="Stones" unique_id=1918552346]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock3" type="Sprite2D" parent="Stones" unique_id=300950878]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 900)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock4" type="Sprite2D" parent="Stones" unique_id=189075648]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock5" type="Sprite2D" parent="Stones" unique_id=1794735334]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock6" type="Sprite2D" parent="Stones" unique_id=1055758821]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 700)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock7" type="Sprite2D" parent="Stones" unique_id=1969697892]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock8" type="Sprite2D" parent="Stones" unique_id=1446394773]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock9" type="Sprite2D" parent="Stones" unique_id=1761815549]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 500)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock10" type="Sprite2D" parent="Stones" unique_id=644858123]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock11" type="Sprite2D" parent="Stones" unique_id=1606908981]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock12" type="Sprite2D" parent="Stones" unique_id=1934004432]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 296)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock13" type="Sprite2D" parent="Stones" unique_id=779699905]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock14" type="Sprite2D" parent="Stones" unique_id=544662806]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock15" type="Sprite2D" parent="Stones" unique_id=291556640]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock16" type="Sprite2D" parent="Stones" unique_id=224401626]
+z_index = -1
+z_as_relative = false
+position = Vector2(-200, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock17" type="Sprite2D" parent="Stones" unique_id=903069043]
+z_index = -1
+z_as_relative = false
+position = Vector2(0, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
+
+[node name="Darkstoneblock18" type="Sprite2D" parent="Stones" unique_id=1796063979]
+z_index = -1
+z_as_relative = false
+position = Vector2(200, 1100)
+scale = Vector2(4, 4)
+texture = ExtResource("1_gicmp")
 
 [node name="BottomStones" type="Node2D" parent="Stones" unique_id=112842386]
 position = Vector2(200, 1100)
@@ -314,3 +445,742 @@ position = Vector2(-1800, 900)
 
 [node name="Stone100" parent="Stones" unique_id=681892575 instance=ExtResource("1_2ode6")]
 position = Vector2(-1800, 1100)
+
+[node name="spawner" parent="." unique_id=234430051 instance=ExtResource("3_1v8wy")]
+position = Vector2(711, 51)
+item = ExtResource("4_gicmp")
+wait_time = 1.0
+
+[node name="spawner2" parent="." unique_id=259659226 instance=ExtResource("3_1v8wy")]
+position = Vector2(690, 0)
+item = ExtResource("5_gxrax")
+wait_time = 10.0
+
+[node name="spawner3" parent="." unique_id=527477 instance=ExtResource("3_1v8wy")]
+position = Vector2(818, 60)
+item = ExtResource("6_n8ndk")
+wait_time = 10.0
+
+[node name="spawner4" parent="." unique_id=1248155741 instance=ExtResource("3_1v8wy")]
+position = Vector2(929, 28)
+item = ExtResource("4_gicmp")
+wait_time = 3.5
+
+[node name="spawner5" parent="." unique_id=639035697 instance=ExtResource("3_1v8wy")]
+position = Vector2(1023, 50)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner6" parent="." unique_id=1966894907 instance=ExtResource("3_1v8wy")]
+position = Vector2(1096, -29)
+item = ExtResource("4_gicmp")
+wait_time = 6.6
+
+[node name="spawner7" parent="." unique_id=723522484 instance=ExtResource("3_1v8wy")]
+position = Vector2(803, -15)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner8" parent="." unique_id=462419799 instance=ExtResource("3_1v8wy")]
+position = Vector2(849, 32)
+item = ExtResource("4_gicmp")
+wait_time = 4.9
+
+[node name="Stones2" type="Node2D" parent="." unique_id=108395489]
+position = Vector2(904, -24)
+
+[node name="BottomStones" type="Node2D" parent="Stones2" unique_id=2053206203]
+position = Vector2(200, 1100)
+script = ExtResource("2_mbgs6")
+
+[node name="Side1" type="Node2D" parent="Stones2/BottomStones" unique_id=1195548581]
+
+[node name="Stone26" parent="Stones2/BottomStones/Side1" unique_id=974195402 instance=ExtResource("1_2ode6")]
+
+[node name="Stone27" parent="Stones2/BottomStones/Side1" unique_id=1443108061 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
+
+[node name="Side2" type="Node2D" parent="Stones2/BottomStones" unique_id=1307098510]
+
+[node name="Stone28" parent="Stones2/BottomStones/Side2" unique_id=1381883099 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 0)
+
+[node name="Stone29" parent="Stones2/BottomStones/Side2" unique_id=1230724621 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
+
+[node name="Stone" parent="Stones2" unique_id=1503488165 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 100)
+
+[node name="Stone2" parent="Stones2" unique_id=731412455 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 300)
+
+[node name="Stone3" parent="Stones2" unique_id=930694630 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 500)
+
+[node name="Stone4" parent="Stones2" unique_id=1857219917 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 700)
+
+[node name="Stone5" parent="Stones2" unique_id=757076819 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 900)
+
+[node name="Stone6" parent="Stones2" unique_id=852753433 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 1100)
+
+[node name="Stone7" parent="Stones2" unique_id=1341948070 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 100)
+
+[node name="Stone8" parent="Stones2" unique_id=1225387627 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 300)
+
+[node name="Stone9" parent="Stones2" unique_id=472657028 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 500)
+
+[node name="Stone10" parent="Stones2" unique_id=9936948 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 700)
+
+[node name="Stone11" parent="Stones2" unique_id=1333691037 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 900)
+
+[node name="Stone12" parent="Stones2" unique_id=1882476958 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 1100)
+
+[node name="Stone13" parent="Stones2" unique_id=806487642 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 100)
+
+[node name="Stone14" parent="Stones2" unique_id=291776371 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 300)
+
+[node name="Stone15" parent="Stones2" unique_id=308431301 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 500)
+
+[node name="Stone16" parent="Stones2" unique_id=675907307 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 700)
+
+[node name="Stone17" parent="Stones2" unique_id=674998921 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 900)
+
+[node name="Stone18" parent="Stones2" unique_id=1039559007 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 1100)
+
+[node name="Stone19" parent="Stones2" unique_id=1854348828 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 100)
+
+[node name="Stone20" parent="Stones2" unique_id=177588972 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 300)
+
+[node name="Stone21" parent="Stones2" unique_id=827670442 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 500)
+
+[node name="Stone22" parent="Stones2" unique_id=109668972 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 700)
+
+[node name="Stone23" parent="Stones2" unique_id=672479278 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 900)
+
+[node name="Stone24" parent="Stones2" unique_id=1175612658 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 1100)
+
+[node name="Stone29" parent="Stones2" unique_id=1407879607 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 100)
+
+[node name="Stone30" parent="Stones2" unique_id=1404825872 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 300)
+
+[node name="Stone31" parent="Stones2" unique_id=102847586 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 500)
+
+[node name="Stone32" parent="Stones2" unique_id=1536427230 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 700)
+
+[node name="Stone33" parent="Stones2" unique_id=2123316000 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 900)
+
+[node name="Stone34" parent="Stones2" unique_id=418780147 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 1100)
+
+[node name="Stone35" parent="Stones2" unique_id=1826360687 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 100)
+
+[node name="Stone36" parent="Stones2" unique_id=1245526249 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 300)
+
+[node name="Stone37" parent="Stones2" unique_id=2129514686 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 500)
+
+[node name="Stone38" parent="Stones2" unique_id=409272187 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 700)
+
+[node name="Stone39" parent="Stones2" unique_id=255495757 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 900)
+
+[node name="Stone40" parent="Stones2" unique_id=1659285463 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 1100)
+
+[node name="Stone41" parent="Stones2" unique_id=168706355 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 100)
+
+[node name="Stone42" parent="Stones2" unique_id=822233668 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 300)
+
+[node name="Stone43" parent="Stones2" unique_id=959157926 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 500)
+
+[node name="Stone44" parent="Stones2" unique_id=983960502 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 700)
+
+[node name="Stone45" parent="Stones2" unique_id=722663579 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 900)
+
+[node name="Stone46" parent="Stones2" unique_id=498669494 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 1100)
+
+[node name="Stone47" parent="Stones2" unique_id=1945876941 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 100)
+
+[node name="Stone48" parent="Stones2" unique_id=640286098 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 300)
+
+[node name="Stone49" parent="Stones2" unique_id=135225745 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 500)
+
+[node name="Stone50" parent="Stones2" unique_id=461707738 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 700)
+
+[node name="Stone51" parent="Stones2" unique_id=1053454948 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 900)
+
+[node name="Stone52" parent="Stones2" unique_id=334919404 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 1100)
+
+[node name="Stone53" parent="Stones2" unique_id=1223654956 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 100)
+
+[node name="Stone54" parent="Stones2" unique_id=1478559257 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 300)
+
+[node name="Stone55" parent="Stones2" unique_id=1788159671 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 500)
+
+[node name="Stone56" parent="Stones2" unique_id=996693241 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 700)
+
+[node name="Stone57" parent="Stones2" unique_id=1560254317 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 900)
+
+[node name="Stone58" parent="Stones2" unique_id=1077494749 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 1100)
+
+[node name="Stone59" parent="Stones2" unique_id=1470358634 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 100)
+
+[node name="Stone60" parent="Stones2" unique_id=145474157 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 300)
+
+[node name="Stone61" parent="Stones2" unique_id=244775695 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 500)
+
+[node name="Stone62" parent="Stones2" unique_id=1613619808 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 700)
+
+[node name="Stone63" parent="Stones2" unique_id=1647634798 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 900)
+
+[node name="Stone64" parent="Stones2" unique_id=198160604 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 1100)
+
+[node name="Stone65" parent="Stones2" unique_id=589558311 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 100)
+
+[node name="Stone66" parent="Stones2" unique_id=461717071 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 300)
+
+[node name="Stone67" parent="Stones2" unique_id=1345603397 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 500)
+
+[node name="Stone68" parent="Stones2" unique_id=1958512214 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 700)
+
+[node name="Stone69" parent="Stones2" unique_id=275043431 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 900)
+
+[node name="Stone70" parent="Stones2" unique_id=1083317712 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 1100)
+
+[node name="Stone71" parent="Stones2" unique_id=825890395 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 100)
+
+[node name="Stone72" parent="Stones2" unique_id=662132462 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 300)
+
+[node name="Stone73" parent="Stones2" unique_id=1837988334 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 500)
+
+[node name="Stone74" parent="Stones2" unique_id=2005541629 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 700)
+
+[node name="Stone75" parent="Stones2" unique_id=1225127872 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 900)
+
+[node name="Stone76" parent="Stones2" unique_id=555715903 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 1100)
+
+[node name="Stone77" parent="Stones2" unique_id=1857340274 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 100)
+
+[node name="Stone78" parent="Stones2" unique_id=371132396 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 300)
+
+[node name="Stone79" parent="Stones2" unique_id=1555479010 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 500)
+
+[node name="Stone80" parent="Stones2" unique_id=201281416 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 700)
+
+[node name="Stone81" parent="Stones2" unique_id=678416307 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 900)
+
+[node name="Stone82" parent="Stones2" unique_id=1510364406 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 1100)
+
+[node name="Stone83" parent="Stones2" unique_id=1148916559 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 100)
+
+[node name="Stone84" parent="Stones2" unique_id=2002690882 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 300)
+
+[node name="Stone85" parent="Stones2" unique_id=856739843 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 500)
+
+[node name="Stone86" parent="Stones2" unique_id=1522860920 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 700)
+
+[node name="Stone87" parent="Stones2" unique_id=1480217059 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 900)
+
+[node name="Stone88" parent="Stones2" unique_id=368693585 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 1100)
+
+[node name="Stone89" parent="Stones2" unique_id=182747071 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 100)
+
+[node name="Stone90" parent="Stones2" unique_id=1906686431 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 300)
+
+[node name="Stone91" parent="Stones2" unique_id=43844509 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 500)
+
+[node name="Stone92" parent="Stones2" unique_id=1869042879 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 700)
+
+[node name="Stone93" parent="Stones2" unique_id=898995028 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 900)
+
+[node name="Stone94" parent="Stones2" unique_id=728843320 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 1100)
+
+[node name="Stone95" parent="Stones2" unique_id=692180173 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 100)
+
+[node name="Stone96" parent="Stones2" unique_id=822065298 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 300)
+
+[node name="Stone97" parent="Stones2" unique_id=1823091814 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 500)
+
+[node name="Stone98" parent="Stones2" unique_id=878730007 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 700)
+
+[node name="Stone99" parent="Stones2" unique_id=252566107 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 900)
+
+[node name="Stone100" parent="Stones2" unique_id=1982872424 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 1100)
+
+[node name="spawner9" parent="." unique_id=835644820 instance=ExtResource("3_1v8wy")]
+position = Vector2(711, 51)
+item = ExtResource("4_gicmp")
+wait_time = 1.0
+
+[node name="spawner10" parent="." unique_id=1609238662 instance=ExtResource("3_1v8wy")]
+position = Vector2(887, 3)
+item = ExtResource("5_gxrax")
+wait_time = 10.0
+
+[node name="spawner11" parent="." unique_id=1562556716 instance=ExtResource("3_1v8wy")]
+position = Vector2(918, 54)
+item = ExtResource("6_n8ndk")
+
+[node name="spawner12" parent="." unique_id=1445003170 instance=ExtResource("3_1v8wy")]
+position = Vector2(947, 38)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner13" parent="." unique_id=1396779626 instance=ExtResource("3_1v8wy")]
+position = Vector2(798, -36)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner14" parent="." unique_id=661874533 instance=ExtResource("3_1v8wy")]
+position = Vector2(1096, -29)
+item = ExtResource("4_gicmp")
+wait_time = 6.6
+
+[node name="spawner15" parent="." unique_id=1222502990 instance=ExtResource("3_1v8wy")]
+position = Vector2(920, 2)
+item = ExtResource("4_gicmp")
+wait_time = 7.2
+
+[node name="spawner16" parent="." unique_id=385749498 instance=ExtResource("3_1v8wy")]
+position = Vector2(833, -3)
+item = ExtResource("4_gicmp")
+wait_time = 8.0
+
+[node name="Stones3" type="Node2D" parent="." unique_id=2055478431]
+position = Vector2(904, -24)
+
+[node name="BottomStones" type="Node2D" parent="Stones3" unique_id=1337306626]
+position = Vector2(200, 1100)
+script = ExtResource("2_mbgs6")
+
+[node name="Side1" type="Node2D" parent="Stones3/BottomStones" unique_id=316025978]
+
+[node name="Stone26" parent="Stones3/BottomStones/Side1" unique_id=265778706 instance=ExtResource("1_2ode6")]
+
+[node name="Stone27" parent="Stones3/BottomStones/Side1" unique_id=1052856446 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
+
+[node name="Side2" type="Node2D" parent="Stones3/BottomStones" unique_id=792254682]
+
+[node name="Stone28" parent="Stones3/BottomStones/Side2" unique_id=703394976 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 0)
+
+[node name="Stone29" parent="Stones3/BottomStones/Side2" unique_id=185610111 instance=ExtResource("1_2ode6")]
+position = Vector2(-200, 0)
+
+[node name="Stone" parent="Stones3" unique_id=1297716959 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 100)
+
+[node name="Stone2" parent="Stones3" unique_id=1621388511 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 300)
+
+[node name="Stone3" parent="Stones3" unique_id=1516959447 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 500)
+
+[node name="Stone4" parent="Stones3" unique_id=1704602255 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 700)
+
+[node name="Stone5" parent="Stones3" unique_id=899154904 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 900)
+
+[node name="Stone6" parent="Stones3" unique_id=1601329261 instance=ExtResource("1_2ode6")]
+position = Vector2(-400, 1100)
+
+[node name="Stone7" parent="Stones3" unique_id=1528833746 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 100)
+
+[node name="Stone8" parent="Stones3" unique_id=1815758206 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 300)
+
+[node name="Stone9" parent="Stones3" unique_id=790595009 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 500)
+
+[node name="Stone10" parent="Stones3" unique_id=1054149208 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 700)
+
+[node name="Stone11" parent="Stones3" unique_id=1320348265 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 900)
+
+[node name="Stone12" parent="Stones3" unique_id=2131128302 instance=ExtResource("1_2ode6")]
+position = Vector2(-600, 1100)
+
+[node name="Stone13" parent="Stones3" unique_id=105563938 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 100)
+
+[node name="Stone14" parent="Stones3" unique_id=1159152381 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 300)
+
+[node name="Stone15" parent="Stones3" unique_id=659814118 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 500)
+
+[node name="Stone16" parent="Stones3" unique_id=58858954 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 700)
+
+[node name="Stone17" parent="Stones3" unique_id=826211661 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 900)
+
+[node name="Stone18" parent="Stones3" unique_id=538508586 instance=ExtResource("1_2ode6")]
+position = Vector2(-800, 1100)
+
+[node name="Stone19" parent="Stones3" unique_id=2109518544 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 100)
+
+[node name="Stone20" parent="Stones3" unique_id=1600006689 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 300)
+
+[node name="Stone21" parent="Stones3" unique_id=1725917069 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 500)
+
+[node name="Stone22" parent="Stones3" unique_id=2141625292 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 700)
+
+[node name="Stone23" parent="Stones3" unique_id=911187134 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 900)
+
+[node name="Stone24" parent="Stones3" unique_id=1249457053 instance=ExtResource("1_2ode6")]
+position = Vector2(-1000, 1100)
+
+[node name="Stone29" parent="Stones3" unique_id=2142115810 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 100)
+
+[node name="Stone30" parent="Stones3" unique_id=97740460 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 300)
+
+[node name="Stone31" parent="Stones3" unique_id=789969789 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 500)
+
+[node name="Stone32" parent="Stones3" unique_id=72373652 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 700)
+
+[node name="Stone33" parent="Stones3" unique_id=1776407785 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 900)
+
+[node name="Stone34" parent="Stones3" unique_id=1438309692 instance=ExtResource("1_2ode6")]
+position = Vector2(1000, 1100)
+
+[node name="Stone35" parent="Stones3" unique_id=462840011 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 100)
+
+[node name="Stone36" parent="Stones3" unique_id=1006092276 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 300)
+
+[node name="Stone37" parent="Stones3" unique_id=283009322 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 500)
+
+[node name="Stone38" parent="Stones3" unique_id=1032816757 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 700)
+
+[node name="Stone39" parent="Stones3" unique_id=584885543 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 900)
+
+[node name="Stone40" parent="Stones3" unique_id=532152412 instance=ExtResource("1_2ode6")]
+position = Vector2(800, 1100)
+
+[node name="Stone41" parent="Stones3" unique_id=1806727847 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 100)
+
+[node name="Stone42" parent="Stones3" unique_id=1380751156 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 300)
+
+[node name="Stone43" parent="Stones3" unique_id=1910406541 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 500)
+
+[node name="Stone44" parent="Stones3" unique_id=1794752354 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 700)
+
+[node name="Stone45" parent="Stones3" unique_id=212435209 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 900)
+
+[node name="Stone46" parent="Stones3" unique_id=651949387 instance=ExtResource("1_2ode6")]
+position = Vector2(600, 1100)
+
+[node name="Stone47" parent="Stones3" unique_id=1604202912 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 100)
+
+[node name="Stone48" parent="Stones3" unique_id=923311029 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 300)
+
+[node name="Stone49" parent="Stones3" unique_id=633339816 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 500)
+
+[node name="Stone50" parent="Stones3" unique_id=575015944 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 700)
+
+[node name="Stone51" parent="Stones3" unique_id=1949391996 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 900)
+
+[node name="Stone52" parent="Stones3" unique_id=368649281 instance=ExtResource("1_2ode6")]
+position = Vector2(400, 1100)
+
+[node name="Stone53" parent="Stones3" unique_id=1552077354 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 100)
+
+[node name="Stone54" parent="Stones3" unique_id=1332893032 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 300)
+
+[node name="Stone55" parent="Stones3" unique_id=1022737785 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 500)
+
+[node name="Stone56" parent="Stones3" unique_id=1254384865 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 700)
+
+[node name="Stone57" parent="Stones3" unique_id=503464120 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 900)
+
+[node name="Stone58" parent="Stones3" unique_id=1165938174 instance=ExtResource("1_2ode6")]
+position = Vector2(1800, 1100)
+
+[node name="Stone59" parent="Stones3" unique_id=368818786 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 100)
+
+[node name="Stone60" parent="Stones3" unique_id=1494436874 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 300)
+
+[node name="Stone61" parent="Stones3" unique_id=1942587808 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 500)
+
+[node name="Stone62" parent="Stones3" unique_id=1038588767 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 700)
+
+[node name="Stone63" parent="Stones3" unique_id=637123434 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 900)
+
+[node name="Stone64" parent="Stones3" unique_id=965072407 instance=ExtResource("1_2ode6")]
+position = Vector2(1600, 1100)
+
+[node name="Stone65" parent="Stones3" unique_id=411413149 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 100)
+
+[node name="Stone66" parent="Stones3" unique_id=2132186418 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 300)
+
+[node name="Stone67" parent="Stones3" unique_id=1024920400 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 500)
+
+[node name="Stone68" parent="Stones3" unique_id=1047837620 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 700)
+
+[node name="Stone69" parent="Stones3" unique_id=1102663367 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 900)
+
+[node name="Stone70" parent="Stones3" unique_id=1326849149 instance=ExtResource("1_2ode6")]
+position = Vector2(1400, 1100)
+
+[node name="Stone71" parent="Stones3" unique_id=1441854568 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 100)
+
+[node name="Stone72" parent="Stones3" unique_id=1846051750 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 300)
+
+[node name="Stone73" parent="Stones3" unique_id=1206011970 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 500)
+
+[node name="Stone74" parent="Stones3" unique_id=753903590 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 700)
+
+[node name="Stone75" parent="Stones3" unique_id=16859521 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 900)
+
+[node name="Stone76" parent="Stones3" unique_id=744708660 instance=ExtResource("1_2ode6")]
+position = Vector2(1200, 1100)
+
+[node name="Stone77" parent="Stones3" unique_id=175462086 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 100)
+
+[node name="Stone78" parent="Stones3" unique_id=1596288150 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 300)
+
+[node name="Stone79" parent="Stones3" unique_id=165788140 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 500)
+
+[node name="Stone80" parent="Stones3" unique_id=1011324485 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 700)
+
+[node name="Stone81" parent="Stones3" unique_id=119028469 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 900)
+
+[node name="Stone82" parent="Stones3" unique_id=887595896 instance=ExtResource("1_2ode6")]
+position = Vector2(-1200, 1100)
+
+[node name="Stone83" parent="Stones3" unique_id=2029985913 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 100)
+
+[node name="Stone84" parent="Stones3" unique_id=1170879021 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 300)
+
+[node name="Stone85" parent="Stones3" unique_id=1763743867 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 500)
+
+[node name="Stone86" parent="Stones3" unique_id=1008777906 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 700)
+
+[node name="Stone87" parent="Stones3" unique_id=1538732767 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 900)
+
+[node name="Stone88" parent="Stones3" unique_id=224434847 instance=ExtResource("1_2ode6")]
+position = Vector2(-1400, 1100)
+
+[node name="Stone89" parent="Stones3" unique_id=2054479735 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 100)
+
+[node name="Stone90" parent="Stones3" unique_id=1233997107 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 300)
+
+[node name="Stone91" parent="Stones3" unique_id=327955064 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 500)
+
+[node name="Stone92" parent="Stones3" unique_id=436532748 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 700)
+
+[node name="Stone93" parent="Stones3" unique_id=1648849636 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 900)
+
+[node name="Stone94" parent="Stones3" unique_id=612910387 instance=ExtResource("1_2ode6")]
+position = Vector2(-1600, 1100)
+
+[node name="Stone95" parent="Stones3" unique_id=2004538457 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 100)
+
+[node name="Stone96" parent="Stones3" unique_id=1573547792 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 300)
+
+[node name="Stone97" parent="Stones3" unique_id=1744308801 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 500)
+
+[node name="Stone98" parent="Stones3" unique_id=632184892 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 700)
+
+[node name="Stone99" parent="Stones3" unique_id=1766869938 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 900)
+
+[node name="Stone100" parent="Stones3" unique_id=121386902 instance=ExtResource("1_2ode6")]
+position = Vector2(-1800, 1100)
+
+[node name="spawner17" parent="." unique_id=1591709229 instance=ExtResource("3_1v8wy")]
+position = Vector2(711, 51)
+item = ExtResource("4_gicmp")
+wait_time = 1.0
+
+[node name="spawner18" parent="." unique_id=1890697870 instance=ExtResource("3_1v8wy")]
+position = Vector2(1026, -5)
+item = ExtResource("5_gxrax")
+wait_time = 12.0
+
+[node name="spawner19" parent="." unique_id=1952344805 instance=ExtResource("3_1v8wy")]
+position = Vector2(852, 27)
+item = ExtResource("6_n8ndk")
+wait_time = 10.0
+
+[node name="spawner20" parent="." unique_id=480028008 instance=ExtResource("3_1v8wy")]
+position = Vector2(752, 14)
+item = ExtResource("4_gicmp")
+wait_time = 3.5
+
+[node name="spawner21" parent="." unique_id=456216450 instance=ExtResource("3_1v8wy")]
+position = Vector2(937, 14)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner22" parent="." unique_id=1622234825 instance=ExtResource("3_1v8wy")]
+position = Vector2(1068, -20)
+item = ExtResource("4_gicmp")
+wait_time = 10.0
+
+[node name="spawner23" parent="." unique_id=595325355 instance=ExtResource("3_1v8wy")]
+position = Vector2(1004, 9)
+item = ExtResource("4_gicmp")
+wait_time = 9.0
+
+[node name="spawner24" parent="." unique_id=1014719274 instance=ExtResource("3_1v8wy")]
+position = Vector2(775, 16)
+item = ExtResource("4_gicmp")
+wait_time = 4.9

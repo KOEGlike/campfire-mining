@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bp1qx486xgkdh"]
+
+[ext_resource type="Script" uid="uid://ole8mt2mcfxa" path="res://map/hole_spawner.gd" id="1_iwa35"]
+
+[node name="spawner" type="Node2D" unique_id=234430051]
+script = ExtResource("1_iwa35")
+
+[node name="Timer" type="Timer" parent="." unique_id=1619845129]

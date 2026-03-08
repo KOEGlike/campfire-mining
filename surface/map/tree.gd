@@ -1,5 +1,6 @@
 extends StaticBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 
 @export var fall_left:bool
 
@@ -12,3 +13,7 @@ func _ready() -> void:
 			else:
 				animation_player.play("tree fall")
 	)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	cpu_particles_2d.restart()

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="2_r5i85"]
 [ext_resource type="PackedScene" uid="uid://b2ymn3we10fvf" path="res://map/stone_grass.tscn" id="3_fv5y6"]
 [ext_resource type="Texture2D" uid="uid://1xek2wgf6e" path="res://map/sunnybackg.png" id="6_fv5y6"]
+[ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="7_sacel"]
 
 [node name="Grassy" type="Node2D" unique_id=1120019614]
 
@@ -31,6 +32,83 @@ position = Vector2(700, 484)
 
 [node name="Stone3" parent="Blocks/Stones" unique_id=1913221941 instance=ExtResource("2_r5i85")]
 position = Vector2(900, 484)
+
+[node name="Darkstoneblock" type="Sprite2D" parent="Blocks/Stones" unique_id=673491915]
+z_index = -1
+z_as_relative = false
+position = Vector2(500, 284)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock2" type="Sprite2D" parent="Blocks/Stones" unique_id=1381669576]
+z_index = -1
+z_as_relative = false
+position = Vector2(500, 116)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock3" type="Sprite2D" parent="Blocks/Stones" unique_id=161159662]
+z_index = -1
+z_as_relative = false
+position = Vector2(700, 284)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock4" type="Sprite2D" parent="Blocks/Stones" unique_id=1320751275]
+z_index = -1
+z_as_relative = false
+position = Vector2(700, 116)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock5" type="Sprite2D" parent="Blocks/Stones" unique_id=951613817]
+z_index = -1
+z_as_relative = false
+position = Vector2(900, 284)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock6" type="Sprite2D" parent="Blocks/Stones" unique_id=1216219180]
+z_index = -1
+z_as_relative = false
+position = Vector2(900, 116)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock7" type="Sprite2D" parent="Blocks/Stones" unique_id=282039256]
+z_index = -1
+z_as_relative = false
+position = Vector2(900, 284)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock9" type="Sprite2D" parent="Blocks/Stones" unique_id=454309050]
+z_index = -1
+z_as_relative = false
+position = Vector2(500, 484)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock10" type="Sprite2D" parent="Blocks/Stones" unique_id=2094214888]
+z_index = -1
+z_as_relative = false
+position = Vector2(700, 484)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock11" type="Sprite2D" parent="Blocks/Stones" unique_id=1927469031]
+z_index = -1
+z_as_relative = false
+position = Vector2(900, 484)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
+
+[node name="Darkstoneblock8" type="Sprite2D" parent="Blocks/Stones" unique_id=706946364]
+z_index = -1
+z_as_relative = false
+position = Vector2(900, 116)
+scale = Vector2(4, 4)
+texture = ExtResource("7_sacel")
 
 [node name="GrassyField" parent="Blocks" unique_id=69348105 instance=ExtResource("2_30474")]
 position = Vector2(104, 84)
@@ -135,7 +213,8 @@ position = Vector2(1500, 284)
 position = Vector2(1700, 284)
 
 [node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
-z_index = -1
+z_index = -2
+z_as_relative = false
 position = Vector2(648, -232)
 scale = Vector2(5, 5)
 texture = ExtResource("6_fv5y6")
