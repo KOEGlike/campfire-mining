@@ -11,12 +11,12 @@
 [node name="Grassy" type="Node2D" unique_id=1120019614]
 
 [node name="Tree" parent="." unique_id=1835523215 instance=ExtResource("1_r5i85")]
-position = Vector2(304, 16.000061)
+position = Vector2(104, 11)
 scale = Vector2(1.898857, 1.898857)
 
 [node name="Tree2" parent="." unique_id=131109395 instance=ExtResource("1_r5i85")]
-position = Vector2(1168, 36)
-scale = Vector2(1.898857, 1.898857)
+position = Vector2(1327, 17)
+scale = Vector2(2.4, 2.4)
 fall_left = true
 
 [node name="Blocks" type="Node2D" parent="." unique_id=33644267]

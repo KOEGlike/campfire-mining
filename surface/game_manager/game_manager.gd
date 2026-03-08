@@ -18,6 +18,7 @@ const USER_ID_FILE="user://user.id"
 
 func _ready() -> void:
 	http_request.request_completed.connect(_on_request_completed)
+	send_name("Peter")
 	timeline()
 	
 func timeline():
@@ -40,6 +41,14 @@ func restart():
 func _on_request_completed(result:int, response_code:int, headers:PackedStringArray, body:PackedByteArray):
 	if response_code == 200:
 		var json = JSON.parse_string(body.get_string_from_utf8())
-		print("Data received: ", json["title"])
+		print("Data received: ", json)
 	else:
 		print("Error: API returned status code ", response_code)
+
+func send_name(player_name: String):
+	var url = "https://squid-app-azgji.ondigitalocean.app/CreateUser"
+	var headers = ["Content-Type: application/json"]
+	var body = JSON.stringify({
+		"name": player_name
+	})
+	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
