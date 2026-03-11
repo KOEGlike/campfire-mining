@@ -13,7 +13,12 @@ config_version=5
 config/name="surface"
 run/main_scene="uid://bt80hs87sfnqv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(2.695322e-06, 0.6460679, 0.84562457, 1)
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
+boot_splash/image="uid://dmoiffhax3gmv"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=300
 
 [autoload]
 
