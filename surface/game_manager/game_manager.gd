@@ -29,6 +29,7 @@ var game_time: int = 0 # másodpercekben (1mp-ként nő 1-gyel)
 var star_count: int = 0 # összegyűjtött csillagok
 var is_completed: bool = false # végigcsinálta-e a pályát
 var game_running: bool = false # fut-e a timer
+var last_server_score: int = -1
 
 # Melyik request van folyamatban
 enum RequestType {NONE, REGISTER, FULL_SCORE}
@@ -181,10 +182,10 @@ func send_full_score() -> bool:
 	print("[GameManager] Sending score -> time=", _format_time_breakdown(game_time), " stars=", star_count, " completed=", is_completed)
 	return true
 
-func show_end_screen(completed: bool, score_was_submitted: bool) -> void:
+func show_end_screen(completed: bool, score_to_display: int, score_was_submitted: bool) -> void:
 	var end_screen := END_SCREEN_SCENE.instantiate() as EndScreen
 	get_tree().root.add_child(end_screen)
-	end_screen.setup(completed, star_count, user_alive, score_was_submitted)
+	end_screen.setup(completed, score_to_display, user_alive, score_was_submitted)
 	await end_screen.closed
 
 # ============================================================
@@ -269,20 +270,30 @@ func _handle_full_score_response(result: int, response_code: int, body_text: Str
 	if response_code == 403:
 		user_alive = 0
 		save_user_data()
+		last_server_score = _extract_server_score(data)
 		return data
 
 	if response_code != 200:
+		last_server_score = _extract_server_score(data)
 		return data
 
 	if data.has("remainingLives"):
 		user_alive = int(data["remainingLives"])
 	else:
 		user_alive -= 1
+	last_server_score = _extract_server_score(data)
 	save_user_data()
 
 	score_submitted.emit(root)
 	print("[GameManager] Server: ", root.get("message", data.get("message", "")))
 	return data
+
+func _extract_server_score(data: Dictionary) -> int:
+	if data.has("score"):
+		return int(data["score"])
+	if data.has("yourScore"):
+		return int(data["yourScore"])
+	return -1
 
 func _http_result_to_text(result: int) -> String:
 	match result:
@@ -358,6 +369,7 @@ func _reset_runtime_state() -> void:
 	game_time = 0
 	star_count = 0
 	is_completed = false
+	last_server_score = -1
 	_time_accumulator = 0.0
 	if current_request != RequestType.NONE:
 		http_request.cancel_request()
@@ -370,6 +382,7 @@ func restart(submit_score: bool = true) -> void:
 	print("[GameManager] restart() called submit_score=", submit_score, " game_running=", game_running, " is_completed=", is_completed, " user_id=", user_id, " alive=", user_alive)
 
 	var score_was_submitted := false
+	var score_to_display := star_count
 	if submit_score and not is_completed:
 		if game_running:
 			stop_game_timer(false)
@@ -378,10 +391,12 @@ func restart(submit_score: bool = true) -> void:
 		score_was_submitted = request_started
 		if request_started:
 			await full_score_finished
+			if last_server_score >= 0:
+				score_to_display = last_server_score
 		else:
 			print("[GameManager] restart() score submit skipped (missing user or no lives)")
 
-	await show_end_screen(is_completed, score_was_submitted)
+	await show_end_screen(is_completed, score_to_display, score_was_submitted)
 
 	_reset_runtime_state()
 	_restart_in_progress = false

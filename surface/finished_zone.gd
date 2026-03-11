@@ -22,10 +22,13 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		Manager.stop_game_timer(true)
 		var request_started = Manager.send_full_score()
+		var score_to_display = Manager.star_count
 		if request_started:
 			await Manager.full_score_finished
+			if Manager.last_server_score >= 0:
+				score_to_display = Manager.last_server_score
 
-		await Manager.show_end_screen(true, request_started)
+		await Manager.show_end_screen(true, score_to_display, request_started)
 		
 		await get_tree().create_timer(1.0).timeout
 		get_tree().paused = true
