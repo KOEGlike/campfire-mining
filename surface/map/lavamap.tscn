@@ -5,643 +5,377 @@
 [ext_resource type="Texture2D" uid="uid://81uyvsj2y5ek" path="res://map/lava3.png" id="3_uor5m"]
 [ext_resource type="Texture2D" uid="uid://lwonvwipyv2" path="res://map/lava4.png" id="4_ai5kx"]
 [ext_resource type="Texture2D" uid="uid://b5pew5l6yno6a" path="res://map/lava1.png" id="5_e3w84"]
-[ext_resource type="Texture2D" uid="uid://cab3wgsj28lsq" path="res://map/lava2.png" id="6_jcp0r"]
 [ext_resource type="PackedScene" uid="uid://bhwemhucswoxv" path="res://map/deepslate.tscn" id="7_ai5kx"]
+[ext_resource type="Script" uid="uid://bbt74bkgvn5tq" path="res://map/mine_breaker.gd" id="7_c373v"]
 [ext_resource type="PackedScene" uid="uid://oaymtvs1qidb" path="res://map/Lava.tscn" id="8_e3w84"]
 [ext_resource type="PackedScene" uid="uid://d3or311exks87" path="res://FinishedZone.tscn" id="9_jcp0r"]
 [ext_resource type="Script" uid="uid://d34tts5h3cipq" path="res://map/area_2d.gd" id="11_c373v"]
 [ext_resource type="PackedScene" uid="uid://mnsu6bljrs0e" path="res://Star.tscn" id="11_l1l63"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3q3e"]
-size = Vector2(74, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1l63"]
-size = Vector2(74, 25.75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c373v"]
-size = Vector2(44, 24.875)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkav7"]
-size = Vector2(96, 84)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nybp6"]
-size = Vector2(96, 76)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvey0"]
-size = Vector2(44, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6br3"]
-size = Vector2(56, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph552"]
-size = Vector2(44, 9)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8me12"]
-size = Vector2(2790, 414)
+size = Vector2(2788, 587)
 
 [node name="Lava" type="Node2D" unique_id=1021381230]
 
-[node name="Lavaburst2" parent="." unique_id=738261255 instance=ExtResource("1_fy3fb")]
-position = Vector2(744, -227)
-
-[node name="Lavaburst3" parent="." unique_id=547919600 instance=ExtResource("1_fy3fb")]
-position = Vector2(1228, -230)
-
-[node name="Lavaburst6" parent="." unique_id=1151809401 instance=ExtResource("1_fy3fb")]
-position = Vector2(1788, -236)
-
-[node name="Lavaburst9" parent="." unique_id=951290694 instance=ExtResource("1_fy3fb")]
-position = Vector2(2272, -236)
-
-[node name="Lavaburst11" parent="." unique_id=1559456407 instance=ExtResource("1_fy3fb")]
-position = Vector2(2716, -236)
-
-[node name="Lavaburst13" parent="." unique_id=2102022469 instance=ExtResource("1_fy3fb")]
-position = Vector2(3284, -332)
-
-[node name="Lavaburst14" parent="." unique_id=2114582868 instance=ExtResource("1_fy3fb")]
-position = Vector2(3284, -332)
-
-[node name="Node2D" type="StaticBody2D" parent="." unique_id=1480346769]
+[node name="Lava4" type="Sprite2D" parent="." unique_id=648843092]
+z_index = -1
+z_as_relative = false
+position = Vector2(1800, -540)
 scale = Vector2(4, 4)
-
-[node name="Lava4" type="Sprite2D" parent="Node2D" unique_id=648843092]
-z_index = -1
-z_as_relative = false
-position = Vector2(450, -135)
 texture = ExtResource("4_ai5kx")
 
-[node name="Lava5" type="Sprite2D" parent="Node2D" unique_id=974546459]
+[node name="Lava5" type="Sprite2D" parent="." unique_id=974546459]
 z_index = -1
 z_as_relative = false
-position = Vector2(450, -135)
+position = Vector2(1800, -540)
+scale = Vector2(4, 4)
 texture = ExtResource("4_ai5kx")
 
-[node name="Lava3" type="Sprite2D" parent="Node2D" unique_id=792388927]
+[node name="Lava3" type="Sprite2D" parent="." unique_id=792388927]
 z_index = -2
 z_as_relative = false
-position = Vector2(450, -138)
+position = Vector2(1800, -552)
+scale = Vector2(4, 4)
 texture = ExtResource("3_uor5m")
 
-[node name="Lava1" type="Sprite2D" parent="Node2D" unique_id=1193750737]
+[node name="Lava1" type="Sprite2D" parent="." unique_id=1193750737]
 z_index = 1
-position = Vector2(450, -135)
+position = Vector2(1800, -540)
+scale = Vector2(4, 4)
 texture = ExtResource("5_e3w84")
 
-[node name="Lava2" type="Sprite2D" parent="Node2D" unique_id=868097737]
-position = Vector2(456, -118)
-texture = ExtResource("6_jcp0r")
+[node name="Lava2" type="Sprite2D" parent="." unique_id=571247517]
+z_index = 1
+position = Vector2(-1004, -540)
+scale = Vector2(4, 4)
+texture = ExtResource("5_e3w84")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=1006356057]
-position = Vector2(446, -46)
-shape = SubResource("RectangleShape2D_h3q3e")
+[node name="RandomDestroyBlocks" type="Node2D" parent="." unique_id=852078607]
+script = ExtResource("7_c373v")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D" unique_id=1865015462]
-position = Vector2(202, -43.875)
-shape = SubResource("RectangleShape2D_l1l63")
+[node name="Deepslate3" parent="RandomDestroyBlocks" unique_id=335165033 instance=ExtResource("7_ai5kx")]
+position = Vector2(-92, -408)
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Node2D" unique_id=1666218471]
-position = Vector2(322, -46.4375)
-shape = SubResource("RectangleShape2D_c373v")
+[node name="Deepslate4" parent="RandomDestroyBlocks" unique_id=2035313004 instance=ExtResource("7_ai5kx")]
+position = Vector2(-292, -408)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D" unique_id=2135826766]
-position = Vector2(852, -40)
-shape = SubResource("RectangleShape2D_nkav7")
+[node name="Deepslate5" parent="RandomDestroyBlocks" unique_id=772646096 instance=ExtResource("7_ai5kx")]
+position = Vector2(-92, -608)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D" unique_id=1513074343]
-position = Vector2(51, -39)
-shape = SubResource("RectangleShape2D_nybp6")
+[node name="Deepslate6" parent="RandomDestroyBlocks" unique_id=601300885 instance=ExtResource("7_ai5kx")]
+position = Vector2(-292, -608)
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D" unique_id=268580553]
-position = Vector2(562, -46)
-shape = SubResource("RectangleShape2D_hvey0")
+[node name="Deepslate7" parent="RandomDestroyBlocks" unique_id=1354944241 instance=ExtResource("7_ai5kx")]
+position = Vector2(-92, -804)
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Node2D" unique_id=810791679]
-position = Vector2(672, -46)
-shape = SubResource("RectangleShape2D_hvey0")
+[node name="Deepslate8" parent="RandomDestroyBlocks" unique_id=900656551 instance=ExtResource("7_ai5kx")]
+position = Vector2(-292, -804)
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Node2D" unique_id=1775137653]
-position = Vector2(778, -44.5)
-shape = SubResource("RectangleShape2D_a6br3")
+[node name="Deepslate9" parent="RandomDestroyBlocks" unique_id=1897290529 instance=ExtResource("7_ai5kx")]
+position = Vector2(-92, -1004)
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Node2D" unique_id=1289821780]
-position = Vector2(784, -62)
-shape = SubResource("RectangleShape2D_ph552")
+[node name="Deepslate10" parent="RandomDestroyBlocks" unique_id=1323487243 instance=ExtResource("7_ai5kx")]
+position = Vector2(-292, -1004)
 
-[node name="Lavaburstlong" parent="." unique_id=2128216012 instance=ExtResource("2_1a4h0")]
-position = Vector2(492, -192)
+[node name="Deepslate11" parent="RandomDestroyBlocks" unique_id=818607494 instance=ExtResource("7_ai5kx")]
+position = Vector2(-492, -1008)
 
-[node name="Lavaburstlong2" parent="." unique_id=1225266164 instance=ExtResource("2_1a4h0")]
-position = Vector2(1044, -204)
+[node name="Deepslate12" parent="RandomDestroyBlocks" unique_id=1077889979 instance=ExtResource("7_ai5kx")]
+position = Vector2(-692, -1008)
 
-[node name="Lavaburstlong3" parent="." unique_id=1406447426 instance=ExtResource("2_1a4h0")]
-position = Vector2(1508, -196)
+[node name="Deepslate13" parent="RandomDestroyBlocks" unique_id=856040967 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -1008)
 
-[node name="Lavaburstlong4" parent="." unique_id=2107063760 instance=ExtResource("2_1a4h0")]
-position = Vector2(1976, -184)
+[node name="Deepslate14" parent="RandomDestroyBlocks" unique_id=1793605795 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -1008)
 
-[node name="Lavaburstlong5" parent="." unique_id=1854963320 instance=ExtResource("2_1a4h0")]
-position = Vector2(2104, -184)
+[node name="Deepslate15" parent="RandomDestroyBlocks" unique_id=395084980 instance=ExtResource("7_ai5kx")]
+position = Vector2(-492, -808)
 
-[node name="Lavaburstlong6" parent="." unique_id=1932076340 instance=ExtResource("2_1a4h0")]
-position = Vector2(2388, -180)
+[node name="Deepslate16" parent="RandomDestroyBlocks" unique_id=1873219665 instance=ExtResource("7_ai5kx")]
+position = Vector2(-692, -808)
 
-[node name="Lavaburstlong7" parent="." unique_id=1448291726 instance=ExtResource("2_1a4h0")]
-position = Vector2(2464, -180)
+[node name="Deepslate17" parent="RandomDestroyBlocks" unique_id=381211314 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -808)
 
-[node name="Lavaburstlong8" parent="." unique_id=1948627599 instance=ExtResource("2_1a4h0")]
-position = Vector2(2540, -168)
+[node name="Deepslate18" parent="RandomDestroyBlocks" unique_id=1366170061 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -808)
 
-[node name="Lavaburstlong10" parent="." unique_id=1147696280 instance=ExtResource("2_1a4h0")]
-position = Vector2(2800, -172)
+[node name="Deepslate27" parent="RandomDestroyBlocks" unique_id=1514281001 instance=ExtResource("7_ai5kx")]
+position = Vector2(-696, -1408)
 
-[node name="Lavaburstlong11" parent="." unique_id=211511213 instance=ExtResource("2_1a4h0")]
-position = Vector2(2920, -178)
+[node name="Deepslate48" parent="RandomDestroyBlocks" unique_id=1522831983 instance=ExtResource("7_ai5kx")]
+position = Vector2(-896, -1408)
 
-[node name="Lavaburstlong12" parent="." unique_id=988410246 instance=ExtResource("2_1a4h0")]
-position = Vector2(3136, -224)
+[node name="Deepslate117" parent="RandomDestroyBlocks" unique_id=100105641 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1096, -1408)
 
-[node name="Lavaburstlong13" parent="." unique_id=1661331764 instance=ExtResource("2_1a4h0")]
-position = Vector2(3332, -300)
+[node name="Deepslate118" parent="RandomDestroyBlocks" unique_id=1127268529 instance=ExtResource("7_ai5kx")]
+position = Vector2(-696, -1208)
 
-[node name="Lavaburstlong14" parent="." unique_id=1902669216 instance=ExtResource("2_1a4h0")]
-position = Vector2(3416, -304)
+[node name="Deepslate119" parent="RandomDestroyBlocks" unique_id=880237005 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -1208)
 
-[node name="Lavaburstlong15" parent="." unique_id=166118457 instance=ExtResource("2_1a4h0")]
-position = Vector2(3416, -304)
+[node name="Deepslate120" parent="RandomDestroyBlocks" unique_id=1351381508 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -1208)
 
-[node name="Lavaburstlong9" parent="." unique_id=1477673466 instance=ExtResource("2_1a4h0")]
-position = Vector2(2492, -164)
+[node name="Deepslate121" parent="RandomDestroyBlocks" unique_id=1313594150 instance=ExtResource("7_ai5kx")]
+position = Vector2(-696, -1408)
 
-[node name="blocks" type="Node2D" parent="." unique_id=852078607]
+[node name="Deepslate122" parent="RandomDestroyBlocks" unique_id=1996582650 instance=ExtResource("7_ai5kx")]
+position = Vector2(-896, -1408)
 
-[node name="Deepslate" parent="blocks" unique_id=361091547 instance=ExtResource("7_ai5kx")]
-position = Vector2(-96, -208)
+[node name="Deepslate123" parent="RandomDestroyBlocks" unique_id=803573570 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1096, -1408)
 
-[node name="Deepslate2" parent="blocks" unique_id=1729655889 instance=ExtResource("7_ai5kx")]
-position = Vector2(-296, -208)
+[node name="Deepslate124" parent="RandomDestroyBlocks" unique_id=94274171 instance=ExtResource("7_ai5kx")]
+position = Vector2(-696, -1208)
 
-[node name="Deepslate3" parent="blocks" unique_id=335165033 instance=ExtResource("7_ai5kx")]
-position = Vector2(-100, -408)
+[node name="Deepslate127" parent="RandomDestroyBlocks" unique_id=1703971670 instance=ExtResource("7_ai5kx")]
+position = Vector2(-496, -1408)
 
-[node name="Deepslate4" parent="blocks" unique_id=2035313004 instance=ExtResource("7_ai5kx")]
-position = Vector2(-300, -408)
+[node name="Deepslate128" parent="RandomDestroyBlocks" unique_id=1452489013 instance=ExtResource("7_ai5kx")]
+position = Vector2(-496, -1208)
 
-[node name="Deepslate5" parent="blocks" unique_id=772646096 instance=ExtResource("7_ai5kx")]
-position = Vector2(-100, -604)
+[node name="Deepslate125" parent="RandomDestroyBlocks" unique_id=679756925 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -1208)
 
-[node name="Deepslate6" parent="blocks" unique_id=601300885 instance=ExtResource("7_ai5kx")]
-position = Vector2(-300, -604)
+[node name="Deepslate126" parent="RandomDestroyBlocks" unique_id=280155951 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -1208)
 
-[node name="Deepslate7" parent="blocks" unique_id=1354944241 instance=ExtResource("7_ai5kx")]
-position = Vector2(-100, -800)
+[node name="Deepslate19" parent="RandomDestroyBlocks" unique_id=1042238129 instance=ExtResource("7_ai5kx")]
+position = Vector2(-492, -608)
 
-[node name="Deepslate8" parent="blocks" unique_id=900656551 instance=ExtResource("7_ai5kx")]
-position = Vector2(-300, -800)
+[node name="Deepslate20" parent="RandomDestroyBlocks" unique_id=1750875000 instance=ExtResource("7_ai5kx")]
+position = Vector2(-692, -608)
 
-[node name="Deepslate9" parent="blocks" unique_id=1897290529 instance=ExtResource("7_ai5kx")]
-position = Vector2(-100, -1000)
+[node name="Deepslate21" parent="RandomDestroyBlocks" unique_id=1319342631 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -608)
 
-[node name="Deepslate10" parent="blocks" unique_id=1323487243 instance=ExtResource("7_ai5kx")]
-position = Vector2(-300, -1000)
+[node name="Deepslate22" parent="RandomDestroyBlocks" unique_id=1632415515 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -608)
 
-[node name="Deepslate11" parent="blocks" unique_id=818607494 instance=ExtResource("7_ai5kx")]
-position = Vector2(-504, -1000)
+[node name="Deepslate23" parent="RandomDestroyBlocks" unique_id=711633392 instance=ExtResource("7_ai5kx")]
+position = Vector2(-492, -408)
 
-[node name="Deepslate12" parent="blocks" unique_id=1077889979 instance=ExtResource("7_ai5kx")]
-position = Vector2(-704, -1000)
+[node name="Deepslate24" parent="RandomDestroyBlocks" unique_id=1425806226 instance=ExtResource("7_ai5kx")]
+position = Vector2(-692, -408)
 
-[node name="Deepslate13" parent="blocks" unique_id=856040967 instance=ExtResource("7_ai5kx")]
-position = Vector2(-904, -1000)
+[node name="Deepslate25" parent="RandomDestroyBlocks" unique_id=412025441 instance=ExtResource("7_ai5kx")]
+position = Vector2(-888, -408)
 
-[node name="Deepslate14" parent="blocks" unique_id=1793605795 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1104, -1000)
+[node name="Deepslate26" parent="RandomDestroyBlocks" unique_id=1658678324 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -408)
 
-[node name="Deepslate15" parent="blocks" unique_id=395084980 instance=ExtResource("7_ai5kx")]
-position = Vector2(-504, -800)
+[node name="Deepslate69" parent="RandomDestroyBlocks" unique_id=361091547 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1292, -1008)
 
-[node name="Deepslate16" parent="blocks" unique_id=1873219665 instance=ExtResource("7_ai5kx")]
-position = Vector2(-704, -800)
+[node name="Deepslate70" parent="RandomDestroyBlocks" unique_id=223703888 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1492, -1008)
 
-[node name="Deepslate17" parent="blocks" unique_id=381211314 instance=ExtResource("7_ai5kx")]
-position = Vector2(-900, -800)
+[node name="Deepslate71" parent="RandomDestroyBlocks" unique_id=231718437 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -1008)
 
-[node name="Deepslate18" parent="blocks" unique_id=1366170061 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1100, -800)
+[node name="Deepslate72" parent="RandomDestroyBlocks" unique_id=550515189 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -1008)
 
-[node name="Deepslate27" parent="blocks" unique_id=1514281001 instance=ExtResource("7_ai5kx")]
-position = Vector2(-708, -1400)
+[node name="Deepslate73" parent="RandomDestroyBlocks" unique_id=637876891 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1292, -808)
 
-[node name="Deepslate48" parent="blocks" unique_id=1522831983 instance=ExtResource("7_ai5kx")]
-position = Vector2(-908, -1400)
+[node name="Deepslate74" parent="RandomDestroyBlocks" unique_id=1993432274 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1492, -808)
 
-[node name="Deepslate117" parent="blocks" unique_id=100105641 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1108, -1400)
+[node name="Deepslate75" parent="RandomDestroyBlocks" unique_id=741927026 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -808)
 
-[node name="Deepslate118" parent="blocks" unique_id=1127268529 instance=ExtResource("7_ai5kx")]
-position = Vector2(-708, -1200)
+[node name="Deepslate76" parent="RandomDestroyBlocks" unique_id=1832953672 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -808)
 
-[node name="Deepslate119" parent="blocks" unique_id=880237005 instance=ExtResource("7_ai5kx")]
-position = Vector2(-904, -1200)
+[node name="Deepslate77" parent="RandomDestroyBlocks" unique_id=1276085603 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1496, -1408)
 
-[node name="Deepslate120" parent="blocks" unique_id=1351381508 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1104, -1200)
+[node name="Deepslate78" parent="RandomDestroyBlocks" unique_id=12834294 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1696, -1408)
 
-[node name="Deepslate121" parent="blocks" unique_id=1313594150 instance=ExtResource("7_ai5kx")]
-position = Vector2(-708, -1400)
+[node name="Deepslate129" parent="RandomDestroyBlocks" unique_id=1013250947 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1896, -1408)
 
-[node name="Deepslate122" parent="blocks" unique_id=1996582650 instance=ExtResource("7_ai5kx")]
-position = Vector2(-908, -1400)
+[node name="Deepslate130" parent="RandomDestroyBlocks" unique_id=989982028 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1496, -1208)
 
-[node name="Deepslate123" parent="blocks" unique_id=803573570 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1108, -1400)
+[node name="Deepslate131" parent="RandomDestroyBlocks" unique_id=633167675 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -1208)
 
-[node name="Deepslate124" parent="blocks" unique_id=94274171 instance=ExtResource("7_ai5kx")]
-position = Vector2(-708, -1200)
+[node name="Deepslate132" parent="RandomDestroyBlocks" unique_id=83353095 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -1208)
 
-[node name="Deepslate127" parent="blocks" unique_id=1703971670 instance=ExtResource("7_ai5kx")]
-position = Vector2(-508, -1400)
+[node name="Deepslate133" parent="RandomDestroyBlocks" unique_id=1799059962 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1496, -1408)
 
-[node name="Deepslate128" parent="blocks" unique_id=1452489013 instance=ExtResource("7_ai5kx")]
-position = Vector2(-508, -1200)
+[node name="Deepslate134" parent="RandomDestroyBlocks" unique_id=1021356732 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1696, -1408)
 
-[node name="Deepslate125" parent="blocks" unique_id=679756925 instance=ExtResource("7_ai5kx")]
-position = Vector2(-904, -1200)
+[node name="Deepslate135" parent="RandomDestroyBlocks" unique_id=633654710 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1896, -1408)
 
-[node name="Deepslate126" parent="blocks" unique_id=280155951 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1104, -1200)
+[node name="Deepslate136" parent="RandomDestroyBlocks" unique_id=626036673 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1496, -1208)
 
-[node name="Deepslate19" parent="blocks" unique_id=1042238129 instance=ExtResource("7_ai5kx")]
-position = Vector2(-504, -600)
+[node name="Deepslate137" parent="RandomDestroyBlocks" unique_id=1036842715 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1296, -1408)
 
-[node name="Deepslate20" parent="blocks" unique_id=1750875000 instance=ExtResource("7_ai5kx")]
-position = Vector2(-704, -600)
+[node name="Deepslate138" parent="RandomDestroyBlocks" unique_id=1580921779 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1296, -1208)
 
-[node name="Deepslate21" parent="blocks" unique_id=1319342631 instance=ExtResource("7_ai5kx")]
-position = Vector2(-904, -600)
+[node name="Deepslate139" parent="RandomDestroyBlocks" unique_id=17495084 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -1208)
 
-[node name="Deepslate22" parent="blocks" unique_id=1632415515 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1104, -600)
+[node name="Deepslate140" parent="RandomDestroyBlocks" unique_id=1630723357 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -1208)
 
-[node name="Deepslate23" parent="blocks" unique_id=711633392 instance=ExtResource("7_ai5kx")]
-position = Vector2(-504, -400)
+[node name="Deepslate79" parent="RandomDestroyBlocks" unique_id=468426066 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1292, -608)
 
-[node name="Deepslate24" parent="blocks" unique_id=1425806226 instance=ExtResource("7_ai5kx")]
-position = Vector2(-704, -400)
+[node name="Deepslate80" parent="RandomDestroyBlocks" unique_id=2058365358 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1492, -608)
 
-[node name="Deepslate25" parent="blocks" unique_id=412025441 instance=ExtResource("7_ai5kx")]
-position = Vector2(-900, -400)
+[node name="Deepslate81" parent="RandomDestroyBlocks" unique_id=605296791 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -608)
 
-[node name="Deepslate26" parent="blocks" unique_id=1658678324 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1100, -400)
+[node name="Deepslate82" parent="RandomDestroyBlocks" unique_id=1904811360 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -608)
 
-[node name="Deepslate28" parent="blocks" unique_id=1246894036 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate83" parent="RandomDestroyBlocks" unique_id=701365639 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1292, -408)
+
+[node name="Deepslate84" parent="RandomDestroyBlocks" unique_id=1422630497 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1492, -408)
+
+[node name="Deepslate85" parent="RandomDestroyBlocks" unique_id=1024913740 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -408)
+
+[node name="Deepslate86" parent="RandomDestroyBlocks" unique_id=1679354415 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1892, -408)
+
+[node name="Deepslate28" parent="RandomDestroyBlocks" unique_id=1246894036 instance=ExtResource("7_ai5kx")]
 position = Vector2(4488, -396)
 
-[node name="Deepslate29" parent="blocks" unique_id=754493941 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate29" parent="RandomDestroyBlocks" unique_id=754493941 instance=ExtResource("7_ai5kx")]
 position = Vector2(4488, -592)
 
-[node name="Deepslate30" parent="blocks" unique_id=1803178196 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate30" parent="RandomDestroyBlocks" unique_id=1803178196 instance=ExtResource("7_ai5kx")]
 position = Vector2(4488, -788)
 
-[node name="Deepslate31" parent="blocks" unique_id=831896652 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate31" parent="RandomDestroyBlocks" unique_id=831896652 instance=ExtResource("7_ai5kx")]
 position = Vector2(4488, -988)
 
-[node name="Deepslate32" parent="blocks" unique_id=438629744 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate32" parent="RandomDestroyBlocks" unique_id=438629744 instance=ExtResource("7_ai5kx")]
 position = Vector2(4284, -988)
 
-[node name="Deepslate33" parent="blocks" unique_id=66864921 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate33" parent="RandomDestroyBlocks" unique_id=66864921 instance=ExtResource("7_ai5kx")]
 position = Vector2(4084, -988)
 
-[node name="Deepslate34" parent="blocks" unique_id=524355717 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate34" parent="RandomDestroyBlocks" unique_id=524355717 instance=ExtResource("7_ai5kx")]
 position = Vector2(3884, -988)
 
-[node name="Deepslate35" parent="blocks" unique_id=934334635 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate35" parent="RandomDestroyBlocks" unique_id=934334635 instance=ExtResource("7_ai5kx")]
 position = Vector2(3684, -988)
 
-[node name="Deepslate36" parent="blocks" unique_id=1983449958 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate36" parent="RandomDestroyBlocks" unique_id=1983449958 instance=ExtResource("7_ai5kx")]
 position = Vector2(4284, -788)
 
-[node name="Deepslate37" parent="blocks" unique_id=950589499 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate37" parent="RandomDestroyBlocks" unique_id=950589499 instance=ExtResource("7_ai5kx")]
 position = Vector2(4084, -788)
 
-[node name="Deepslate38" parent="blocks" unique_id=1721860875 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate38" parent="RandomDestroyBlocks" unique_id=1721860875 instance=ExtResource("7_ai5kx")]
 position = Vector2(3888, -788)
 
-[node name="Deepslate39" parent="blocks" unique_id=901353660 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate39" parent="RandomDestroyBlocks" unique_id=901353660 instance=ExtResource("7_ai5kx")]
 position = Vector2(3688, -788)
 
-[node name="Deepslate40" parent="blocks" unique_id=1387310448 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate40" parent="RandomDestroyBlocks" unique_id=1387310448 instance=ExtResource("7_ai5kx")]
 position = Vector2(4284, -588)
 
-[node name="Deepslate41" parent="blocks" unique_id=1349424470 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate41" parent="RandomDestroyBlocks" unique_id=1349424470 instance=ExtResource("7_ai5kx")]
 position = Vector2(4084, -588)
 
-[node name="Deepslate42" parent="blocks" unique_id=1918320484 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate42" parent="RandomDestroyBlocks" unique_id=1918320484 instance=ExtResource("7_ai5kx")]
 position = Vector2(3884, -588)
 
-[node name="Deepslate43" parent="blocks" unique_id=842373168 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate43" parent="RandomDestroyBlocks" unique_id=842373168 instance=ExtResource("7_ai5kx")]
 position = Vector2(3684, -588)
 
-[node name="Deepslate44" parent="blocks" unique_id=1667828017 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate44" parent="RandomDestroyBlocks" unique_id=1667828017 instance=ExtResource("7_ai5kx")]
 position = Vector2(4284, -388)
 
-[node name="Deepslate45" parent="blocks" unique_id=151362937 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate45" parent="RandomDestroyBlocks" unique_id=151362937 instance=ExtResource("7_ai5kx")]
 position = Vector2(4084, -388)
 
-[node name="Deepslate46" parent="blocks" unique_id=926083561 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate46" parent="RandomDestroyBlocks" unique_id=926083561 instance=ExtResource("7_ai5kx")]
 position = Vector2(3888, -388)
 
-[node name="Deepslate47" parent="blocks" unique_id=1887560688 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate47" parent="RandomDestroyBlocks" unique_id=1887560688 instance=ExtResource("7_ai5kx")]
 position = Vector2(3688, -388)
 
-[node name="Deepslate49" parent="blocks" unique_id=75085125 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate49" parent="RandomDestroyBlocks" unique_id=75085125 instance=ExtResource("7_ai5kx")]
 position = Vector2(4500, 400)
 
-[node name="Deepslate50" parent="blocks" unique_id=1548945375 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate50" parent="RandomDestroyBlocks" unique_id=1548945375 instance=ExtResource("7_ai5kx")]
 position = Vector2(4500, 204)
 
-[node name="Deepslate51" parent="blocks" unique_id=1246025365 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate51" parent="RandomDestroyBlocks" unique_id=1246025365 instance=ExtResource("7_ai5kx")]
 position = Vector2(4500, 8)
 
-[node name="Deepslate52" parent="blocks" unique_id=1723746952 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate52" parent="RandomDestroyBlocks" unique_id=1723746952 instance=ExtResource("7_ai5kx")]
 position = Vector2(4500, -192)
 
-[node name="Deepslate53" parent="blocks" unique_id=220112865 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate53" parent="RandomDestroyBlocks" unique_id=220112865 instance=ExtResource("7_ai5kx")]
 position = Vector2(4296, -192)
 
-[node name="Deepslate54" parent="blocks" unique_id=109463535 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate54" parent="RandomDestroyBlocks" unique_id=109463535 instance=ExtResource("7_ai5kx")]
 position = Vector2(4096, -192)
 
-[node name="Deepslate55" parent="blocks" unique_id=1415929544 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate55" parent="RandomDestroyBlocks" unique_id=1415929544 instance=ExtResource("7_ai5kx")]
 position = Vector2(3896, -192)
 
-[node name="Deepslate56" parent="blocks" unique_id=2034085003 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate56" parent="RandomDestroyBlocks" unique_id=2034085003 instance=ExtResource("7_ai5kx")]
 position = Vector2(3696, -192)
 
-[node name="Deepslate57" parent="blocks" unique_id=1662077850 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate57" parent="RandomDestroyBlocks" unique_id=1662077850 instance=ExtResource("7_ai5kx")]
 position = Vector2(4296, 8)
 
-[node name="Deepslate58" parent="blocks" unique_id=544872433 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate58" parent="RandomDestroyBlocks" unique_id=544872433 instance=ExtResource("7_ai5kx")]
 position = Vector2(4096, 8)
 
-[node name="Deepslate59" parent="blocks" unique_id=1712434282 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate59" parent="RandomDestroyBlocks" unique_id=1712434282 instance=ExtResource("7_ai5kx")]
 position = Vector2(3900, 8)
 
-[node name="Deepslate60" parent="blocks" unique_id=115600778 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate60" parent="RandomDestroyBlocks" unique_id=115600778 instance=ExtResource("7_ai5kx")]
 position = Vector2(3700, 8)
 
-[node name="Deepslate61" parent="blocks" unique_id=875482348 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate61" parent="RandomDestroyBlocks" unique_id=875482348 instance=ExtResource("7_ai5kx")]
 position = Vector2(4296, 208)
 
-[node name="Deepslate62" parent="blocks" unique_id=1368747900 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate62" parent="RandomDestroyBlocks" unique_id=1368747900 instance=ExtResource("7_ai5kx")]
 position = Vector2(4096, 208)
 
-[node name="Deepslate63" parent="blocks" unique_id=1445514859 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate63" parent="RandomDestroyBlocks" unique_id=1445514859 instance=ExtResource("7_ai5kx")]
 position = Vector2(3896, 208)
 
-[node name="Deepslate64" parent="blocks" unique_id=299721928 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate64" parent="RandomDestroyBlocks" unique_id=299721928 instance=ExtResource("7_ai5kx")]
 position = Vector2(3696, 208)
 
-[node name="Deepslate65" parent="blocks" unique_id=1027063126 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate65" parent="RandomDestroyBlocks" unique_id=1027063126 instance=ExtResource("7_ai5kx")]
 position = Vector2(4296, 408)
 
-[node name="Deepslate66" parent="blocks" unique_id=243166709 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate66" parent="RandomDestroyBlocks" unique_id=243166709 instance=ExtResource("7_ai5kx")]
 position = Vector2(4096, 408)
 
-[node name="Deepslate67" parent="blocks" unique_id=1349024920 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate67" parent="RandomDestroyBlocks" unique_id=1349024920 instance=ExtResource("7_ai5kx")]
 position = Vector2(3900, 408)
 
-[node name="Deepslate68" parent="blocks" unique_id=1281944427 instance=ExtResource("7_ai5kx")]
+[node name="Deepslate68" parent="RandomDestroyBlocks" unique_id=1281944427 instance=ExtResource("7_ai5kx")]
 position = Vector2(3700, 408)
-
-[node name="Deepslate109" parent="blocks" unique_id=1821197070 instance=ExtResource("7_ai5kx")]
-position = Vector2(3480, 96)
-
-[node name="Deepslate110" parent="blocks" unique_id=1682459881 instance=ExtResource("7_ai5kx")]
-position = Vector2(3280, 96)
-
-[node name="Deepslate111" parent="blocks" unique_id=1081682655 instance=ExtResource("7_ai5kx")]
-position = Vector2(3484, 296)
-
-[node name="Deepslate112" parent="blocks" unique_id=1885680030 instance=ExtResource("7_ai5kx")]
-position = Vector2(3284, 296)
-
-[node name="Deepslate113" parent="blocks" unique_id=1909635771 instance=ExtResource("7_ai5kx")]
-position = Vector2(3612, 88)
-
-[node name="Deepslate114" parent="blocks" unique_id=2014001402 instance=ExtResource("7_ai5kx")]
-position = Vector2(3412, 88)
-
-[node name="Deepslate115" parent="blocks" unique_id=901018816 instance=ExtResource("7_ai5kx")]
-position = Vector2(3616, 288)
-
-[node name="Deepslate116" parent="blocks" unique_id=1194364765 instance=ExtResource("7_ai5kx")]
-position = Vector2(3416, 288)
-
-[node name="Deepslate69" parent="blocks" unique_id=309614740 instance=ExtResource("7_ai5kx")]
-position = Vector2(296, 299)
-
-[node name="Deepslate70" parent="blocks" unique_id=1841181531 instance=ExtResource("7_ai5kx")]
-position = Vector2(296, 103)
-
-[node name="Deepslate71" parent="blocks" unique_id=404977986 instance=ExtResource("7_ai5kx")]
-position = Vector2(92, 107)
-
-[node name="Deepslate72" parent="blocks" unique_id=1465041819 instance=ExtResource("7_ai5kx")]
-position = Vector2(-108, 107)
-
-[node name="Deepslate73" parent="blocks" unique_id=68257794 instance=ExtResource("7_ai5kx")]
-position = Vector2(-308, 107)
-
-[node name="Deepslate74" parent="blocks" unique_id=2111994813 instance=ExtResource("7_ai5kx")]
-position = Vector2(-508, 107)
-
-[node name="Deepslate75" parent="blocks" unique_id=914691262 instance=ExtResource("7_ai5kx")]
-position = Vector2(92, 307)
-
-[node name="Deepslate76" parent="blocks" unique_id=272852279 instance=ExtResource("7_ai5kx")]
-position = Vector2(-108, 307)
-
-[node name="Deepslate77" parent="blocks" unique_id=2086086441 instance=ExtResource("7_ai5kx")]
-position = Vector2(-304, 307)
-
-[node name="Deepslate78" parent="blocks" unique_id=2078544625 instance=ExtResource("7_ai5kx")]
-position = Vector2(-504, 307)
-
-[node name="Deepslate79" parent="blocks" unique_id=36048532 instance=ExtResource("7_ai5kx")]
-position = Vector2(108, 64)
-
-[node name="Deepslate80" parent="blocks" unique_id=696036237 instance=ExtResource("7_ai5kx")]
-position = Vector2(108, -132)
-
-[node name="Deepslate81" parent="blocks" unique_id=1296735241 instance=ExtResource("7_ai5kx")]
-position = Vector2(-96, -128)
-
-[node name="Deepslate82" parent="blocks" unique_id=2037811745 instance=ExtResource("7_ai5kx")]
-position = Vector2(-296, -128)
-
-[node name="Deepslate83" parent="blocks" unique_id=858911786 instance=ExtResource("7_ai5kx")]
-position = Vector2(-496, -128)
-
-[node name="Deepslate84" parent="blocks" unique_id=823393825 instance=ExtResource("7_ai5kx")]
-position = Vector2(-696, -128)
-
-[node name="Deepslate85" parent="blocks" unique_id=1185911710 instance=ExtResource("7_ai5kx")]
-position = Vector2(-96, 72)
-
-[node name="Deepslate86" parent="blocks" unique_id=297789208 instance=ExtResource("7_ai5kx")]
-position = Vector2(-296, 72)
-
-[node name="Deepslate87" parent="blocks" unique_id=32956398 instance=ExtResource("7_ai5kx")]
-position = Vector2(-492, 72)
-
-[node name="Deepslate88" parent="blocks" unique_id=1159419704 instance=ExtResource("7_ai5kx")]
-position = Vector2(-692, 72)
-
-[node name="Deepslate89" parent="blocks" unique_id=1821878585 instance=ExtResource("7_ai5kx")]
-position = Vector2(-492, -100)
-
-[node name="Deepslate90" parent="blocks" unique_id=809752376 instance=ExtResource("7_ai5kx")]
-position = Vector2(-492, -296)
-
-[node name="Deepslate91" parent="blocks" unique_id=1379543932 instance=ExtResource("7_ai5kx")]
-position = Vector2(-696, -292)
-
-[node name="Deepslate92" parent="blocks" unique_id=985697218 instance=ExtResource("7_ai5kx")]
-position = Vector2(-896, -292)
-
-[node name="Deepslate93" parent="blocks" unique_id=1365861673 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1096, -292)
-
-[node name="Deepslate94" parent="blocks" unique_id=1068986286 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1296, -292)
-
-[node name="Deepslate95" parent="blocks" unique_id=1719917801 instance=ExtResource("7_ai5kx")]
-position = Vector2(-696, -92)
-
-[node name="Deepslate96" parent="blocks" unique_id=756926555 instance=ExtResource("7_ai5kx")]
-position = Vector2(-896, -92)
-
-[node name="Deepslate97" parent="blocks" unique_id=1529333941 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1092, -92)
-
-[node name="Deepslate98" parent="blocks" unique_id=1849614432 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1292, -92)
-
-[node name="Deepslate99" parent="blocks" unique_id=397687260 instance=ExtResource("7_ai5kx")]
-position = Vector2(-492, -100)
-
-[node name="Deepslate100" parent="blocks" unique_id=432847345 instance=ExtResource("7_ai5kx")]
-position = Vector2(-492, -296)
-
-[node name="Deepslate101" parent="blocks" unique_id=1718069419 instance=ExtResource("7_ai5kx")]
-position = Vector2(-696, -292)
-
-[node name="Deepslate102" parent="blocks" unique_id=353019246 instance=ExtResource("7_ai5kx")]
-position = Vector2(-896, -292)
-
-[node name="Deepslate103" parent="blocks" unique_id=901485368 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1096, -292)
-
-[node name="Deepslate104" parent="blocks" unique_id=1334332354 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1296, -292)
-
-[node name="Deepslate105" parent="blocks" unique_id=57045256 instance=ExtResource("7_ai5kx")]
-position = Vector2(-696, -92)
-
-[node name="Deepslate106" parent="blocks" unique_id=1758194064 instance=ExtResource("7_ai5kx")]
-position = Vector2(-896, -92)
-
-[node name="Deepslate107" parent="blocks" unique_id=2094135451 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1092, -92)
-
-[node name="Deepslate108" parent="blocks" unique_id=1886241943 instance=ExtResource("7_ai5kx")]
-position = Vector2(-1292, -92)
-
-[node name="Lava" parent="blocks" unique_id=1371657347 instance=ExtResource("8_e3w84")]
-position = Vector2(492, 96)
-
-[node name="Lava2" parent="blocks" unique_id=1918970592 instance=ExtResource("8_e3w84")]
-position = Vector2(692, 96)
-
-[node name="Lava3" parent="blocks" unique_id=886453074 instance=ExtResource("8_e3w84")]
-position = Vector2(892, 96)
-
-[node name="Lava4" parent="blocks" unique_id=1247295797 instance=ExtResource("8_e3w84")]
-position = Vector2(1092, 96)
-
-[node name="Lava5" parent="blocks" unique_id=1061084876 instance=ExtResource("8_e3w84")]
-position = Vector2(1288, 96)
-
-[node name="Lava6" parent="blocks" unique_id=1812456562 instance=ExtResource("8_e3w84")]
-position = Vector2(1488, 96)
-
-[node name="Lava7" parent="blocks" unique_id=262722891 instance=ExtResource("8_e3w84")]
-position = Vector2(1688, 96)
-
-[node name="Lava8" parent="blocks" unique_id=903872436 instance=ExtResource("8_e3w84")]
-position = Vector2(1888, 96)
-
-[node name="Lava9" parent="blocks" unique_id=392456306 instance=ExtResource("8_e3w84")]
-position = Vector2(2084, 96)
-
-[node name="Lava10" parent="blocks" unique_id=1563674452 instance=ExtResource("8_e3w84")]
-position = Vector2(2284, 96)
-
-[node name="Lava11" parent="blocks" unique_id=413842600 instance=ExtResource("8_e3w84")]
-position = Vector2(2484, 96)
-
-[node name="Lava12" parent="blocks" unique_id=1028765773 instance=ExtResource("8_e3w84")]
-position = Vector2(2684, 96)
-
-[node name="Lava13" parent="blocks" unique_id=1744048423 instance=ExtResource("8_e3w84")]
-position = Vector2(2884, 96)
-
-[node name="Lava14" parent="blocks" unique_id=1732844067 instance=ExtResource("8_e3w84")]
-position = Vector2(3084, 96)
-
-[node name="Lava15" parent="blocks" unique_id=137053109 instance=ExtResource("8_e3w84")]
-position = Vector2(492, 272)
-
-[node name="Lava16" parent="blocks" unique_id=1627949114 instance=ExtResource("8_e3w84")]
-position = Vector2(692, 272)
-
-[node name="Lava17" parent="blocks" unique_id=1659034132 instance=ExtResource("8_e3w84")]
-position = Vector2(892, 272)
-
-[node name="Lava18" parent="blocks" unique_id=1302827599 instance=ExtResource("8_e3w84")]
-position = Vector2(1092, 272)
-
-[node name="Lava19" parent="blocks" unique_id=664847518 instance=ExtResource("8_e3w84")]
-position = Vector2(1288, 272)
-
-[node name="Lava20" parent="blocks" unique_id=428911931 instance=ExtResource("8_e3w84")]
-position = Vector2(1488, 272)
-
-[node name="Lava21" parent="blocks" unique_id=1119889520 instance=ExtResource("8_e3w84")]
-position = Vector2(1688, 272)
-
-[node name="Lava22" parent="blocks" unique_id=824233834 instance=ExtResource("8_e3w84")]
-position = Vector2(1888, 272)
-
-[node name="Lava23" parent="blocks" unique_id=1103295538 instance=ExtResource("8_e3w84")]
-position = Vector2(2084, 272)
-
-[node name="Lava24" parent="blocks" unique_id=278978917 instance=ExtResource("8_e3w84")]
-position = Vector2(2284, 272)
-
-[node name="Lava25" parent="blocks" unique_id=407609653 instance=ExtResource("8_e3w84")]
-position = Vector2(2484, 272)
-
-[node name="Lava26" parent="blocks" unique_id=832050317 instance=ExtResource("8_e3w84")]
-position = Vector2(2684, 272)
-
-[node name="Lava27" parent="blocks" unique_id=231225395 instance=ExtResource("8_e3w84")]
-position = Vector2(2884, 272)
-
-[node name="Lava28" parent="blocks" unique_id=422499905 instance=ExtResource("8_e3w84")]
-position = Vector2(3084, 272)
 
 [node name="FinishedZone" parent="." unique_id=1008965861 instance=ExtResource("9_jcp0r")]
 position = Vector2(2752, -740)
@@ -654,7 +388,355 @@ scale = Vector2(0.1, 0.1)
 script = ExtResource("11_c373v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1255238563]
-position = Vector2(1789, 165)
+position = Vector2(1790, 137.5)
 shape = SubResource("RectangleShape2D_8me12")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1462565878]
+position = Vector2(-1002, 106)
+shape = SubResource("RectangleShape2D_8me12")
+
+[node name="Burst" type="Node2D" parent="." unique_id=16440636]
+
+[node name="Lavaburst2" parent="Burst" unique_id=738261255 instance=ExtResource("1_fy3fb")]
+position = Vector2(744, -227)
+
+[node name="Lavaburst3" parent="Burst" unique_id=547919600 instance=ExtResource("1_fy3fb")]
+position = Vector2(1228, -230)
+
+[node name="Lavaburst6" parent="Burst" unique_id=1151809401 instance=ExtResource("1_fy3fb")]
+position = Vector2(1788, -236)
+
+[node name="Lavaburst9" parent="Burst" unique_id=951290694 instance=ExtResource("1_fy3fb")]
+position = Vector2(2272, -236)
+
+[node name="Lavaburst11" parent="Burst" unique_id=1559456407 instance=ExtResource("1_fy3fb")]
+position = Vector2(2716, -236)
+
+[node name="Lavaburst13" parent="Burst" unique_id=2102022469 instance=ExtResource("1_fy3fb")]
+position = Vector2(3284, -332)
+
+[node name="Lavaburst14" parent="Burst" unique_id=2114582868 instance=ExtResource("1_fy3fb")]
+position = Vector2(3284, -332)
+
+[node name="Lavaburstlong" parent="Burst" unique_id=2128216012 instance=ExtResource("2_1a4h0")]
+position = Vector2(492, -192)
+
+[node name="Lavaburstlong2" parent="Burst" unique_id=1225266164 instance=ExtResource("2_1a4h0")]
+position = Vector2(1044, -204)
+
+[node name="Lavaburstlong3" parent="Burst" unique_id=1406447426 instance=ExtResource("2_1a4h0")]
+position = Vector2(1508, -196)
+
+[node name="Lavaburstlong4" parent="Burst" unique_id=2107063760 instance=ExtResource("2_1a4h0")]
+position = Vector2(1976, -184)
+
+[node name="Lavaburstlong5" parent="Burst" unique_id=1854963320 instance=ExtResource("2_1a4h0")]
+position = Vector2(2104, -184)
+
+[node name="Lavaburstlong6" parent="Burst" unique_id=1932076340 instance=ExtResource("2_1a4h0")]
+position = Vector2(2388, -180)
+
+[node name="Lavaburstlong7" parent="Burst" unique_id=1448291726 instance=ExtResource("2_1a4h0")]
+position = Vector2(2464, -180)
+
+[node name="Lavaburstlong8" parent="Burst" unique_id=1948627599 instance=ExtResource("2_1a4h0")]
+position = Vector2(2540, -168)
+
+[node name="Lavaburstlong10" parent="Burst" unique_id=1147696280 instance=ExtResource("2_1a4h0")]
+position = Vector2(2800, -172)
+
+[node name="Lavaburstlong11" parent="Burst" unique_id=211511213 instance=ExtResource("2_1a4h0")]
+position = Vector2(2920, -178)
+
+[node name="Lavaburstlong12" parent="Burst" unique_id=988410246 instance=ExtResource("2_1a4h0")]
+position = Vector2(3136, -224)
+
+[node name="Lavaburstlong13" parent="Burst" unique_id=1661331764 instance=ExtResource("2_1a4h0")]
+position = Vector2(3332, -300)
+
+[node name="Lavaburstlong14" parent="Burst" unique_id=1902669216 instance=ExtResource("2_1a4h0")]
+position = Vector2(3416, -304)
+
+[node name="Lavaburstlong15" parent="Burst" unique_id=166118457 instance=ExtResource("2_1a4h0")]
+position = Vector2(3416, -304)
+
+[node name="Lavaburstlong9" parent="Burst" unique_id=1477673466 instance=ExtResource("2_1a4h0")]
+position = Vector2(2492, -164)
+
+[node name="StandonDestroyBlocks" type="Node2D" parent="." unique_id=1031242853]
+
+[node name="Deepslate3" parent="StandonDestroyBlocks" unique_id=327765587 instance=ExtResource("7_ai5kx")]
+position = Vector2(-92, -208)
+disappear_on_stand = true
+
+[node name="Deepslate12" parent="StandonDestroyBlocks" unique_id=1089920852 instance=ExtResource("7_ai5kx")]
+position = Vector2(108, -208)
+disappear_on_stand = true
+
+[node name="Deepslate34" parent="StandonDestroyBlocks" unique_id=1464473736 instance=ExtResource("7_ai5kx")]
+position = Vector2(812, -128)
+scale = Vector2(1.4460037, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate35" parent="StandonDestroyBlocks" unique_id=824185106 instance=ExtResource("7_ai5kx")]
+position = Vector2(1344, -136)
+scale = Vector2(1.4460037, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate36" parent="StandonDestroyBlocks" unique_id=1254742893 instance=ExtResource("7_ai5kx")]
+position = Vector2(1784, -136)
+scale = Vector2(1.4460037, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate37" parent="StandonDestroyBlocks" unique_id=1663152588 instance=ExtResource("7_ai5kx")]
+position = Vector2(2252, -136)
+scale = Vector2(0.86616945, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate38" parent="StandonDestroyBlocks" unique_id=509685365 instance=ExtResource("7_ai5kx")]
+position = Vector2(2688, -136)
+scale = Vector2(0.86616945, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate39" parent="StandonDestroyBlocks" unique_id=1586569503 instance=ExtResource("7_ai5kx")]
+position = Vector2(3104.0002, -168)
+scale = Vector2(1.1861694, 0.9953828)
+disappear_on_stand = true
+
+[node name="Deepslate13" parent="StandonDestroyBlocks" unique_id=649564975 instance=ExtResource("7_ai5kx")]
+position = Vector2(308, -208)
+disappear_on_stand = true
+
+[node name="Deepslate4" parent="StandonDestroyBlocks" unique_id=38874862 instance=ExtResource("7_ai5kx")]
+position = Vector2(-292, -208)
+disappear_on_stand = true
+
+[node name="Deepslate5" parent="StandonDestroyBlocks" unique_id=1052481902 instance=ExtResource("7_ai5kx")]
+position = Vector2(-492, -208)
+disappear_on_stand = true
+
+[node name="Deepslate6" parent="StandonDestroyBlocks" unique_id=870152012 instance=ExtResource("7_ai5kx")]
+position = Vector2(-692, -208)
+disappear_on_stand = true
+
+[node name="Deepslate7" parent="StandonDestroyBlocks" unique_id=996371976 instance=ExtResource("7_ai5kx")]
+position = Vector2(-892, -208)
+disappear_on_stand = true
+
+[node name="Deepslate8" parent="StandonDestroyBlocks" unique_id=1169522559 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1092, -208)
+disappear_on_stand = true
+
+[node name="Deepslate9" parent="StandonDestroyBlocks" unique_id=624783427 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1292, -208)
+disappear_on_stand = true
+
+[node name="Deepslate10" parent="StandonDestroyBlocks" unique_id=1420831604 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1492, -208)
+disappear_on_stand = true
+
+[node name="Deepslate11" parent="StandonDestroyBlocks" unique_id=1744496721 instance=ExtResource("7_ai5kx")]
+position = Vector2(-1692, -208)
+disappear_on_stand = true
+
+[node name="Blocks" type="Node2D" parent="." unique_id=658119102]
+
+[node name="Deepslate55" parent="Blocks" unique_id=1894599109 instance=ExtResource("7_ai5kx")]
+position = Vector2(3316, -228)
+
+[node name="Deepslate56" parent="Blocks" unique_id=2123112237 instance=ExtResource("7_ai5kx")]
+position = Vector2(3512, -228)
+
+[node name="Deepslate57" parent="Blocks" unique_id=1506972439 instance=ExtResource("7_ai5kx")]
+position = Vector2(3316, -28)
+
+[node name="Deepslate58" parent="Blocks" unique_id=502824707 instance=ExtResource("7_ai5kx")]
+position = Vector2(3516, -28)
+
+[node name="Deepslate59" parent="Blocks" unique_id=878638588 instance=ExtResource("7_ai5kx")]
+position = Vector2(3268, 32)
+
+[node name="Deepslate60" parent="Blocks" unique_id=241290203 instance=ExtResource("7_ai5kx")]
+position = Vector2(3496, 168)
+
+[node name="Deepslate61" parent="Blocks" unique_id=1225603508 instance=ExtResource("7_ai5kx")]
+position = Vector2(3364, 168)
+
+[node name="Deepslate62" parent="Blocks" unique_id=1989467883 instance=ExtResource("7_ai5kx")]
+position = Vector2(3268, 228)
+
+[node name="Deepslate63" parent="Blocks" unique_id=512986716 instance=ExtResource("7_ai5kx")]
+position = Vector2(3496, 308)
+
+[node name="Deepslate64" parent="Blocks" unique_id=1086471896 instance=ExtResource("7_ai5kx")]
+position = Vector2(3296, 296)
+
+[node name="Lava" parent="Blocks" unique_id=1371657347 instance=ExtResource("8_e3w84")]
+position = Vector2(492, 96)
+
+[node name="Lava2" parent="Blocks" unique_id=1918970592 instance=ExtResource("8_e3w84")]
+position = Vector2(692, 96)
+
+[node name="Lava3" parent="Blocks" unique_id=886453074 instance=ExtResource("8_e3w84")]
+position = Vector2(892, 96)
+
+[node name="Lava4" parent="Blocks" unique_id=1247295797 instance=ExtResource("8_e3w84")]
+position = Vector2(1092, 96)
+
+[node name="Lava5" parent="Blocks" unique_id=1061084876 instance=ExtResource("8_e3w84")]
+position = Vector2(1288, 96)
+
+[node name="Lava6" parent="Blocks" unique_id=1812456562 instance=ExtResource("8_e3w84")]
+position = Vector2(1488, 96)
+
+[node name="Lava7" parent="Blocks" unique_id=262722891 instance=ExtResource("8_e3w84")]
+position = Vector2(1688, 96)
+
+[node name="Lava8" parent="Blocks" unique_id=903872436 instance=ExtResource("8_e3w84")]
+position = Vector2(1888, 96)
+
+[node name="Lava9" parent="Blocks" unique_id=392456306 instance=ExtResource("8_e3w84")]
+position = Vector2(2084, 96)
+
+[node name="Lava10" parent="Blocks" unique_id=1563674452 instance=ExtResource("8_e3w84")]
+position = Vector2(2284, 96)
+
+[node name="Lava11" parent="Blocks" unique_id=413842600 instance=ExtResource("8_e3w84")]
+position = Vector2(2484, 96)
+
+[node name="Lava12" parent="Blocks" unique_id=1028765773 instance=ExtResource("8_e3w84")]
+position = Vector2(2684, 96)
+
+[node name="Lava13" parent="Blocks" unique_id=1744048423 instance=ExtResource("8_e3w84")]
+position = Vector2(2884, 96)
+
+[node name="Lava14" parent="Blocks" unique_id=1732844067 instance=ExtResource("8_e3w84")]
+position = Vector2(3084, 96)
+
+[node name="Lava15" parent="Blocks" unique_id=137053109 instance=ExtResource("8_e3w84")]
+position = Vector2(492, 272)
+
+[node name="Lava16" parent="Blocks" unique_id=1627949114 instance=ExtResource("8_e3w84")]
+position = Vector2(692, 272)
+
+[node name="Lava17" parent="Blocks" unique_id=1659034132 instance=ExtResource("8_e3w84")]
+position = Vector2(892, 272)
+
+[node name="Lava18" parent="Blocks" unique_id=1302827599 instance=ExtResource("8_e3w84")]
+position = Vector2(1092, 272)
+
+[node name="Lava19" parent="Blocks" unique_id=664847518 instance=ExtResource("8_e3w84")]
+position = Vector2(1288, 272)
+
+[node name="Lava20" parent="Blocks" unique_id=428911931 instance=ExtResource("8_e3w84")]
+position = Vector2(1488, 272)
+
+[node name="Lava21" parent="Blocks" unique_id=1119889520 instance=ExtResource("8_e3w84")]
+position = Vector2(1688, 272)
+
+[node name="Lava22" parent="Blocks" unique_id=824233834 instance=ExtResource("8_e3w84")]
+position = Vector2(1888, 272)
+
+[node name="Lava23" parent="Blocks" unique_id=1103295538 instance=ExtResource("8_e3w84")]
+position = Vector2(2084, 272)
+
+[node name="Lava24" parent="Blocks" unique_id=278978917 instance=ExtResource("8_e3w84")]
+position = Vector2(2284, 272)
+
+[node name="Lava25" parent="Blocks" unique_id=407609653 instance=ExtResource("8_e3w84")]
+position = Vector2(2484, 272)
+
+[node name="Lava26" parent="Blocks" unique_id=832050317 instance=ExtResource("8_e3w84")]
+position = Vector2(2684, 272)
+
+[node name="Lava27" parent="Blocks" unique_id=231225395 instance=ExtResource("8_e3w84")]
+position = Vector2(2884, 272)
+
+[node name="Lava28" parent="Blocks" unique_id=422499905 instance=ExtResource("8_e3w84")]
+position = Vector2(3084, 272)
+
+[node name="Lava29" parent="Blocks" unique_id=733963192 instance=ExtResource("8_e3w84")]
+position = Vector2(-2300, 96)
+
+[node name="Lava30" parent="Blocks" unique_id=34102296 instance=ExtResource("8_e3w84")]
+position = Vector2(-2100, 96)
+
+[node name="Lava31" parent="Blocks" unique_id=1701861724 instance=ExtResource("8_e3w84")]
+position = Vector2(-1900, 96)
+
+[node name="Lava32" parent="Blocks" unique_id=1616614472 instance=ExtResource("8_e3w84")]
+position = Vector2(-1700, 96)
+
+[node name="Lava33" parent="Blocks" unique_id=1879529388 instance=ExtResource("8_e3w84")]
+position = Vector2(-1504, 96)
+
+[node name="Lava34" parent="Blocks" unique_id=1432018229 instance=ExtResource("8_e3w84")]
+position = Vector2(-1304, 96)
+
+[node name="Lava35" parent="Blocks" unique_id=147187477 instance=ExtResource("8_e3w84")]
+position = Vector2(-1104, 96)
+
+[node name="Lava36" parent="Blocks" unique_id=541261260 instance=ExtResource("8_e3w84")]
+position = Vector2(-904, 96)
+
+[node name="Lava37" parent="Blocks" unique_id=1457258315 instance=ExtResource("8_e3w84")]
+position = Vector2(-708, 96)
+
+[node name="Lava38" parent="Blocks" unique_id=279545574 instance=ExtResource("8_e3w84")]
+position = Vector2(-508, 96)
+
+[node name="Lava39" parent="Blocks" unique_id=1556295641 instance=ExtResource("8_e3w84")]
+position = Vector2(-308, 96)
+
+[node name="Lava40" parent="Blocks" unique_id=229588693 instance=ExtResource("8_e3w84")]
+position = Vector2(-108, 96)
+
+[node name="Lava41" parent="Blocks" unique_id=1879664577 instance=ExtResource("8_e3w84")]
+position = Vector2(92, 96)
+
+[node name="Lava42" parent="Blocks" unique_id=972625281 instance=ExtResource("8_e3w84")]
+position = Vector2(292, 96)
+
+[node name="Lava43" parent="Blocks" unique_id=1026384026 instance=ExtResource("8_e3w84")]
+position = Vector2(-2300, 272)
+
+[node name="Lava44" parent="Blocks" unique_id=1469046856 instance=ExtResource("8_e3w84")]
+position = Vector2(-2100, 272)
+
+[node name="Lava45" parent="Blocks" unique_id=1329484302 instance=ExtResource("8_e3w84")]
+position = Vector2(-1900, 272)
+
+[node name="Lava46" parent="Blocks" unique_id=2060714973 instance=ExtResource("8_e3w84")]
+position = Vector2(-1700, 272)
+
+[node name="Lava47" parent="Blocks" unique_id=1268707866 instance=ExtResource("8_e3w84")]
+position = Vector2(-1504, 272)
+
+[node name="Lava48" parent="Blocks" unique_id=2112667823 instance=ExtResource("8_e3w84")]
+position = Vector2(-1304, 272)
+
+[node name="Lava49" parent="Blocks" unique_id=653270378 instance=ExtResource("8_e3w84")]
+position = Vector2(-1104, 272)
+
+[node name="Lava50" parent="Blocks" unique_id=98710128 instance=ExtResource("8_e3w84")]
+position = Vector2(-904, 272)
+
+[node name="Lava51" parent="Blocks" unique_id=379264962 instance=ExtResource("8_e3w84")]
+position = Vector2(-708, 272)
+
+[node name="Lava52" parent="Blocks" unique_id=1138960569 instance=ExtResource("8_e3w84")]
+position = Vector2(-508, 272)
+
+[node name="Lava53" parent="Blocks" unique_id=198667964 instance=ExtResource("8_e3w84")]
+position = Vector2(-308, 272)
+
+[node name="Lava54" parent="Blocks" unique_id=1484776348 instance=ExtResource("8_e3w84")]
+position = Vector2(-108, 272)
+
+[node name="Lava55" parent="Blocks" unique_id=1584800690 instance=ExtResource("8_e3w84")]
+position = Vector2(92, 272)
+
+[node name="Lava56" parent="Blocks" unique_id=1539688062 instance=ExtResource("8_e3w84")]
+position = Vector2(292, 272)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

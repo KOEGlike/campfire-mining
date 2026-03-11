@@ -257,104 +257,104 @@ texture = ExtResource("3_0v2pn")
 z_index = 4
 position = Vector2(-96, 720)
 
-[node name="Node2D" type="Node2D" parent="." unique_id=231791190]
+[node name="RandomDestroy" type="Node2D" parent="." unique_id=231791190]
 position = Vector2(104, 720)
 script = ExtResource("6_10dh8")
 
-[node name="StoneDarkStone9" parent="Node2D" unique_id=1929718195 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone9" parent="RandomDestroy" unique_id=1929718195 instance=ExtResource("5_rr464")]
 position = Vector2(1400, 0)
 
-[node name="Deepslate" parent="Node2D" unique_id=361091547 instance=ExtResource("6_r4eby")]
+[node name="Deepslate" parent="RandomDestroy" unique_id=361091547 instance=ExtResource("6_r4eby")]
 position = Vector2(-200, 200)
 
-[node name="Deepslate2" parent="Node2D" unique_id=1245633883 instance=ExtResource("6_r4eby")]
+[node name="Deepslate2" parent="RandomDestroy" unique_id=1245633883 instance=ExtResource("6_r4eby")]
 position = Vector2(0, 200)
 
-[node name="Deepslate3" parent="Node2D" unique_id=1058302402 instance=ExtResource("6_r4eby")]
+[node name="Deepslate3" parent="RandomDestroy" unique_id=1058302402 instance=ExtResource("6_r4eby")]
 position = Vector2(208, 200)
 
-[node name="Deepslate4" parent="Node2D" unique_id=1999932163 instance=ExtResource("6_r4eby")]
+[node name="Deepslate4" parent="RandomDestroy" unique_id=1999932163 instance=ExtResource("6_r4eby")]
 position = Vector2(408, 200)
 
-[node name="Deepslate5" parent="Node2D" unique_id=919230595 instance=ExtResource("6_r4eby")]
+[node name="Deepslate5" parent="RandomDestroy" unique_id=919230595 instance=ExtResource("6_r4eby")]
 position = Vector2(608, 200)
 
-[node name="Deepslate6" parent="Node2D" unique_id=1082046862 instance=ExtResource("6_r4eby")]
+[node name="Deepslate6" parent="RandomDestroy" unique_id=1082046862 instance=ExtResource("6_r4eby")]
 position = Vector2(816, 200)
 
-[node name="Deepslate7" parent="Node2D" unique_id=462012220 instance=ExtResource("6_r4eby")]
+[node name="Deepslate7" parent="RandomDestroy" unique_id=462012220 instance=ExtResource("6_r4eby")]
 position = Vector2(1024, 200)
 
-[node name="Deepslate8" parent="Node2D" unique_id=1024131050 instance=ExtResource("6_r4eby")]
+[node name="Deepslate8" parent="RandomDestroy" unique_id=1024131050 instance=ExtResource("6_r4eby")]
 position = Vector2(1224, 200)
 
-[node name="Deepslate9" parent="Node2D" unique_id=1904653335 instance=ExtResource("6_r4eby")]
+[node name="Deepslate9" parent="RandomDestroy" unique_id=1904653335 instance=ExtResource("6_r4eby")]
 position = Vector2(1432, 200)
 
-[node name="Deepslate10" parent="Node2D" unique_id=736803008 instance=ExtResource("6_r4eby")]
+[node name="Deepslate10" parent="RandomDestroy" unique_id=736803008 instance=ExtResource("6_r4eby")]
 position = Vector2(1600, 200)
 
-[node name="Deepslate11" parent="Node2D" unique_id=1669241642 instance=ExtResource("6_r4eby")]
+[node name="Deepslate11" parent="RandomDestroy" unique_id=1669241642 instance=ExtResource("6_r4eby")]
 position = Vector2(-200, 336)
 
-[node name="Deepslate12" parent="Node2D" unique_id=1857048110 instance=ExtResource("6_r4eby")]
+[node name="Deepslate12" parent="RandomDestroy" unique_id=1857048110 instance=ExtResource("6_r4eby")]
 position = Vector2(0, 336)
 
-[node name="Deepslate26" parent="Node2D" unique_id=1000395925 instance=ExtResource("6_r4eby")]
+[node name="Deepslate26" parent="RandomDestroy" unique_id=1000395925 instance=ExtResource("6_r4eby")]
 position = Vector2(-392, 200)
 
-[node name="Deepslate28" parent="Node2D" unique_id=1654071996 instance=ExtResource("6_r4eby")]
+[node name="Deepslate28" parent="RandomDestroy" unique_id=1654071996 instance=ExtResource("6_r4eby")]
 position = Vector2(-392, 336)
 
-[node name="Deepslate13" parent="Node2D" unique_id=302413348 instance=ExtResource("6_r4eby")]
+[node name="Deepslate13" parent="RandomDestroy" unique_id=302413348 instance=ExtResource("6_r4eby")]
 position = Vector2(208, 336)
 
-[node name="Deepslate14" parent="Node2D" unique_id=333963690 instance=ExtResource("6_r4eby")]
+[node name="Deepslate14" parent="RandomDestroy" unique_id=333963690 instance=ExtResource("6_r4eby")]
 position = Vector2(408, 336)
 
-[node name="Deepslate15" parent="Node2D" unique_id=138966380 instance=ExtResource("6_r4eby")]
+[node name="Deepslate15" parent="RandomDestroy" unique_id=138966380 instance=ExtResource("6_r4eby")]
 position = Vector2(608, 336)
 
-[node name="Deepslate16" parent="Node2D" unique_id=513488478 instance=ExtResource("6_r4eby")]
+[node name="Deepslate16" parent="RandomDestroy" unique_id=513488478 instance=ExtResource("6_r4eby")]
 position = Vector2(816, 336)
 
-[node name="Deepslate17" parent="Node2D" unique_id=1463772416 instance=ExtResource("6_r4eby")]
+[node name="Deepslate17" parent="RandomDestroy" unique_id=1463772416 instance=ExtResource("6_r4eby")]
 position = Vector2(1024, 336)
 
-[node name="Deepslate18" parent="Node2D" unique_id=2020834746 instance=ExtResource("6_r4eby")]
+[node name="Deepslate18" parent="RandomDestroy" unique_id=2020834746 instance=ExtResource("6_r4eby")]
 position = Vector2(1224, 336)
 
-[node name="Deepslate19" parent="Node2D" unique_id=506244068 instance=ExtResource("6_r4eby")]
+[node name="Deepslate19" parent="RandomDestroy" unique_id=506244068 instance=ExtResource("6_r4eby")]
 position = Vector2(1432, 336)
 
-[node name="Deepslate20" parent="Node2D" unique_id=409850533 instance=ExtResource("6_r4eby")]
+[node name="Deepslate20" parent="RandomDestroy" unique_id=409850533 instance=ExtResource("6_r4eby")]
 position = Vector2(1600, 336)
 
-[node name="Deepslate21" parent="Node2D" unique_id=1635533357 instance=ExtResource("6_r4eby")]
+[node name="Deepslate21" parent="RandomDestroy" unique_id=1635533357 instance=ExtResource("6_r4eby")]
 position = Vector2(1800, 200)
 
-[node name="Deepslate23" parent="Node2D" unique_id=612604844 instance=ExtResource("6_r4eby")]
+[node name="Deepslate23" parent="RandomDestroy" unique_id=612604844 instance=ExtResource("6_r4eby")]
 position = Vector2(1800, 336)
 
-[node name="StoneDarkStone8" parent="Node2D" unique_id=1652770691 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone8" parent="RandomDestroy" unique_id=1652770691 instance=ExtResource("5_rr464")]
 position = Vector2(1200, 0)
 
-[node name="StoneDarkStone7" parent="Node2D" unique_id=334052808 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone7" parent="RandomDestroy" unique_id=334052808 instance=ExtResource("5_rr464")]
 position = Vector2(1000, 0)
 
-[node name="StoneDarkStone6" parent="Node2D" unique_id=747183931 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone6" parent="RandomDestroy" unique_id=747183931 instance=ExtResource("5_rr464")]
 position = Vector2(800, 0)
 
-[node name="StoneDarkStone5" parent="Node2D" unique_id=964748283 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone5" parent="RandomDestroy" unique_id=964748283 instance=ExtResource("5_rr464")]
 position = Vector2(600, 0)
 
-[node name="StoneDarkStone4" parent="Node2D" unique_id=1165589872 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone4" parent="RandomDestroy" unique_id=1165589872 instance=ExtResource("5_rr464")]
 position = Vector2(400, 0)
 
-[node name="StoneDarkStone3" parent="Node2D" unique_id=1633108157 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone3" parent="RandomDestroy" unique_id=1633108157 instance=ExtResource("5_rr464")]
 position = Vector2(200, 0)
 
-[node name="StoneDarkStone2" parent="Node2D" unique_id=1504043483 instance=ExtResource("5_rr464")]
+[node name="StoneDarkStone2" parent="RandomDestroy" unique_id=1504043483 instance=ExtResource("5_rr464")]
 
 [node name="StoneDarkStone10" parent="." unique_id=165882193 instance=ExtResource("5_rr464")]
 z_index = 2

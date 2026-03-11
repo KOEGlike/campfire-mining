@@ -13,6 +13,10 @@ func _physics_process(delta):
 		velocity.x = SPEED
 	velocity.y = 0
 	
+	# Gravitáció
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	
 	move_and_slide()
 	
 	# Minden collision-t figyelmen kívül hagy - visszatolja a másikat

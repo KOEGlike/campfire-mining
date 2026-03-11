@@ -12,6 +12,9 @@ size = Vector2(200, 200)
 _data = [Vector2(0, 0.9912103), 0.0, 0.0, 0, 0, Vector2(0.20502092, 0.9648411), 1.1609374, 1.1609374, 0, 0, Vector2(1, 0.20013523), 0.0, 0.0, 0, 0]
 point_count = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki3dt"]
+size = Vector2(200, 20)
+
 [node name="Deepslate" type="StaticBody2D" unique_id=361091547]
 script = ExtResource("1_ki3dt")
 
@@ -47,3 +50,12 @@ node = NodePath("..")
 position = Vector2(-0.24999905, -0.2499938)
 scale = Vector2(4.01, 4.01)
 texture = ExtResource("3_doub5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=979174412]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1642601268]
+position = Vector2(0, -100)
+shape = SubResource("RectangleShape2D_ki3dt")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
