@@ -376,7 +376,7 @@ func timeline() -> void:
 	if run_id != _timeline_run_id:
 		return
 	the_hole_start.emit()
-	await get_tree().create_timer(12).timeout
+	await get_tree().create_timer(15).timeout
 	if run_id != _timeline_run_id:
 		return
 	the_hole_open.emit()
