@@ -334,20 +334,20 @@ func timeline() -> void:
 	if run_id != _timeline_run_id:
 		return
 	surface_ground_fall.emit()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	if run_id != _timeline_run_id:
 		return
 	surface_tree_fall.emit()
 	await get_tree().create_timer(1).timeout
 	if run_id != _timeline_run_id:
 		return
-	#the_hole_start.emit()
-	await get_tree().create_timer(1).timeout
+	the_hole_start.emit()
+	await get_tree().create_timer(12).timeout
 	if run_id != _timeline_run_id:
 		return
 	the_hole_open.emit()
 
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(15).timeout
 	if run_id != _timeline_run_id:
 		return
 	mine_end.emit()
