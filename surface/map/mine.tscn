@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://btpplk1rdmh75"]
 
+[ext_resource type="PackedScene" uid="uid://mnsu6bljrs0e" path="res://Star.tscn" id="1_6xeef"]
 [ext_resource type="PackedScene" uid="uid://bwlmqeguk3bqa" path="res://map/darkstone.tscn" id="2_0v2pn"]
 [ext_resource type="Script" uid="uid://b5st3u7pmwx8v" path="res://map/grassy_field.gd" id="2_keolf"]
 [ext_resource type="PackedScene" uid="uid://e17b7r5m2lsj" path="res://map/spawner.tscn" id="2_kj0ke"]
@@ -9,10 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://bhwemhucswoxv" path="res://map/deepslate.tscn" id="6_r4eby"]
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="7_r4eby"]
 [ext_resource type="PackedScene" uid="uid://ds37h2vv48ucr" path="res://map/spike.tscn" id="8_t181l"]
-[ext_resource type="Texture2D" uid="uid://c3h1i6xrd6bke" path="res://map/star.png" id="10_lrf6c"]
 [ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="11_6xeef"]
 
 [node name="Mine" type="Node2D" unique_id=862780132]
+
+[node name="Star2" parent="." unique_id=966012803 instance=ExtResource("1_6xeef")]
+position = Vector2(396, -100)
+scale = Vector2(0.11165025, 0.11165025)
 
 [node name="Stones" type="Node2D" parent="." unique_id=2031564209]
 
@@ -662,11 +666,6 @@ rotation = 3.1415927
 [node name="Spike6" parent="." unique_id=517551627 instance=ExtResource("8_t181l")]
 position = Vector2(1496, -232)
 rotation = 3.1415927
-
-[node name="Star" type="Sprite2D" parent="." unique_id=267418196]
-position = Vector2(336, -143.99997)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_lrf6c")
 
 [node name="Darkstoneblock" type="Sprite2D" parent="." unique_id=122614899]
 z_index = -1
