@@ -253,7 +253,7 @@ texture = ExtResource("3_0v2pn")
 
 [node name="Mine2" type="Sprite2D" parent="." unique_id=555955415]
 z_index = -1
-position = Vector2(776, 144)
+position = Vector2(788, 144)
 scale = Vector2(4, 4)
 texture = ExtResource("3_0v2pn")
 
@@ -410,25 +410,25 @@ position = Vector2(2680, 728)
 position = Vector2(2104, 928)
 
 [node name="Deepslate30" parent="." unique_id=504137993 instance=ExtResource("6_r4eby")]
-position = Vector2(2312, 928)
+position = Vector2(2300, 928)
 
 [node name="Deepslate31" parent="." unique_id=2103145387 instance=ExtResource("6_r4eby")]
-position = Vector2(2480, 928)
+position = Vector2(2468, 928)
 
 [node name="Deepslate32" parent="." unique_id=803187998 instance=ExtResource("6_r4eby")]
 position = Vector2(2104, 1064)
 
 [node name="Deepslate33" parent="." unique_id=1847126973 instance=ExtResource("6_r4eby")]
-position = Vector2(2312, 1064)
+position = Vector2(2300, 1064)
 
 [node name="Deepslate34" parent="." unique_id=901097247 instance=ExtResource("6_r4eby")]
-position = Vector2(2480, 1064)
+position = Vector2(2468, 1064)
 
 [node name="Deepslate35" parent="." unique_id=634904095 instance=ExtResource("6_r4eby")]
-position = Vector2(2680, 928)
+position = Vector2(2668, 928)
 
 [node name="Deepslate36" parent="." unique_id=999255368 instance=ExtResource("6_r4eby")]
-position = Vector2(2680, 1064)
+position = Vector2(2668, 1064)
 
 [node name="Deepslate37" parent="." unique_id=801221252 instance=ExtResource("6_r4eby")]
 position = Vector2(-1200, 856)

@@ -3136,7 +3136,7 @@ position = Vector2(-888, -408)
 position = Vector2(2752, -740)
 
 [node name="Star" parent="." unique_id=966012803 instance=ExtResource("11_l1l63")]
-position = Vector2(2088, -808)
+position = Vector2(1104, -1136)
 scale = Vector2(0.1, 0.1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=262195688]
