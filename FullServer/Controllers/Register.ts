@@ -1,6 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 import { serverdb } from "../db/db";
-import { User } from "./../db/schema";
+import { User, ScoreTable } from "./../db/schema";
 import { eq } from "drizzle-orm";
 
 export const CreateUser = async (
@@ -59,6 +59,7 @@ export const DeleteOneUser = async (
   try {
     const { userId } = req.query;
     if (userId) {
+      await serverdb.delete(ScoreTable).where(eq(ScoreTable.userId, Number(userId)));
       const deletedUser = await serverdb.delete(User).where(eq(User.id, Number(userId))).returning();
       
       if (deletedUser.length > 0) {
