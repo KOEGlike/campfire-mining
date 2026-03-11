@@ -53,6 +53,12 @@ func _process(delta: float) -> void:
 	while _time_accumulator >= 1.0:
 		_time_accumulator -= 1.0
 		game_time += 1
+		
+	if Input.is_action_just_pressed("restart"):
+		restart(false)
+		
+	if Input.is_action_just_pressed("full_reset"):
+		delete_user_and_restart()
 
 var _time_accumulator: float = 0.0
 var _timeline_run_id: int = 0
@@ -122,6 +128,23 @@ func has_saved_user() -> bool:
 	if user_id == -1 and FileAccess.file_exists(USER_ID_FILE):
 		load_user_data()
 	return user_id != -1
+
+func delete_user_and_restart() -> void:
+	if FileAccess.file_exists(USER_ID_FILE):
+		var remove_error := DirAccess.remove_absolute(USER_ID_FILE)
+		if remove_error != OK:
+			print("[GameManager] Failed to delete user data file: ", error_string(remove_error), " (", remove_error, ")")
+		else:
+			print("[GameManager] Deleted saved user data file.")
+
+	user_id = -1
+	user_name = ""
+	user_alive = -1
+
+	_reset_runtime_state()
+	_restart_in_progress = false
+	print("[GameManager] User reset complete. Reloading scene...")
+	get_tree().call_deferred("reload_current_scene")
 
 # ============================================================
 #  REGISTER - /CreateUser

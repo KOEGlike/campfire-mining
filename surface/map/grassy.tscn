@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsuek3rt1ourq" path="res://map/stone.tscn" id="2_r5i85"]
 [ext_resource type="PackedScene" uid="uid://b2ymn3we10fvf" path="res://map/stone_grass.tscn" id="3_fv5y6"]
 [ext_resource type="Texture2D" uid="uid://1xek2wgf6e" path="res://map/sunnybackg.png" id="6_fv5y6"]
+[ext_resource type="Script" uid="uid://be7x52ptmhkmk" path="res://map/full_reset_button.gd" id="7_c7lng"]
 [ext_resource type="Texture2D" uid="uid://bi335escd505a" path="res://map/darkstoneblock.png" id="7_sacel"]
 [ext_resource type="Script" uid="uid://so6mv4pujstx" path="res://map/prank.gd" id="8_0kllu"]
 
@@ -286,6 +287,14 @@ position = Vector2(1500, 284)
 [node name="StoneGrass9" parent="Blocks" unique_id=1196158713 instance=ExtResource("3_fv5y6")]
 position = Vector2(1700, 284)
 
+[node name="FullResetButton" type="Button" parent="." unique_id=872103679]
+offset_left = -1328.0
+offset_top = -288.0
+offset_right = -1263.0
+offset_bottom = -257.0
+text = "Fully Reset game, delete user"
+script = ExtResource("7_c7lng")
+
 [node name="Prank" type="Node2D" parent="." unique_id=1821568380]
 script = ExtResource("8_0kllu")
 
@@ -352,6 +361,7 @@ position = Vector2(648, -244)
 scale = Vector2(5, 5)
 texture = ExtResource("6_fv5y6")
 
+[connection signal="pressed" from="FullResetButton" to="FullResetButton" method="_on_pressed"]
 [connection signal="pressed" from="Prank/Button" to="Prank" method="_on_button_pressed"]
 [connection signal="pressed" from="Prank/Button2" to="Prank" method="_on_button_pressed"]
 [connection signal="body_entered" from="Prank/Area2D" to="Prank" method="_on_area_2d_body_entered"]
