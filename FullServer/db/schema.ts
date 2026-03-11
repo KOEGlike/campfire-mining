@@ -2,7 +2,7 @@ import { pgTable, PgTable,serial,varchar,integer, boolean, time } from "drizzle-
 
 export const User = pgTable("users",{
     id: serial("id").primaryKey(),
-    allive: integer("live").notNull().default(5),
+    allive: integer("live").notNull().default(100),
     name: varchar("name", {length: 15}).notNull(),
 });
 

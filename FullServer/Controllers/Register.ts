@@ -33,7 +33,7 @@ export const GetRegister = async (
   }
 };
 
-export const DeleteUser = async (
+export const DeleteUsers = async (
   req: Request,
   res: Response,
   next: NextFunction,
@@ -50,3 +50,36 @@ export const DeleteUser = async (
     next(error);
   }
 };
+
+export const DeleteOneUser = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const { userId } = req.query;
+    if (userId) {
+      const deletedUser = await serverdb.delete(User).where(eq(User.id, Number(userId))).returning();
+      
+      if (deletedUser.length > 0) {
+        res.status(200).json({ 
+          message: "User deleted successfully", 
+          success: true, 
+          deletedUser: deletedUser[0] 
+        });
+      } else {
+        res.status(404).json({ 
+          message: "User not found", 
+          success: false 
+        });
+      }
+    } else {
+      res.status(400).json({ 
+        message: "User ID is required", 
+        success: false 
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+}
