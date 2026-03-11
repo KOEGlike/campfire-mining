@@ -14,6 +14,7 @@ func _start_random_wait() -> void:
 	await get_tree().create_timer(wait_time).timeout
 	if is_inside_tree():
 		animation_player.play("Popup")
+		_kill_overlapping_players()
 
 func _on_animation_finished(_anim_name: StringName) -> void:
 	_start_random_wait()
@@ -22,3 +23,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		var player: Player = body
 		player.die()
+
+func _kill_overlapping_players() -> void:
+	for body in get_overlapping_bodies():
+		if body is Player:
+			var player: Player = body
+			player.die()
