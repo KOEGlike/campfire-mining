@@ -202,6 +202,60 @@ position = Vector2(-1296, 84)
 [node name="StoneGrass22" parent="Blocks" unique_id=2106241028 instance=ExtResource("3_fv5y6")]
 position = Vector2(-1300, 284)
 
+[node name="GrassyField29" parent="Blocks" unique_id=573927229 instance=ExtResource("2_30474")]
+position = Vector2(-1496, 84)
+
+[node name="StoneGrass19" parent="Blocks" unique_id=1275094683 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1500, 284)
+
+[node name="GrassyField30" parent="Blocks" unique_id=1162979830 instance=ExtResource("2_30474")]
+position = Vector2(-1696, 84)
+
+[node name="StoneGrass20" parent="Blocks" unique_id=541656036 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1700, 284)
+
+[node name="GrassyField31" parent="Blocks" unique_id=1205028627 instance=ExtResource("2_30474")]
+position = Vector2(-1896, 84)
+
+[node name="StoneGrass21" parent="Blocks" unique_id=414867319 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1900, 284)
+
+[node name="GrassyField33" parent="Blocks" unique_id=1537224530 instance=ExtResource("2_30474")]
+position = Vector2(-2096, 84)
+
+[node name="StoneGrass23" parent="Blocks" unique_id=316374123 instance=ExtResource("3_fv5y6")]
+position = Vector2(-2100, 284)
+
+[node name="GrassyField34" parent="Blocks" unique_id=380562501 instance=ExtResource("2_30474")]
+position = Vector2(-2296, 84)
+
+[node name="StoneGrass24" parent="Blocks" unique_id=400561426 instance=ExtResource("3_fv5y6")]
+position = Vector2(-2300, 284)
+
+[node name="GrassyField35" parent="Blocks" unique_id=2081248541 instance=ExtResource("2_30474")]
+position = Vector2(3104, 84)
+
+[node name="StoneGrass25" parent="Blocks" unique_id=1434397528 instance=ExtResource("3_fv5y6")]
+position = Vector2(3100, 284)
+
+[node name="GrassyField36" parent="Blocks" unique_id=506416680 instance=ExtResource("2_30474")]
+position = Vector2(2904, 84)
+
+[node name="StoneGrass26" parent="Blocks" unique_id=381854780 instance=ExtResource("3_fv5y6")]
+position = Vector2(2900, 284)
+
+[node name="GrassyField37" parent="Blocks" unique_id=595507660 instance=ExtResource("2_30474")]
+position = Vector2(2704, 84)
+
+[node name="StoneGrass27" parent="Blocks" unique_id=1712285805 instance=ExtResource("3_fv5y6")]
+position = Vector2(2700, 284)
+
+[node name="GrassyField38" parent="Blocks" unique_id=1891351501 instance=ExtResource("2_30474")]
+position = Vector2(2504, 84)
+
+[node name="StoneGrass28" parent="Blocks" unique_id=650166203 instance=ExtResource("3_fv5y6")]
+position = Vector2(2500, 284)
+
 [node name="GrassyField16" parent="Blocks" unique_id=1680109942 instance=ExtResource("2_30474")]
 position = Vector2(2304, 84)
 
@@ -355,6 +409,7 @@ position = Vector2(1496, -156)
 shape = SubResource("RectangleShape2D_src3g")
 
 [node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
+visible = false
 z_index = -2
 z_as_relative = false
 position = Vector2(648, -244)
