@@ -11,12 +11,12 @@
 [node name="Grassy" type="Node2D" unique_id=1120019614]
 
 [node name="Tree" parent="." unique_id=1835523215 instance=ExtResource("1_r5i85")]
-position = Vector2(104, 11)
-scale = Vector2(1.898857, 1.898857)
+position = Vector2(8.000008, 11)
+scale = Vector2(2.193994, 2.193994)
 
 [node name="Tree2" parent="." unique_id=131109395 instance=ExtResource("1_r5i85")]
-position = Vector2(1226, 17)
-scale = Vector2(2.1663902, 2.1663902)
+position = Vector2(1240, 19)
+scale = Vector2(2.5031095, 2.5031095)
 fall_left = true
 
 [node name="Blocks" type="Node2D" parent="." unique_id=33644267]
@@ -169,6 +169,54 @@ position = Vector2(-700, 284)
 
 [node name="GrassyField16" parent="Blocks" unique_id=1680109942 instance=ExtResource("2_30474")]
 position = Vector2(2304, 84)
+
+[node name="Label" type="Label" parent="Blocks" unique_id=914493977]
+offset_left = 2132.0
+offset_top = -172.0
+offset_right = 2221.0
+offset_bottom = -123.0
+text = "I fixed ts lol
+"
+
+[node name="GrassyField17" parent="Blocks" unique_id=690513698 instance=ExtResource("2_30474")]
+position = Vector2(2496, -80)
+rotation = 1.5707964
+
+[node name="GrassyField18" parent="Blocks" unique_id=712369152 instance=ExtResource("2_30474")]
+position = Vector2(2496, -276)
+rotation = 1.5707964
+
+[node name="GrassyField19" parent="Blocks" unique_id=1059693159 instance=ExtResource("2_30474")]
+position = Vector2(2496, -460)
+rotation = 1.5707964
+
+[node name="GrassyField20" parent="Blocks" unique_id=1905116124 instance=ExtResource("2_30474")]
+position = Vector2(2496, -636)
+rotation = 1.5707964
+
+[node name="GrassyField21" parent="Blocks" unique_id=1697682670 instance=ExtResource("2_30474")]
+position = Vector2(2496, -804)
+rotation = 1.5707964
+
+[node name="GrassyField22" parent="Blocks" unique_id=1701907589 instance=ExtResource("2_30474")]
+position = Vector2(-740, -87.999985)
+rotation = 4.7067304
+
+[node name="GrassyField23" parent="Blocks" unique_id=633014269 instance=ExtResource("2_30474")]
+position = Vector2(-740, -284)
+rotation = 4.7067304
+
+[node name="GrassyField24" parent="Blocks" unique_id=1813591107 instance=ExtResource("2_30474")]
+position = Vector2(-740, -468)
+rotation = 4.7067304
+
+[node name="GrassyField25" parent="Blocks" unique_id=1945362807 instance=ExtResource("2_30474")]
+position = Vector2(-740, -644)
+rotation = 4.7067304
+
+[node name="GrassyField26" parent="Blocks" unique_id=511808890 instance=ExtResource("2_30474")]
+position = Vector2(-740, -812)
+rotation = 4.7067304
 
 [node name="StoneGrass16" parent="Blocks" unique_id=464477417 instance=ExtResource("3_fv5y6")]
 position = Vector2(2300, 284)

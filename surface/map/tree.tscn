@@ -11,7 +11,7 @@ size = Vector2(16, 60)
 size = Vector2(128, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3puuq"]
-size = Vector2(60, 100)
+size = Vector2(124, 100)
 
 [sub_resource type="Animation" id="Animation_g2vli"]
 length = 0.033333335
@@ -81,7 +81,7 @@ position = Vector2(2, -142)
 shape = SubResource("RectangleShape2D_g2vli")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2119576535]
-position = Vector2(0, -50)
+position = Vector2(2, -50)
 shape = SubResource("RectangleShape2D_3puuq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=417996757]
