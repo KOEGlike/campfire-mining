@@ -36,5 +36,5 @@ func _process(delta: float) -> void:
 	# Leesés
 	if _falling:
 		_spawned_item.position.y += fall_speed * delta
-		fall_speed += 500.0 * delta
+		fall_speed += 100.0 * delta
 		_spawned_item.rotation += delta * 2.0

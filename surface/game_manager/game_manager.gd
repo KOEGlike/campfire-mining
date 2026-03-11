@@ -184,7 +184,7 @@ func send_full_score() -> bool:
 func show_end_screen(completed: bool, score_was_submitted: bool) -> void:
 	var end_screen := END_SCREEN_SCENE.instantiate() as EndScreen
 	get_tree().root.add_child(end_screen)
-	end_screen.setup(completed, star_count, game_time, user_alive, score_was_submitted)
+	end_screen.setup(completed, star_count, game_time, score_was_submitted)
 	await end_screen.closed
 
 # ============================================================

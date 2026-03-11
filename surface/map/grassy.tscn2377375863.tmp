@@ -10,28 +10,19 @@
 [ext_resource type="Script" uid="uid://so6mv4pujstx" path="res://map/prank.gd" id="8_0kllu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kllu"]
-size = Vector2(696, 148)
+size = Vector2(1240, 633)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7lng"]
-size = Vector2(361.75, 193.125)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_klm6j"]
-size = Vector2(361.75, 193.125)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fi15"]
-size = Vector2(332, 230.5625)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_src3g"]
-size = Vector2(319.5, 321.125)
+size = Vector2(183, 316.5)
 
 [node name="Grassy" type="Node2D" unique_id=1120019614]
 
 [node name="Tree" parent="." unique_id=1835523215 instance=ExtResource("1_r5i85")]
-position = Vector2(76, 11)
+position = Vector2(8.000008, 11)
 scale = Vector2(2.193994, 2.193994)
 
 [node name="Tree2" parent="." unique_id=131109395 instance=ExtResource("1_r5i85")]
-position = Vector2(1332, 19)
+position = Vector2(1240, 19)
 scale = Vector2(2.5031095, 2.5031095)
 fall_left = true
 
@@ -195,11 +186,29 @@ position = Vector2(-1096, 84)
 [node name="StoneGrass18" parent="Blocks" unique_id=1797321768 instance=ExtResource("3_fv5y6")]
 position = Vector2(-1100, 284)
 
-[node name="GrassyField32" parent="Blocks" unique_id=762579226 instance=ExtResource("2_30474")]
+[node name="GrassyField29" parent="Blocks" unique_id=1502135151 instance=ExtResource("2_30474")]
 position = Vector2(-1296, 84)
 
-[node name="StoneGrass22" parent="Blocks" unique_id=2106241028 instance=ExtResource("3_fv5y6")]
+[node name="StoneGrass19" parent="Blocks" unique_id=1524537796 instance=ExtResource("3_fv5y6")]
 position = Vector2(-1300, 284)
+
+[node name="GrassyField30" parent="Blocks" unique_id=829300158 instance=ExtResource("2_30474")]
+position = Vector2(-1496, 84)
+
+[node name="StoneGrass20" parent="Blocks" unique_id=269081196 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1500, 284)
+
+[node name="GrassyField31" parent="Blocks" unique_id=456033428 instance=ExtResource("2_30474")]
+position = Vector2(-1696, 84)
+
+[node name="StoneGrass21" parent="Blocks" unique_id=2039370091 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1700, 284)
+
+[node name="GrassyField32" parent="Blocks" unique_id=762579226 instance=ExtResource("2_30474")]
+position = Vector2(-1896, 84)
+
+[node name="StoneGrass22" parent="Blocks" unique_id=2106241028 instance=ExtResource("3_fv5y6")]
+position = Vector2(-1900, 284)
 
 [node name="GrassyField16" parent="Blocks" unique_id=1680109942 instance=ExtResource("2_30474")]
 position = Vector2(2304, 84)
@@ -225,23 +234,23 @@ position = Vector2(2496, -804)
 rotation = 1.5707964
 
 [node name="GrassyField22" parent="Blocks" unique_id=1701907589 instance=ExtResource("2_30474")]
-position = Vector2(-1500, -87.99997)
+position = Vector2(-2100, -87.99997)
 rotation = 4.7067304
 
 [node name="GrassyField23" parent="Blocks" unique_id=633014269 instance=ExtResource("2_30474")]
-position = Vector2(-1500, -283.99997)
+position = Vector2(-2100, -283.99997)
 rotation = 4.7067304
 
 [node name="GrassyField24" parent="Blocks" unique_id=1813591107 instance=ExtResource("2_30474")]
-position = Vector2(-1500, -467.99997)
+position = Vector2(-2100, -467.99997)
 rotation = 4.7067304
 
 [node name="GrassyField25" parent="Blocks" unique_id=1945362807 instance=ExtResource("2_30474")]
-position = Vector2(-1500, -644)
+position = Vector2(-2100, -644)
 rotation = 4.7067304
 
 [node name="GrassyField26" parent="Blocks" unique_id=511808890 instance=ExtResource("2_30474")]
-position = Vector2(-1500, -812)
+position = Vector2(-2100, -812)
 rotation = 4.7067304
 
 [node name="StoneGrass16" parent="Blocks" unique_id=464477417 instance=ExtResource("3_fv5y6")]
@@ -286,6 +295,14 @@ position = Vector2(1500, 284)
 [node name="StoneGrass9" parent="Blocks" unique_id=1196158713 instance=ExtResource("3_fv5y6")]
 position = Vector2(1700, 284)
 
+[node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
+visible = false
+z_index = -2
+z_as_relative = false
+position = Vector2(648, -232)
+scale = Vector2(5, 5)
+texture = ExtResource("6_fv5y6")
+
 [node name="Prank" type="Node2D" parent="." unique_id=1821568380]
 script = ExtResource("8_0kllu")
 
@@ -299,18 +316,18 @@ Now you are trapped 😊
 "
 
 [node name="Label2" type="Label" parent="Prank" unique_id=2027910233]
-offset_left = -1336.0
+offset_left = -1936.0
 offset_top = -132.0
-offset_right = -1146.0
-offset_bottom = -57.0
+offset_right = -1847.0
+offset_bottom = -83.0
 text = "I fixed ts lol
 Now you are trapped 😊
 "
 
 [node name="Button" type="Button" parent="Prank" unique_id=1788992102]
-offset_left = -1336.0
+offset_left = -1936.0
 offset_top = -80.0
-offset_right = -1271.0
+offset_right = -1871.0
 offset_bottom = -49.0
 text = "Restart"
 
@@ -324,33 +341,18 @@ text = "Restart"
 [node name="StaticBody2D" type="StaticBody2D" parent="Prank" unique_id=39510666]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Prank/StaticBody2D" unique_id=613433093]
-position = Vector2(688, 32)
+position = Vector2(640, -308.5)
 shape = SubResource("RectangleShape2D_0kllu")
 
 [node name="Area2D" type="Area2D" parent="Prank" unique_id=118904931]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Prank/Area2D" unique_id=1373268376]
-position = Vector2(292, -216)
+position = Vector2(24, -368)
 shape = SubResource("RectangleShape2D_c7lng")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Prank/Area2D" unique_id=1031487680]
-position = Vector2(1204, -216)
-shape = SubResource("RectangleShape2D_klm6j")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Prank/Area2D" unique_id=1075033958]
-position = Vector2(-66, -124.71875)
-shape = SubResource("RectangleShape2D_5fi15")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Prank/Area2D" unique_id=569151960]
-position = Vector2(1496, -156)
-shape = SubResource("RectangleShape2D_src3g")
-
-[node name="Sunnybackg" type="Sprite2D" parent="." unique_id=382371341]
-z_index = -2
-z_as_relative = false
-position = Vector2(648, -244)
-scale = Vector2(5, 5)
-texture = ExtResource("6_fv5y6")
+position = Vector2(1239.5, -353.75)
+shape = SubResource("RectangleShape2D_c7lng")
 
 [connection signal="pressed" from="Prank/Button" to="Prank" method="_on_button_pressed"]
 [connection signal="pressed" from="Prank/Button2" to="Prank" method="_on_button_pressed"]

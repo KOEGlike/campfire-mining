@@ -7,12 +7,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyaq1"]
 size = Vector2(16, 60)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2vli"]
-size = Vector2(128, 84)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3puuq"]
-size = Vector2(124, 100)
-
 [sub_resource type="Animation" id="Animation_g2vli"]
 length = 0.033333335
 
@@ -76,15 +70,10 @@ texture = ExtResource("1_xyaq1")
 position = Vector2(74, -138)
 shape = SubResource("RectangleShape2D_xyaq1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524856722]
-position = Vector2(2, -142)
-shape = SubResource("RectangleShape2D_g2vli")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2119576535]
-position = Vector2(2, -50)
-shape = SubResource("RectangleShape2D_3puuq")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=417996757]
 libraries/ = SubResource("AnimationLibrary_3jcs6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=448029330]
+polygon = PackedVector2Array(-48, -100, -60, -116, -60, -156, -52, -172, -36, -180, -20, -184, 12, -192, 32, -192, 48, -188, 56, -176, 64, -172, 76, -168, 84, -160, 88, -152, 92, -144, 92, -136, 88, -120, 80, -112, 68, -104, 64, -100, 56, -92, 56, -80, 16, -56, 16, -44, 8, 0, -12, 0, -16, -40, -36, -64, -32, -88)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
