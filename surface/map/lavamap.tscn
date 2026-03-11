@@ -3379,109 +3379,128 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_h3q3e")
 
 [node name="Lava1" type="Sprite2D" parent="." unique_id=1193750737]
-visible = false
 z_index = 1
 position = Vector2(1800, -540)
 scale = Vector2(4, 4)
 texture = ExtResource("5_e3w84")
 
 [node name="Lava2" type="Sprite2D" parent="." unique_id=571247517]
-visible = false
 z_index = 1
 position = Vector2(-1004, -540)
 scale = Vector2(4, 4)
 texture = ExtResource("5_e3w84")
 
 [node name="RandomDestroyBlocks" type="Node2D" parent="." unique_id=852078607]
-visible = false
 script = ExtResource("7_c373v")
 
 [node name="Deepslate3" parent="RandomDestroyBlocks" unique_id=335165033 instance=ExtResource("7_ai5kx")]
 position = Vector2(-92, -408)
+collision_layer = 3
 
 [node name="Deepslate4" parent="RandomDestroyBlocks" unique_id=2035313004 instance=ExtResource("7_ai5kx")]
 position = Vector2(-292, -408)
+collision_layer = 3
 
 [node name="Deepslate5" parent="RandomDestroyBlocks" unique_id=772646096 instance=ExtResource("7_ai5kx")]
 position = Vector2(-92, -608)
+collision_layer = 3
 
 [node name="Deepslate6" parent="RandomDestroyBlocks" unique_id=601300885 instance=ExtResource("7_ai5kx")]
 position = Vector2(-292, -608)
+collision_layer = 3
 
 [node name="Deepslate7" parent="RandomDestroyBlocks" unique_id=1354944241 instance=ExtResource("7_ai5kx")]
 position = Vector2(-92, -804)
+collision_layer = 3
 
 [node name="Deepslate8" parent="RandomDestroyBlocks" unique_id=900656551 instance=ExtResource("7_ai5kx")]
 position = Vector2(-292, -804)
+collision_layer = 3
 
 [node name="Deepslate9" parent="RandomDestroyBlocks" unique_id=1897290529 instance=ExtResource("7_ai5kx")]
 position = Vector2(-92, -1004)
+collision_layer = 3
 
 [node name="Deepslate10" parent="RandomDestroyBlocks" unique_id=1323487243 instance=ExtResource("7_ai5kx")]
 position = Vector2(-292, -1004)
+collision_layer = 3
 
 [node name="Deepslate11" parent="RandomDestroyBlocks" unique_id=818607494 instance=ExtResource("7_ai5kx")]
 position = Vector2(-492, -1008)
+collision_layer = 3
 
 [node name="Deepslate12" parent="RandomDestroyBlocks" unique_id=1077889979 instance=ExtResource("7_ai5kx")]
 position = Vector2(-692, -1008)
+collision_layer = 3
 
 [node name="Deepslate13" parent="RandomDestroyBlocks" unique_id=856040967 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -1008)
+collision_layer = 3
 
 [node name="Deepslate15" parent="RandomDestroyBlocks" unique_id=395084980 instance=ExtResource("7_ai5kx")]
 position = Vector2(-492, -808)
+collision_layer = 3
 
 [node name="Deepslate16" parent="RandomDestroyBlocks" unique_id=1873219665 instance=ExtResource("7_ai5kx")]
 position = Vector2(-692, -808)
+collision_layer = 3
 
 [node name="Deepslate17" parent="RandomDestroyBlocks" unique_id=381211314 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -808)
+collision_layer = 3
 
 [node name="Deepslate118" parent="RandomDestroyBlocks" unique_id=1127268529 instance=ExtResource("7_ai5kx")]
 position = Vector2(-696, -1208)
+collision_layer = 3
 
 [node name="Deepslate119" parent="RandomDestroyBlocks" unique_id=880237005 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -1208)
+collision_layer = 3
 
 [node name="Deepslate124" parent="RandomDestroyBlocks" unique_id=94274171 instance=ExtResource("7_ai5kx")]
 position = Vector2(-696, -1208)
+collision_layer = 3
 
 [node name="Deepslate128" parent="RandomDestroyBlocks" unique_id=1452489013 instance=ExtResource("7_ai5kx")]
 position = Vector2(-496, -1208)
+collision_layer = 3
 
 [node name="Deepslate125" parent="RandomDestroyBlocks" unique_id=679756925 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -1208)
+collision_layer = 3
 
 [node name="Deepslate19" parent="RandomDestroyBlocks" unique_id=1042238129 instance=ExtResource("7_ai5kx")]
 position = Vector2(-492, -608)
+collision_layer = 3
 
 [node name="Deepslate20" parent="RandomDestroyBlocks" unique_id=1750875000 instance=ExtResource("7_ai5kx")]
 position = Vector2(-692, -608)
+collision_layer = 3
 
 [node name="Deepslate21" parent="RandomDestroyBlocks" unique_id=1319342631 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -608)
+collision_layer = 3
 
 [node name="Deepslate23" parent="RandomDestroyBlocks" unique_id=711633392 instance=ExtResource("7_ai5kx")]
 position = Vector2(-492, -408)
+collision_layer = 3
 
 [node name="Deepslate24" parent="RandomDestroyBlocks" unique_id=1425806226 instance=ExtResource("7_ai5kx")]
 position = Vector2(-692, -408)
+collision_layer = 3
 
 [node name="Deepslate25" parent="RandomDestroyBlocks" unique_id=412025441 instance=ExtResource("7_ai5kx")]
 position = Vector2(-888, -408)
+collision_layer = 3
 
 [node name="FinishedZone" parent="." unique_id=1008965861 instance=ExtResource("9_jcp0r")]
-visible = false
 position = Vector2(2752, -740)
 
 [node name="Star" parent="." unique_id=966012803 instance=ExtResource("11_l1l63")]
-visible = false
 position = Vector2(1104, -1136)
 scale = Vector2(0.1, 0.1)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=262195688]
-visible = false
 script = ExtResource("11_c373v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1255238563]
@@ -3493,7 +3512,6 @@ position = Vector2(-1002, 106)
 shape = SubResource("RectangleShape2D_8me12")
 
 [node name="Burst" type="Node2D" parent="." unique_id=16440636]
-visible = false
 
 [node name="Lavaburst2" parent="Burst" unique_id=738261255 instance=ExtResource("1_fy3fb")]
 position = Vector2(744, -227)
@@ -3562,68 +3580,79 @@ position = Vector2(3416, -304)
 position = Vector2(2492, -164)
 
 [node name="StandonDestroyBlocks" type="Node2D" parent="." unique_id=1031242853]
-visible = false
 
 [node name="Deepslate3" parent="StandonDestroyBlocks" unique_id=327765587 instance=ExtResource("7_ai5kx")]
 position = Vector2(-92, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate12" parent="StandonDestroyBlocks" unique_id=1089920852 instance=ExtResource("7_ai5kx")]
 position = Vector2(108, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate34" parent="StandonDestroyBlocks" unique_id=1464473736 instance=ExtResource("7_ai5kx")]
 position = Vector2(812, -128)
 scale = Vector2(1.4460037, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate35" parent="StandonDestroyBlocks" unique_id=824185106 instance=ExtResource("7_ai5kx")]
 position = Vector2(1344, -136)
 scale = Vector2(1.4460037, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate36" parent="StandonDestroyBlocks" unique_id=1254742893 instance=ExtResource("7_ai5kx")]
 position = Vector2(1784, -136)
 scale = Vector2(1.4460037, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate37" parent="StandonDestroyBlocks" unique_id=1663152588 instance=ExtResource("7_ai5kx")]
 position = Vector2(2252, -136)
 scale = Vector2(0.86616945, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate38" parent="StandonDestroyBlocks" unique_id=509685365 instance=ExtResource("7_ai5kx")]
 position = Vector2(2688, -136)
 scale = Vector2(0.86616945, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate39" parent="StandonDestroyBlocks" unique_id=1586569503 instance=ExtResource("7_ai5kx")]
 position = Vector2(3104.0002, -168)
 scale = Vector2(1.1861694, 0.9953828)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate13" parent="StandonDestroyBlocks" unique_id=649564975 instance=ExtResource("7_ai5kx")]
 position = Vector2(308, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate4" parent="StandonDestroyBlocks" unique_id=38874862 instance=ExtResource("7_ai5kx")]
 position = Vector2(-292, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate5" parent="StandonDestroyBlocks" unique_id=1052481902 instance=ExtResource("7_ai5kx")]
 position = Vector2(-492, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate6" parent="StandonDestroyBlocks" unique_id=870152012 instance=ExtResource("7_ai5kx")]
 position = Vector2(-692, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Deepslate7" parent="StandonDestroyBlocks" unique_id=996371976 instance=ExtResource("7_ai5kx")]
 position = Vector2(-892, -208)
+collision_layer = 3
 disappear_on_stand = true
 
 [node name="Blocks" type="Node2D" parent="." unique_id=658119102]
-visible = false
 
 [node name="Deepslate55" parent="Blocks" unique_id=1894599109 instance=ExtResource("7_ai5kx")]
 position = Vector2(3316, -228)

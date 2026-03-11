@@ -5,6 +5,8 @@ extends CharacterBody2D
 const SPEED = 800.0
 
 @export var goleft: bool
+var _has_been_queued_for_free := false
+	
 
 func _physics_process(delta):
 	if goleft:
@@ -15,7 +17,7 @@ func _physics_process(delta):
 	
 	# Gravitáció
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta * 50
 	
 	move_and_slide()
 	

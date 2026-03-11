@@ -29,6 +29,8 @@ func disappear():
 	_remove()
 
 func _remove():
+	if collision_shape_2d.is_queued_for_deletion():
+		return
 	collision_shape_2d.queue_free()
 	icon.queue_free()
 	cpu_particles_2d.restart()
